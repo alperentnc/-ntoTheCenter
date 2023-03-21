@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider2D coll;
     [SerializeField] private LayerMask ground;
     private Vector2 screenBounds;
+    public Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,11 +23,20 @@ public class PlayerController : MonoBehaviour
             if (touchPosition.x > Screen.width * 0.5 && IsGrounded())
             {
                 rb.velocity = new Vector2(3, 0);
+                animator.SetBool("isWalking", true);
+                transform.eulerAngles = new Vector3(0, 0, 0);
+
             }
             else if(touchPosition.x < Screen.width * 0.5 && IsGrounded())
             {
                 rb.velocity = new Vector2(-3, 0);
+                animator.SetBool("isWalking", true);
+                transform.eulerAngles = new Vector3(0, 180, 0);
             }
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 
