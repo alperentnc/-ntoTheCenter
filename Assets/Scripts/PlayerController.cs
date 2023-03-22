@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask ground;
     private Vector2 screenBounds;
     public Animator animator;
+    private Vector2 startTouchpos, endTouchpos;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,11 +34,24 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isWalking", true);
                 transform.eulerAngles = new Vector3(0, 180, 0);
             }
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                startTouchpos = Input.GetTouch(0).position;
+            }
+            if (Input.GetTouch(0).phase == TouchPhase.Ended)
+            {
+                endTouchpos = Input.GetTouch(0).position;
+                if (endTouchpos.y >= startTouchpos.y +4  && IsGrounded())
+                {
+                    rb.AddForce(new Vector2(0, 6), ForceMode2D.Impulse);
+                }
+            }
         }
         else
         {
             animator.SetBool("isWalking", false);
         }
+
     }
 
     private bool IsGrounded()
