@@ -38,14 +38,14 @@ public class PlayerController : MonoBehaviour
             {
                 startTouchpos = Input.GetTouch(0).position;
             }
-            if (Input.GetTouch(0).phase == TouchPhase.Ended)
-            {
-                endTouchpos = Input.GetTouch(0).position;
-                if (endTouchpos.y >= startTouchpos.y +4  && IsGrounded())
-                {
-                    rb.AddForce(new Vector2(0, 6), ForceMode2D.Impulse);
-                }
-            }
+            //if (Input.GetTouch(0).phase == TouchPhase.Ended)
+            //{
+            //    endTouchpos = Input.GetTouch(0).position;
+            //    if (endTouchpos.y >= startTouchpos.y +4  && IsGrounded())
+            //    {
+            //        rb.AddForce(new Vector2(0, 6), ForceMode2D.Impulse);
+            //    }
+            //}
         }
         else
         {

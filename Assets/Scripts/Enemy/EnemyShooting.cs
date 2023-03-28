@@ -10,9 +10,11 @@ public class EnemyShooting : MonoBehaviour
     private float timer;
     private GameObject player;
     public float fireDistance;
+    EnemyPatrolling enemyPatrolling;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        enemyPatrolling = gameObject.GetComponent<EnemyPatrolling>();
     }
 
     
@@ -30,6 +32,10 @@ public class EnemyShooting : MonoBehaviour
                 timer = 0;
                 Shoot();
             }
+        }
+        else
+        {
+            enemyPatrolling.Patroll();
         }
         
         
