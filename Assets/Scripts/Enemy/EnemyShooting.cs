@@ -12,6 +12,7 @@ public class EnemyShooting : MonoBehaviour
     public float fireDistance;
     EnemyPatrolling enemyPatrolling;
     public Animator animator;
+    float yDifferance;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -24,8 +25,11 @@ public class EnemyShooting : MonoBehaviour
     {
         
         float distance = Vector2.Distance(transform.position, player.transform.position);
-        
-        if (distance < fireDistance)
+
+        yDifferance = player.transform.position.y - transform.position.y;
+
+
+        if (distance < fireDistance && System.Math.Abs(yDifferance) <= 1.5f)
         {
             animator.SetBool("isShooting", true);
             if (transform.position.x<=player.transform.position.x)

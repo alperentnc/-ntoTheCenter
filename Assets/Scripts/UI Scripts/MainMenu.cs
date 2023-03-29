@@ -8,7 +8,8 @@ public class MainMenu : MonoBehaviour
 
     public GameObject ShopPanel;
     public GameObject SettingsPanel;
-    public GameObject PlayButton;
+    public GameObject LevelMode;
+    public GameObject FreeFall;
 
     public void GoToLevels()
     {
@@ -18,24 +19,28 @@ public class MainMenu : MonoBehaviour
     public void Shop()
     {
         ShopPanel.SetActive(true);
-        PlayButton.SetActive(false);
+        LevelMode.SetActive(false);
+        FreeFall.SetActive(false);
     }
 
     public void Settings()
     {
         SettingsPanel.SetActive(true);
-        PlayButton.SetActive(false);
+        LevelMode.SetActive(false);
+        FreeFall.SetActive(false);
     }
     public void CloseShop()
     {
         ShopPanel.SetActive(false);
-        PlayButton.SetActive(true);
+        LevelMode.SetActive(true);
+        FreeFall.SetActive(true);
     }
 
     public void CloseSettings()
     {
         SettingsPanel.SetActive(false);
-        PlayButton.SetActive(true);
+        LevelMode.SetActive(true);
+        FreeFall.SetActive(true);
     }
 
 }
