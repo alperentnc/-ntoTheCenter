@@ -27,6 +27,7 @@ public class EnemyShooting : MonoBehaviour
         
         if (distance < fireDistance)
         {
+            animator.SetBool("isShooting", true);
             if (transform.position.x<=player.transform.position.x)
             {
                 gameObject.GetComponent<SpriteRenderer>().flipX = true;
@@ -54,7 +55,6 @@ public class EnemyShooting : MonoBehaviour
     }
 
     void Shoot() {
-        animator.SetBool("isShooting", true);
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
 
     }

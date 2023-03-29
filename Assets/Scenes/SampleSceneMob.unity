@@ -380,8 +380,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129750689}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8509684, y: -0.88, z: -15.787102}
-  m_LocalScale: {x: 0.5659858, y: 0.274084, z: 1.1754123}
+  m_LocalPosition: {x: -2.5564, y: -0.88, z: -15.787102}
+  m_LocalScale: {x: 0.29255807, y: 0.274084, z: 1.1754123}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 343243256}
@@ -3040,7 +3040,7 @@ Animator:
   m_GameObject: {fileID: 534511936}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e646bdd5c0d24d146bb6b841b29bf1a6, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3472,8 +3472,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527418823}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.207, y: -0.891, z: -15.787102}
-  m_LocalScale: {x: 0.57357925, y: 0.274084, z: 1.1754123}
+  m_LocalPosition: {x: 1.6688, y: -0.891, z: -15.787102}
+  m_LocalScale: {x: 0.39458844, y: 0.274084, z: 1.1754123}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 343243256}
@@ -4326,6 +4326,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e646bdd5c0d24d146bb6b841b29bf1a6, type: 2}
+    - target: {fileID: 3419288947709951979, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4320417
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419288947709951979, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8911859
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419288947709951979, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.02842497
+      objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 18c6002ab55f03d46bf77887f425bd94
+guid: 39123785d86814f43b3463d9bc9a8db6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,22 +129,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mob_Spritesheets-04_0
+      name: xxx-05_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 389
-        height: 139
+        x: 8
+        y: 24
+        width: 56
+        height: 94
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d6f35e5643f09d47b7ed72a487848ce
-      internalID: 527208135
+      spriteID: 760bd0688f8b1a74eacffab830ea7c2f
+      internalID: -543176394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xxx-05_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 24
+        width: 57
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a04303b5abdf87418d17d5139c873e9
+      internalID: -163742661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xxx-05_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 26
+        width: 56
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d2df7085bae9b43b020a1320160275
+      internalID: 1667496857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xxx-05_3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 26
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ee5860a4ddf7a488de0c3d592167d2
+      internalID: -1400571177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xxx-05_4
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 24
+        width: 57
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f2cb5d9c7458549b2ab23dc357d41d
+      internalID: -1650154516
       vertices: []
       indices: 
       edges: []
@@ -160,7 +244,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mob_Spritesheets-04_0: 527208135
+      xxx-05_3: -1400571177
+      xxx-05_2: 1667496857
+      xxx-05_4: -1650154516
+      xxx-05_0: -543176394
+      xxx-05_1: -163742661
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
