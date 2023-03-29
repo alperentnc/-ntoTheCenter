@@ -43,6 +43,11 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
+        if(transform.position.x>=1.9f && 2.5f >= transform.position.x && transform.position.y <= -49)
+        {
+            animator.SetBool("isFinish", true);
+            rb.velocity = new Vector2(0, 0);
+        }
 
     }
 
