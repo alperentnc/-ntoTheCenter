@@ -8,14 +8,14 @@ public class MainMenu : MonoBehaviour
 
     public GameObject ShopPanel;
     public GameObject SettingsPanel;
+    public GameObject LevelsPanel;
     public GameObject LevelMode;
     public GameObject FreeFall;
 
-    public void GoToLevels()
+    public void Play()
     {
-        SceneManager.LoadScene("Levels");
+        SceneManager.LoadScene("SampleSceneMob");
     }
-
     public void Shop()
     {
         ShopPanel.SetActive(true);
@@ -26,6 +26,13 @@ public class MainMenu : MonoBehaviour
     public void Settings()
     {
         SettingsPanel.SetActive(true);
+        LevelMode.SetActive(false);
+        FreeFall.SetActive(false);
+    }
+
+    public void Levels()
+    {
+        LevelsPanel.SetActive(true);
         LevelMode.SetActive(false);
         FreeFall.SetActive(false);
     }
@@ -42,5 +49,12 @@ public class MainMenu : MonoBehaviour
         LevelMode.SetActive(true);
         FreeFall.SetActive(true);
     }
+    public void CloseLevels()
+    {
+        LevelsPanel.SetActive(false);
+        LevelMode.SetActive(true);
+        FreeFall.SetActive(true);
+    }
+
 
 }
