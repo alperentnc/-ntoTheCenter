@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             {
                
                 Vector2 touchDeltaPosition = touch.position - initialTouchPos;
-                if (touchDeltaPosition.y > 30 && !isJumping) // Check if the touch input is moving upwards and the character is not already jumping
+                if (touchDeltaPosition.y > 200 && !isJumping) // Check if the touch input is moving upwards and the character is not already jumping
                 {
                     isJumping = true;
                 }
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
 
         }
-        else
+        if(!IsGrounded())
         {
             animator.SetBool("isWalking", false);
         }
