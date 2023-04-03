@@ -109,19 +109,39 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-        if (isMoving && IsGrounded())
+        if (isMoving /*&& IsGrounded()*/)
         {
-            if (direction.x == -1)
+            if (IsGrounded())
             {
-                animator.SetBool("isWalking", true);
-                transform.eulerAngles = new Vector3(0, 180, 0);
+                rb.gravityScale = 1f;
+                if (direction.x == -1)
+                {
+                    animator.SetBool("isWalking", true);
+                    transform.eulerAngles = new Vector3(0, 180, 0);
+                }
+                else if (direction.x == 1)
+                {
+                    animator.SetBool("isWalking", true);
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                rb.velocity = new Vector2(direction.x * speed, rb.velocity.y); // Apply velocity to character's Rigidbody2D component
             }
-            else if (direction.x == 1)
+            else
             {
-                animator.SetBool("isWalking", true);
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                rb.gravityScale = 0.75f;
+                if (direction.x == -1)
+                {
+                    animator.SetBool("isWalking", true);
+                    transform.eulerAngles = new Vector3(0, 180, 0);
+                }
+                else if (direction.x == 1)
+                {
+                    animator.SetBool("isWalking", true);
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                rb.velocity = new Vector2(direction.x * speed/2, rb.velocity.y); // Apply velocity to character's Rigidbody2D component
             }
-            rb.velocity = new Vector2(direction.x * speed, rb.velocity.y); // Apply velocity to character's Rigidbody2D component
+            
         }
 
         else if(!isMoving && IsGrounded())

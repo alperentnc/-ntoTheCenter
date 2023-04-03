@@ -19,7 +19,6 @@ public class SalivaBullet : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-
         if (timer > 5)
         {
             Destroy(gameObject);
@@ -30,7 +29,7 @@ public class SalivaBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().health -= 20;
+            collision.gameObject.GetComponent<PlayerHealth>().health -= 5;
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Platform"))

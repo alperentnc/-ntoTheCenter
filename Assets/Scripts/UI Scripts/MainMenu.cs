@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("SampleSceneMob");
+        Time.timeScale = 1.0f;
     }
     public void Shop()
     {

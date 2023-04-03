@@ -15,12 +15,12 @@ public class Bullet : MonoBehaviour
 
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+
     }
 
     void Update()
     {
         timer += Time.deltaTime;
-
         if (timer > 5)
         {
             Destroy(gameObject);
