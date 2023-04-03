@@ -115,13 +115,11 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetBool("isWalking", true);
                 transform.eulerAngles = new Vector3(0, 180, 0);
-                Debug.Log("left");
             }
             else if (direction.x == 1)
             {
                 animator.SetBool("isWalking", true);
                 transform.eulerAngles = new Vector3(0, 0, 0);
-                Debug.Log("right");
             }
             rb.velocity = new Vector2(direction.x * speed, rb.velocity.y); // Apply velocity to character's Rigidbody2D component
         }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShooting1 : MonoBehaviour
+public class JumperShooting : MonoBehaviour
 {
     [SerializeField] private LayerMask ground;
     private CapsuleCollider2D coll;
@@ -10,19 +10,17 @@ public class EnemyShooting1 : MonoBehaviour
     private float timer;
     private GameObject player;
     public float fireDistance;
-    EnemyPatrolling enemyPatrolling;
-    public Animator animator;
+    JumperPatrolling jumperPatrolling;
     float yDifferance;
     bool catcher;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        enemyPatrolling = gameObject.GetComponent<EnemyPatrolling>();
-        animator = gameObject.GetComponent<Animator>();
+        jumperPatrolling = gameObject.GetComponent<JumperPatrolling>();
         coll = GetComponent<CapsuleCollider2D>();
     }
 
-    
+
     void Update()
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
@@ -32,27 +30,26 @@ public class EnemyShooting1 : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (distance < fireDistance && System.Math.Abs(yDifferance) <=0.2f )
+        if (distance < fireDistance && System.Math.Abs(yDifferance) <= 0.2f)
         {
-            animator.SetBool("isShooting", true);
-            if (transform.position.x<=player.transform.position.x)
+            if (transform.position.x <= player.transform.position.x)
             {
                 gameObject.GetComponent<SpriteRenderer>().flipX = true;
             }
             else
             {
-                gameObject.GetComponent<SpriteRenderer>().flipX = false;            }
-                timer += Time.deltaTime;
-            if (timer > bulletFrequency && IsGrounded()&& yDifferance<=1)
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            }
+            if (IsGrounded() && yDifferance <= 10)
             {
-                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, enemyPatrolling.speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, jumperPatrolling.speed * Time.deltaTime);
             }
         }
         else
         {
-            enemyPatrolling.Patroll();
-            animator.SetBool("isShooting", false);
+            jumperPatrolling.Patroll();
         }
+
         
         
     }
