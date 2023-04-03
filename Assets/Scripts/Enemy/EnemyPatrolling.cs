@@ -14,21 +14,18 @@ public class EnemyPatrolling : MonoBehaviour
     public float direction = 1.0f;
     private Vector3 scale;
     public Animator animator;
-    //private Rigidbody2D rb;
     void Start()
     {
         
-       // platformHalfWidth = platformTransform.localScale.x * 3/2f;
-        //leftBound = platformTransform.position.x - platformHalfWidth;
-       // rightBound = platformTransform.position.x + platformHalfWidth;
+       
         enemyShooting = gameObject.GetComponent<EnemyShooting>();
         animator = gameObject.GetComponent<Animator>();
-        //rb = gameObject.GetComponent<Rigidbody2D>();
+        
     }
 
     void Update()
     {
-        //rb.velocity = new Vector2(3, 0);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

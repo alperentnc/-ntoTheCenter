@@ -86,8 +86,12 @@ public class PlayerController : MonoBehaviour
 
 
         }
-        if(!IsGrounded())
+        else
         {
+            //if (!IsGrounded())
+            //{
+            //    animator.SetBool("isWalking", false);
+            //}
             animator.SetBool("isWalking", false);
         }
         //if (transform.position.x >= 1.9f && 2.5f >= transform.position.x && transform.position.y <= -49)
@@ -101,6 +105,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!IsGrounded())
+        {
+            animator.SetBool("isWalking", false);
+        }
         if (isMoving && IsGrounded())
         {
             if (direction.x == -1)
