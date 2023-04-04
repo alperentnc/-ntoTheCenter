@@ -11,11 +11,19 @@ public class MainMenu : MonoBehaviour
     public GameObject LevelsPanel;
     public GameObject LevelMode;
     public GameObject FreeFall;
+    public GameObject FreeFallPanel;
 
     public void Play()
     {
         SceneManager.LoadScene("SampleSceneMob");
         Time.timeScale = 1.0f;
+    }
+
+    public void FreeFallPopUp()
+    {
+        FreeFallPanel.SetActive(true);
+        LevelMode.SetActive(false);
+        FreeFall.SetActive(false);
     }
     public void Shop()
     {

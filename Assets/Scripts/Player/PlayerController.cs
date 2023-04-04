@@ -7,10 +7,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private CapsuleCollider2D coll;
     [SerializeField] private LayerMask ground;
-    private Vector2 screenBounds;
     public Animator animator;
-    private Vector2 touchStartPosition;
-    private bool isSwipeStarted;
     private float slowTimer = 3;
     private bool slow;
     public float speed;
@@ -19,14 +16,16 @@ public class PlayerController : MonoBehaviour
     
     private Vector2 direction;
 
-    private Vector2 initialTouchPos; // Initial position of touch input
+    private Vector2 initialTouchPos;
     public float minSwipeDistance;
     public float jumpForce = 2f;
     public float jumpTime = 0.5f;
     private bool isJumping;
     private float jumpTimer;
+
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<CapsuleCollider2D>();
         slow = false;
@@ -50,11 +49,10 @@ public class PlayerController : MonoBehaviour
             {
                 isMoving = true;
                 direction = Vector2.zero;
-                initialTouchPos = touch.position; // Record the initial position of touch input
+                initialTouchPos = touch.position; 
                 if (slowTimer > 0 && slowTimer < 3 && slow)
                 {
                     speed = 1.5f;
-                    Debug.Log(slow);
                 }
                 else
                 {
@@ -63,21 +61,23 @@ public class PlayerController : MonoBehaviour
 
 
             }
-            else if (touch.phase == TouchPhase.Moved) // Check if the touch input is currently moving
+            else if (touch.phase == TouchPhase.Moved)
             {
                
                 Vector2 touchDeltaPosition = touch.position - initialTouchPos;
-                if (touchDeltaPosition.y > 200 && !isJumping) // Check if the touch input is moving upwards and the character is not already jumping
+                if (touchDeltaPosition.y > 200 && !isJumping && IsGrounded()) 
                 {
                     isJumping = true;
+                    jumpTimer = jumpTime;
+                    rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 }
                 if(Mathf.Abs(touchDeltaPosition.x) >= minSwipeDistance)
                 {
-                    direction.x = Mathf.Sign(touchDeltaPosition.x); // Get the sign of the x component to determine direction
+                    direction.x = Mathf.Sign(touchDeltaPosition.x);
                 }
             }
             
-            else if (touch.phase == TouchPhase.Ended) // Check if the touch input just ended
+            else if (touch.phase == TouchPhase.Ended)
             {
                 isMoving = false;
                
@@ -88,10 +88,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //if (!IsGrounded())
-            //{
-            //    animator.SetBool("isWalking", false);
-            //}
+            
             animator.SetBool("isWalking", false);
         }
         //if (transform.position.x >= 1.9f && 2.5f >= transform.position.x && transform.position.y <= -49)
@@ -109,7 +106,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-        if (isMoving /*&& IsGrounded()*/)
+        if (isMoving)
         {
             if (IsGrounded())
             {
@@ -124,43 +121,42 @@ public class PlayerController : MonoBehaviour
                     animator.SetBool("isWalking", true);
                     transform.eulerAngles = new Vector3(0, 0, 0);
                 }
-                rb.velocity = new Vector2(direction.x * speed, rb.velocity.y); // Apply velocity to character's Rigidbody2D component
+                rb.velocity = new Vector2(direction.x * speed, rb.velocity.y); 
             }
             else
             {
-                rb.gravityScale = 0.75f;
+                rb.gravityScale = .8f;
                 if (direction.x == -1)
                 {
-                    animator.SetBool("isWalking", true);
+                    animator.SetBool("isWalking", false);
                     transform.eulerAngles = new Vector3(0, 180, 0);
                 }
                 else if (direction.x == 1)
                 {
-                    animator.SetBool("isWalking", true);
+                    animator.SetBool("isWalking", false);
                     transform.eulerAngles = new Vector3(0, 0, 0);
                 }
-                rb.velocity = new Vector2(direction.x * speed/2, rb.velocity.y); // Apply velocity to character's Rigidbody2D component
+                rb.velocity = new Vector2(direction.x * speed*2/3, rb.velocity.y); 
             }
             
         }
 
         else if(!isMoving && IsGrounded())
         {
-            rb.velocity = new Vector2(0.0f, rb.velocity.y); // Stop the character's horizontal movement
+            rb.velocity = new Vector2(0.0f, rb.velocity.y); 
         }
 
         if (isJumping)
         {
-            if (IsGrounded())
+            
+            if (jumpTimer > 0.0f)
             {
-                rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-                // rb.velocity = new Vector2(rb.velocity.x, jumpForce); 
+                jumpTimer -= Time.fixedDeltaTime;
             }
             else
             {
                 isJumping = false;
-            }
-        }
+            }        }
     }
 
     private bool IsGrounded()
@@ -174,6 +170,7 @@ public class PlayerController : MonoBehaviour
             slow = true;
         }
     }
+    
 }
 
 

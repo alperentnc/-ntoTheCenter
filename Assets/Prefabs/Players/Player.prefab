@@ -142,6 +142,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 5374809718222455446}
+  speed: 0
+  slowSpeed: 0
+  minSwipeDistance: 20
+  jumpForce: 8
+  jumpTime: 0.5
 --- !u!95 &5374809718222455446
 Animator:
   serializedVersion: 5

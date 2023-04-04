@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8053469941773878278}
   - component: {fileID: 8053469941773878330}
   - component: {fileID: 8053469941773878331}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: EnemyJumper
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -101,8 +101,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019043567, y: 0.02068487}
-  m_Size: {x: 0.52191293, y: 0.56690735}
+  m_Offset: {x: 0.051128726, y: -0.04977489}
+  m_Size: {x: 0.12573133, y: 0.42598796}
   m_Direction: 0
 --- !u!50 &8053469941773878278
 Rigidbody2D:
@@ -142,6 +142,7 @@ MonoBehaviour:
     m_Bits: 64
   bulletFrequency: 0
   fireDistance: 4
+  explode: {fileID: 4728298166092756708, guid: 15c58d2f2081e934697105f8a22a088a, type: 3}
 --- !u!114 &8053469941773878331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,5 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e8169b937c12a45ba4dd9bd58d121b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1.5
   direction: 1

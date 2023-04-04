@@ -13,6 +13,7 @@ public class JumperShooting : MonoBehaviour
     JumperPatrolling jumperPatrolling;
     float yDifferance;
     bool catcher;
+    public GameObject explode;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -26,10 +27,11 @@ public class JumperShooting : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
         yDifferance = player.transform.position.y - transform.position.y;
-        if (distance <= 0.1f)
-        {
-            Destroy(gameObject);
-        }
+        //if (distance <= 0.1f)
+        //{
+        //    Destroy(gameObject);
+
+        //}
         if (distance < fireDistance && System.Math.Abs(yDifferance) <= 0.2f)
         {
             if (transform.position.x <= player.transform.position.x)
@@ -42,7 +44,7 @@ public class JumperShooting : MonoBehaviour
             }
             if (IsGrounded() && yDifferance <= 10)
             {
-                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, jumperPatrolling.speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, jumperPatrolling.speed*4/3 * Time.deltaTime);
             }
         }
         else
@@ -57,5 +59,15 @@ public class JumperShooting : MonoBehaviour
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, ground);
     }
-
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().health -= 30;
+            GameObject explodingAnim =  Instantiate(explode, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            Destroy(explodingAnim, .5f);
+        }
+    }
 }
