@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8053469941773878278}
   - component: {fileID: 8053469941773878330}
   - component: {fileID: 8053469941773878331}
+  - component: {fileID: 4370682288235268351}
   m_Layer: 9
   m_Name: EnemyJumper
   m_TagString: Enemy
@@ -29,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8053469941773878272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.95, y: 4.88, z: -1}
-  m_LocalScale: {x: 1.0728486, y: 0.9877, z: 1}
+  m_LocalPosition: {x: 1.7875, y: 4.7717, z: -1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1241594340, guid: f4222d548a01fa6469db4723748caff3, type: 3}
+  m_Sprite: {fileID: 1663835497, guid: cb478a7aabd878e4bb67b40243f97f3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,8 +102,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.051128726, y: -0.04977489}
-  m_Size: {x: 0.12573133, y: 0.42598796}
+  m_Offset: {x: 0.039567746, y: -0.026651919}
+  m_Size: {x: 0.46100894, y: 1.9058356}
   m_Direction: 0
 --- !u!50 &8053469941773878278
 Rigidbody2D:
@@ -143,6 +144,7 @@ MonoBehaviour:
   bulletFrequency: 0
   fireDistance: 4
   explode: {fileID: 4728298166092756708, guid: 15c58d2f2081e934697105f8a22a088a, type: 3}
+  animator: {fileID: 4370682288235268351}
 --- !u!114 &8053469941773878331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +159,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   direction: 1
+--- !u!95 &4370682288235268351
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053469941773878272}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1a43bcee5018fa24d84983525b4663aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

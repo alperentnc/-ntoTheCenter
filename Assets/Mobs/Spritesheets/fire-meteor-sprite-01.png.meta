@@ -1,0 +1,609 @@
+fileFormatVersion: 2
+guid: c0055851213936949953101ba18734b1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_0
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 5
+        width: 300
+        height: 671
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2281796696b7f7444a9d76274819ca97
+      internalID: -1987116173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_1
+      rect:
+        serializedVersion: 2
+        x: 5928
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc1ca72bafa3d548a01f0d36c179301
+      internalID: 367178549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_2
+      rect:
+        serializedVersion: 2
+        x: 6852
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba88adb8d7cc564588e22b35f75893c
+      internalID: -2111394930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_3
+      rect:
+        serializedVersion: 2
+        x: 8653
+        y: 6
+        width: 313
+        height: 668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc78aa096887394db8b61d578125e32
+      internalID: -1212955578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_5
+      rect:
+        serializedVersion: 2
+        x: 10589
+        y: 662
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3068f34ce3a6c4495f9d6f44fc8324
+      internalID: -807409626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_6
+      rect:
+        serializedVersion: 2
+        x: 11592
+        y: 662
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1527f787c925d6b419ecace0fabf3f4e
+      internalID: 726805699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_7
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114fd9ae5c768bf4d8d5c1d69bd3d51a
+      internalID: -930290040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_8
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d62238c59c59694eba39273c2a70a66
+      internalID: -298160658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_10
+      rect:
+        serializedVersion: 2
+        x: 11448
+        y: 6
+        width: 300
+        height: 668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b926a973e85f9b745aaa5c0d97dcbf02
+      internalID: 489274145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_11
+      rect:
+        serializedVersion: 2
+        x: 12360
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67c099b1e5107646a1e0c1ccf385f9e
+      internalID: -119836628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_12
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43566803c02e16a4a971d3645ee05da8
+      internalID: -526214897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3840ac473dd6cdb42aa685647e69bdf8
+      internalID: -213123095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_14
+      rect:
+        serializedVersion: 2
+        x: 3885
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54aa101a38311a540a58777c2180218b
+      internalID: 1218417632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_15
+      rect:
+        serializedVersion: 2
+        x: 7773
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7d7658ea97c7349b05c4012868a146
+      internalID: 493986941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_16
+      rect:
+        serializedVersion: 2
+        x: 9513
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69d3aea129b05344b21d1eef80f4e4a
+      internalID: -345632253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_17
+      rect:
+        serializedVersion: 2
+        x: 10389
+        y: 6
+        width: 300
+        height: 668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b73eecb7d7ec44f86b014e2d25d2d9
+      internalID: -1136713488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_19
+      rect:
+        serializedVersion: 2
+        x: 14172
+        y: 6
+        width: 300
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4e8791ff0fa594585fab24aa4bb9bd
+      internalID: 1693316166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_20
+      rect:
+        serializedVersion: 2
+        x: 13231
+        y: 6
+        width: 300
+        height: 660
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadfd367cca96cd45bc5f10287eb9835
+      internalID: -1677086042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_21
+      rect:
+        serializedVersion: 2
+        x: 14455
+        y: 221
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322a4c956a26b094ab3305eea293fdd5
+      internalID: 427675329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-meteor-sprite-01_22
+      rect:
+        serializedVersion: 2
+        x: 12346
+        y: 148
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0094c3fa4de5784b8e179116d7ec941
+      internalID: -630982195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      fire-meteor-sprite-01_7: -930290040
+      fire-meteor-sprite-01_10: 489274145
+      fire-meteor-sprite-01_21: 427675329
+      fire-meteor-sprite-01_41: 1594078091
+      fire-meteor-sprite-01_28: -1222544625
+      fire-meteor-sprite-01_32: -1383116524
+      fire-meteor-sprite-01_12: -526214897
+      fire-meteor-sprite-01_35: 977122274
+      fire-meteor-sprite-01_13: -213123095
+      fire-meteor-sprite-01_18: -1538622124
+      fire-meteor-sprite-01_31: 776032901
+      fire-meteor-sprite-01_17: -1136713488
+      fire-meteor-sprite-01_19: 1693316166
+      fire-meteor-sprite-01_40: 3413264
+      fire-meteor-sprite-01_23: 1063533417
+      fire-meteor-sprite-01_11: -119836628
+      fire-meteor-sprite-01_37: 1528360308
+      fire-meteor-sprite-01_39: 1633028409
+      fire-meteor-sprite-01_4: -1340359085
+      fire-meteor-sprite-01_1: 367178549
+      fire-meteor-sprite-01_6: 726805699
+      fire-meteor-sprite-01_5: -807409626
+      fire-meteor-sprite-01_0: -1987116173
+      fire-meteor-sprite-01_24: -2138116377
+      fire-meteor-sprite-01_3: -1212955578
+      fire-meteor-sprite-01_2: -2111394930
+      fire-meteor-sprite-01_16: -345632253
+      fire-meteor-sprite-01_15: 493986941
+      fire-meteor-sprite-01_29: -15063473
+      fire-meteor-sprite-01_30: -1870085335
+      fire-meteor-sprite-01_33: -463419555
+      fire-meteor-sprite-01_8: -298160658
+      fire-meteor-sprite-01_22: -630982195
+      fire-meteor-sprite-01_25: -2036668638
+      fire-meteor-sprite-01_38: -992635006
+      fire-meteor-sprite-01_20: -1677086042
+      fire-meteor-sprite-01_9: 583484654
+      fire-meteor-sprite-01_34: 1154558365
+      fire-meteor-sprite-01_36: -302023127
+      fire-meteor-sprite-01_27: 1975958208
+      fire-meteor-sprite-01_14: 1218417632
+      fire-meteor-sprite-01_26: 1785835311
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

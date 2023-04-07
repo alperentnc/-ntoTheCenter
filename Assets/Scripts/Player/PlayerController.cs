@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float jumpTime = 0.5f;
     private bool isJumping;
     private float jumpTimer;
+    public static bool meteorStarter=false;
 
     void Start()
     {
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.touchCount > 0)
         {
+            meteorStarter = true;
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began && IsGrounded())
             {

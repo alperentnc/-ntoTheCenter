@@ -7,23 +7,34 @@ public class RainGroup : MonoBehaviour
     // Start is called before the first frame update
     Rigidbody2D rb;
     PlayerController player;
+    PlayerHealth playerHealth;
     public float timer;
+    public float animTimer;
+    public Animator anim;
     void Start()
     {
+        anim = GetComponent<Animator>();
+        anim.SetBool("isStarting", false);
         rb = GetComponent<Rigidbody2D>();
         player = GetComponent<PlayerController>();
+        playerHealth = GetComponent<PlayerHealth>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= 2)
+        if (PlayerController.meteorStarter == true)
         {
-            rb.velocity = new Vector2(0, -1);
+            timer += Time.deltaTime;
+            if (timer >= 2)
+            {
+                anim.SetBool("isStarting", true);
+                rb.velocity = new Vector2(0, -1);
+            }
+
         }
-        
+
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -33,7 +44,8 @@ public class RainGroup : MonoBehaviour
         }
         else if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("oyunbýtýk");
+            collision.gameObject.GetComponent<PlayerHealth>().health = 0;
+
         }
     }
 }
