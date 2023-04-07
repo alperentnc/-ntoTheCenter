@@ -1,0 +1,609 @@
+fileFormatVersion: 2
+guid: 9b3088d1ba9bbc24aadda361c9d40ff7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_0"
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 1153
+        width: 107
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb395e25a5e82d428f7a1771a8af7d9
+      internalID: 797577408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_1"
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 1362
+        width: 26
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745455f2df6242241946b81e254fd447
+      internalID: -1678225695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_2"
+      rect:
+        serializedVersion: 2
+        x: 2359
+        y: 343
+        width: 388
+        height: 1390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64e61339b994984ca60867166654ecf
+      internalID: 751881073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_3"
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1248
+        width: 43
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a35e0c43a649345ad28e7467f92992
+      internalID: 469974153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_4"
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 343
+        width: 426
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b3266c2c3d39c448f07ea5e2cf5173
+      internalID: -991751643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_5"
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 1187
+        width: 31
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ced89ccf5817fa418b471b5ef98ff6a
+      internalID: -613883012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_6"
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 321
+        width: 378
+        height: 914
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d8e9a5ab394dd4eb27850f81e508e5
+      internalID: -1911178833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_7"
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1441
+        width: 80
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67aaa990fa0c43d49937d04795c29de8
+      internalID: 1618393197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_8"
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 353
+        width: 361
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0c936d7525bf846a9ab259c7008c37
+      internalID: 68814785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_9"
+      rect:
+        serializedVersion: 2
+        x: 2716
+        y: 1074
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3b0880c85d38a40b8e22526cc87327
+      internalID: 269632657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_10"
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 945
+        width: 67
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136740b61adb4c04c94f15d18ea6e6b4
+      internalID: -1949568360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_11"
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 1329
+        width: 218
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1972430a65a068e4fa4dd1a5f7c7cccc
+      internalID: -402641441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_12"
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 1066
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8636e9e606e35844dbbf4d286ca1428a
+      internalID: -2050291337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_13"
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 328
+        width: 397
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82c83cfe71de6c46944140116df115e
+      internalID: -1020196025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_14"
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1401
+        width: 51
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc602ed1ad58651419e547dd15633228
+      internalID: 1564908881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_15"
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 814
+        width: 61
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d4241abe85dbb4fb0b4f2f074c32d1
+      internalID: -1330471213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_16"
+      rect:
+        serializedVersion: 2
+        x: 2998
+        y: 347
+        width: 397
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82972f4fa08735d4893473a7b00df5a6
+      internalID: -360241519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_17"
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 941
+        width: 38
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93add1c6532ebc74086a1c82ea169b20
+      internalID: -114370306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_18"
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 892
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ecc76a077eb3148ad9e84045b8af9c
+      internalID: 1050874739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_19"
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 366
+        width: 378
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067ad806217080246a956f93822ca43a
+      internalID: -233145900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "goktas\u0131-sprite-02_20"
+      rect:
+        serializedVersion: 2
+        x: 3697
+        y: 727
+        width: 124
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ede15eaca0643c4dade44925e294526
+      internalID: 1618541656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "goktas\u0131-sprite-02_8": 68814785
+      "goktas\u0131-sprite-02_14": 1564908881
+      "goktas\u0131-sprite-02_20": 1618541656
+      "goktas\u0131-sprite-02_15": -1330471213
+      "goktas\u0131-sprite-02_5": -613883012
+      "goktas\u0131-sprite-02_12": -2050291337
+      "goktas\u0131-sprite-02_17": -114370306
+      "goktas\u0131-sprite-02_7": 1618393197
+      "goktas\u0131-sprite-02_0": 797577408
+      "goktas\u0131-sprite-02_19": -233145900
+      "goktas\u0131-sprite-02_9": 269632657
+      "goktas\u0131-sprite-02_1": -1678225695
+      "goktas\u0131-sprite-02_18": 1050874739
+      "goktas\u0131-sprite-02_10": -1949568360
+      "goktas\u0131-sprite-02_13": -1020196025
+      "goktas\u0131-sprite-02_6": -1911178833
+      "goktas\u0131-sprite-02_3": 469974153
+      "goktas\u0131-sprite-02_16": -360241519
+      "goktas\u0131-sprite-02_2": 751881073
+      "goktas\u0131-sprite-02_4": -991751643
+      "goktas\u0131-sprite-02_11": -402641441
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
