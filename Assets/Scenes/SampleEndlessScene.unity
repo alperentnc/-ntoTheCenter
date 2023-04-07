@@ -1427,6 +1427,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84812d01af3327848abf4a6b3acc7037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &531653773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531653774}
+  - component: {fileID: 531653775}
+  m_Layer: 0
+  m_Name: Platform Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531653774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531653773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.63, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531653775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531653773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21241f26b0288c4d9d9e5769daef0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformPrefabs:
+  - {fileID: 7861214875453283263, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+  - {fileID: 3769374253920474504, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+  - {fileID: 4884878364908368123, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+  - {fileID: 7632807547724574963, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+  - {fileID: 3531104874600313659, guid: 1a6378cc1f106bd44832093183f957fe, type: 3}
+  - {fileID: 1634156913843247400, guid: 309215feb7362fc498012189424d1cc6, type: 3}
+  - {fileID: 8066520178781500857, guid: fd15c6acdb4262146a3ef031682d3844, type: 3}
+  - {fileID: 8190369399778043109, guid: 0ca043e436b04f24c8ce00179f2bb0ba, type: 3}
+  - {fileID: 1871921537213963706, guid: 861b6259b3e70574d96db0ed0407f072, type: 3}
+  - {fileID: 3870836417306333226, guid: 1bc82ad4b11c95e4c8d3abe218693b28, type: 3}
+  - {fileID: 7560393172544125989, guid: 4de796ff02f739f4192dd7c92376cc55, type: 3}
+  - {fileID: 2464705163181771676, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
+  - {fileID: 7912133551177592132, guid: 804a679e09fea6f4d9bbdd007047ae3d, type: 3}
+  platformDistance: 1.25
+  platformSpawnHeight: -60
+  platformCount: 50
 --- !u!1 &532912118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,7 +1916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7cf8096dc44f3554ab57cf7cb7c0c1f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d68a00592850c4544b63de67b0834d60, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6799,15 +6860,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455442, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455442, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.06
+      value: 12.92
       objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455442, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455442, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6859,7 +6920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455447, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: health
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455447, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: slider
