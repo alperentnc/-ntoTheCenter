@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class PlatformManager : MonoBehaviour
 {
-    public GameObject[] platformPrefabs;
-    public float platformDistance = 2f;
-    public float platformSpawnHeight = 0f;
-    public int platformCount = 10;
+    public GameObject[] platformPrefabs; // Array of platform prefabs to spawn
+    public Transform characterTransform; // Reference to the transform of the main character
+    public float platformSpawnDistance = 20f; // Distance from the character at which a new platform should be spawned
+    public int maxPlatformCount = 10; // Maximum number of platforms that can exist at any given time
+    public string leftPlatformTag = "LeftPlatform"; // Tag for left-aligned platforms
+    public string rightPlatformTag = "RightPlatform"; // Tag for right-aligned platforms
+    public string middlePlatformTag = "MiddlePlatform"; // Tag for middle-aligned platforms
 
-    private List<GameObject> spawnedPlatforms = new List<GameObject>();
-    private Transform playerTransform;
+    private List<GameObject> spawnedPlatforms = new List<GameObject>(); // List of all currently spawned platforms
 
     private void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
-        for (int i = 0; i < platformCount; i++)
+        // Spawn initial platforms
+        for (int i = 0; i < maxPlatformCount; i++)
         {
             SpawnPlatform();
         }
@@ -24,21 +25,56 @@ public class PlatformManager : MonoBehaviour
 
     private void Update()
     {
-        if (playerTransform.position.y < spawnedPlatforms[0].transform.position.y + platformDistance)
+        // Check if the last platform in the list is too far from the character
+        if (spawnedPlatforms.Count > 0 && spawnedPlatforms[0].transform.position.y < characterTransform.position.y - platformSpawnDistance)
         {
+            Debug.Log("baþ");
+            // Remove the last platform from the list and destroy it
             Destroy(spawnedPlatforms[0]);
-            spawnedPlatforms.RemoveAt(4);
+            spawnedPlatforms.RemoveAt(0);
+            Debug.Log("orta");
+            // Spawn a new platform at the end
             SpawnPlatform();
+            Debug.Log("son");
         }
     }
 
     private void SpawnPlatform()
     {
-        int randomIndex = Random.Range(0, platformPrefabs.Length);
-        GameObject platform = Instantiate(platformPrefabs[randomIndex], transform);
-        float xPosition = Random.Range(-2.5f, 2.1f);
-        float yPosition = platformSpawnHeight + (spawnedPlatforms.Count * platformDistance);
-        platform.transform.position = new Vector2(xPosition, yPosition);
-        spawnedPlatforms.Add(platform);
+        // Randomly select a platform prefab
+        int platformIndex = Random.Range(0, platformPrefabs.Length);
+        GameObject platformPrefab = platformPrefabs[platformIndex];
+
+        // Instantiate the platform
+        GameObject newPlatform = Instantiate(platformPrefab, transform);
+
+        // Position the platform randomly
+        Vector3 platformPosition = new Vector3(Random.Range(-2f, 2f), 0f, 0f);
+
+        // Align the platform based on its tag
+        if (newPlatform.CompareTag(leftPlatformTag))
+        {
+            platformPosition.x = -1.875f;
+        }
+        else if (newPlatform.CompareTag(rightPlatformTag))
+        {
+            platformPosition.x = 1.54f;
+        }
+        else if (newPlatform.CompareTag(middlePlatformTag))
+        {
+            platformPosition.x = -0.4f;
+        }
+
+        // Position the platform relative to the last platform in the list (if there is one)
+        if (spawnedPlatforms.Count > 0)
+        {
+            Transform lastPlatformTransform = spawnedPlatforms[spawnedPlatforms.Count - 1].transform;
+            platformPosition.y = lastPlatformTransform.position.y - lastPlatformTransform.localScale.y * 0.5f - 1.25f;
+        }
+
+        newPlatform.transform.localPosition = platformPosition;
+
+        // Add the platform to the list of spawned platforms
+        spawnedPlatforms.Add(newPlatform);
     }
 }

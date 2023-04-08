@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - salivaBullet
   - wall
+  - LeftPlatform
+  - RightPlatform
+  - MiddlePlatform
   layers:
   - Default
   - TransparentFX
