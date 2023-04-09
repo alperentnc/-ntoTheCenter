@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3531104874600313606}
   m_Layer: 6
   m_Name: leftJumper
-  m_TagString: Platform
+  m_TagString: LeftPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3531104874600313659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.88, y: 4.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.41151568, y: 0.25084168, z: 1.1754123}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8053469941773878272, guid: 0e05f48dbe9a7bb4ca0409c882925d34, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8053469941773878277, guid: 0e05f48dbe9a7bb4ca0409c882925d34, type: 3}
       propertyPath: m_RootOrder
@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8053469941773878277, guid: 0e05f48dbe9a7bb4ca0409c882925d34, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9968
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8053469941773878277, guid: 0e05f48dbe9a7bb4ca0409c882925d34, type: 3}
       propertyPath: m_LocalScale.z

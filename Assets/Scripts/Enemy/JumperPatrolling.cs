@@ -28,7 +28,7 @@ public class JumperPatrolling : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Platform")
+        if (collision.gameObject.tag == "LeftPlatform" || collision.gameObject.tag == "RightPlatform" || collision.gameObject.tag == "MiddlePlatform")
         {
             platformTransform = collision.gameObject.transform;
             float platformHalfWidth = collision.gameObject.transform.localScale.x*2;
