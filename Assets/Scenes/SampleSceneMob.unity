@@ -711,6 +711,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -780,7 +788,7 @@ GameObject:
   - component: {fileID: 127899476}
   - component: {fileID: 127899475}
   - component: {fileID: 127899474}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &127899476
 CircleCollider2D:
@@ -940,7 +948,7 @@ GameObject:
   - component: {fileID: 132785386}
   - component: {fileID: 132785385}
   - component: {fileID: 132785384}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &132785386
 CircleCollider2D:
@@ -1098,10 +1106,10 @@ GameObject:
   - component: {fileID: 153574063}
   - component: {fileID: 153574062}
   - component: {fileID: 153574061}
-  - component: {fileID: 153574060}
   - component: {fileID: 153574059}
-  m_Layer: 0
-  m_Name: meteor (29)
+  - component: {fileID: 153574065}
+  m_Layer: 15
+  m_Name: fastMeteor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,21 +1136,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &153574060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153574058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad23612656878e243a89d80d20f7dfb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 2
-  animTimer: 0
-  anim: {fileID: 0}
 --- !u!58 &153574061
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1244,8 +1237,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &153574065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153574058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57771410347ecb244b0a67e9c4ac5876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 3
+  max: 5
 --- !u!1001 &157912948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1336,11 +1343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8053469941773878277, guid: 0e05f48dbe9a7bb4ca0409c882925d34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.61
+      value: -2.14
       objectReference: {fileID: 0}
     - target: {fileID: 8053469941773878277, guid: 0e05f48dbe9a7bb4ca0409c882925d34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.93
+      value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 8053469941773878277, guid: 0e05f48dbe9a7bb4ca0409c882925d34, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1398,7 +1405,7 @@ GameObject:
   - component: {fileID: 172262471}
   - component: {fileID: 172262470}
   - component: {fileID: 172262469}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1439,7 +1446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &172262471
 CircleCollider2D:
@@ -1558,7 +1565,7 @@ GameObject:
   - component: {fileID: 195430638}
   - component: {fileID: 195430637}
   - component: {fileID: 195430636}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1599,7 +1606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &195430638
 CircleCollider2D:
@@ -1702,7 +1709,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &201817992
 GameObject:
@@ -1716,10 +1723,10 @@ GameObject:
   - component: {fileID: 201817997}
   - component: {fileID: 201817996}
   - component: {fileID: 201817995}
-  - component: {fileID: 201817994}
   - component: {fileID: 201817993}
-  m_Layer: 0
-  m_Name: meteor (16)
+  - component: {fileID: 201817999}
+  m_Layer: 15
+  m_Name: fastMeteor5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1746,21 +1753,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &201817994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201817992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad23612656878e243a89d80d20f7dfb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 2
-  animTimer: 0
-  anim: {fileID: 0}
 --- !u!58 &201817995
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1862,8 +1854,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &201817999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201817992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57771410347ecb244b0a67e9c4ac5876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 11
+  max: 13
 --- !u!1001 &229318919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1871,6 +1877,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -2553,6 +2567,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -2662,6 +2684,14 @@ PrefabInstance:
     - target: {fileID: 4884878364908368123, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
       propertyPath: m_Name
       value: movingPlatform (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
@@ -2918,6 +2948,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -2987,7 +3025,7 @@ GameObject:
   - component: {fileID: 467752295}
   - component: {fileID: 467752294}
   - component: {fileID: 467752293}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3028,7 +3066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &467752295
 CircleCollider2D:
@@ -3145,10 +3183,10 @@ GameObject:
   - component: {fileID: 471499008}
   - component: {fileID: 471499007}
   - component: {fileID: 471499006}
-  - component: {fileID: 471499005}
   - component: {fileID: 471499004}
-  m_Layer: 0
-  m_Name: meteor (25)
+  - component: {fileID: 471499010}
+  m_Layer: 15
+  m_Name: fastMeteor2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3175,21 +3213,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &471499005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471499003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad23612656878e243a89d80d20f7dfb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 2
-  animTimer: 0
-  anim: {fileID: 0}
 --- !u!58 &471499006
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3291,8 +3314,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &471499010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471499003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57771410347ecb244b0a67e9c4ac5876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 5
+  max: 7
 --- !u!1001 &489863557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3348,6 +3385,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: movingPlatform (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
 --- !u!4 &489863558 stripped
@@ -3369,7 +3414,7 @@ GameObject:
   - component: {fileID: 492793008}
   - component: {fileID: 492793007}
   - component: {fileID: 492793006}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3410,7 +3455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &492793008
 CircleCollider2D:
@@ -3513,7 +3558,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -3691,6 +3736,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -4180,6 +4233,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 3769374253920474503, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -4767,6 +4828,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -4893,7 +4962,7 @@ GameObject:
   - component: {fileID: 638340179}
   - component: {fileID: 638340178}
   - component: {fileID: 638340177}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4934,7 +5003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &638340179
 CircleCollider2D:
@@ -5461,6 +5530,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -5523,6 +5600,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -5632,6 +5717,14 @@ PrefabInstance:
     - target: {fileID: 4884878364908368123, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
       propertyPath: m_Name
       value: movingPlatform (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
@@ -5955,7 +6048,7 @@ GameObject:
   - component: {fileID: 802909603}
   - component: {fileID: 802909602}
   - component: {fileID: 802909601}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5996,7 +6089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &802909603
 CircleCollider2D:
@@ -6099,7 +6192,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &804902908
 GameObject:
@@ -6115,7 +6208,7 @@ GameObject:
   - component: {fileID: 804902911}
   - component: {fileID: 804902910}
   - component: {fileID: 804902909}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6156,7 +6249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &804902911
 CircleCollider2D:
@@ -6329,6 +6422,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -6513,6 +6614,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 3769374253920474503, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
       propertyPath: m_RootOrder
       value: 39
@@ -6575,6 +6684,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -6644,7 +6761,7 @@ GameObject:
   - component: {fileID: 900302075}
   - component: {fileID: 900302074}
   - component: {fileID: 900302073}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6685,7 +6802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &900302075
 CircleCollider2D:
@@ -6804,7 +6921,7 @@ GameObject:
   - component: {fileID: 906050068}
   - component: {fileID: 906050067}
   - component: {fileID: 906050066}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6845,7 +6962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &906050068
 CircleCollider2D:
@@ -7068,6 +7185,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 3769374253920474503, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
       propertyPath: m_RootOrder
       value: 42
@@ -7138,6 +7263,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 3769374253920474503, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -7247,6 +7380,14 @@ PrefabInstance:
     - target: {fileID: 4884878364908368123, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
       propertyPath: m_Name
       value: movingPlatform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
@@ -7397,6 +7538,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -7459,6 +7608,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -7791,6 +7948,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 40
@@ -7860,7 +8025,7 @@ GameObject:
   - component: {fileID: 1032341317}
   - component: {fileID: 1032341316}
   - component: {fileID: 1032341315}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7901,7 +8066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1032341317
 CircleCollider2D:
@@ -8310,6 +8475,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -8569,10 +8742,10 @@ GameObject:
   - component: {fileID: 1206011459}
   - component: {fileID: 1206011458}
   - component: {fileID: 1206011457}
-  - component: {fileID: 1206011456}
   - component: {fileID: 1206011455}
-  m_Layer: 0
-  m_Name: meteor (22)
+  - component: {fileID: 1206011461}
+  m_Layer: 15
+  m_Name: fastMeteor3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8599,21 +8772,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &1206011456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206011454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad23612656878e243a89d80d20f7dfb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 2
-  animTimer: 0
-  anim: {fileID: 0}
 --- !u!58 &1206011457
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8717,6 +8875,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206011461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206011454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57771410347ecb244b0a67e9c4ac5876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 7
+  max: 9
 --- !u!1 &1206652330
 GameObject:
   m_ObjectHideFlags: 0
@@ -8927,6 +9099,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -8989,6 +9169,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -9191,6 +9379,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -9260,7 +9456,7 @@ GameObject:
   - component: {fileID: 1316754855}
   - component: {fileID: 1316754854}
   - component: {fileID: 1316754853}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9301,7 +9497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1316754855
 CircleCollider2D:
@@ -9404,7 +9600,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1321736949
 PrefabInstance:
@@ -9413,6 +9609,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -9482,7 +9686,7 @@ GameObject:
   - component: {fileID: 1332379141}
   - component: {fileID: 1332379140}
   - component: {fileID: 1332379139}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9523,7 +9727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1332379141
 CircleCollider2D:
@@ -9635,6 +9839,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -9704,7 +9916,7 @@ GameObject:
   - component: {fileID: 1372562804}
   - component: {fileID: 1372562803}
   - component: {fileID: 1372562802}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9745,7 +9957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1372562804
 CircleCollider2D:
@@ -10127,6 +10339,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -10357,6 +10577,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -10616,7 +10844,7 @@ GameObject:
   - component: {fileID: 1493534484}
   - component: {fileID: 1493534483}
   - component: {fileID: 1493534482}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10657,7 +10885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1493534484
 CircleCollider2D:
@@ -10769,6 +10997,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -10971,10 +11207,10 @@ GameObject:
   - component: {fileID: 1536904179}
   - component: {fileID: 1536904178}
   - component: {fileID: 1536904177}
-  - component: {fileID: 1536904176}
   - component: {fileID: 1536904175}
-  m_Layer: 0
-  m_Name: meteor (28)
+  - component: {fileID: 1536904181}
+  m_Layer: 15
+  m_Name: fastMeteor4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11001,21 +11237,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &1536904176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536904174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad23612656878e243a89d80d20f7dfb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 2
-  animTimer: 0
-  anim: {fileID: 0}
 --- !u!58 &1536904177
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11117,8 +11338,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1536904181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536904174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57771410347ecb244b0a67e9c4ac5876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 9
+  max: 11
 --- !u!1001 &1540790273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11126,6 +11361,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -11310,6 +11553,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -11420,6 +11671,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: movingPlatform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
 --- !u!4 &1570431879 stripped
@@ -11441,7 +11700,7 @@ GameObject:
   - component: {fileID: 1584613230}
   - component: {fileID: 1584613229}
   - component: {fileID: 1584613228}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11482,7 +11741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1584613230
 CircleCollider2D:
@@ -11734,10 +11993,10 @@ GameObject:
   - component: {fileID: 1587574460}
   - component: {fileID: 1587574459}
   - component: {fileID: 1587574458}
-  - component: {fileID: 1587574457}
   - component: {fileID: 1587574456}
-  m_Layer: 0
-  m_Name: meteor (19)
+  - component: {fileID: 1587574462}
+  m_Layer: 15
+  m_Name: fastMeteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11764,21 +12023,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &1587574457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587574455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad23612656878e243a89d80d20f7dfb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 2
-  animTimer: 0
-  anim: {fileID: 0}
 --- !u!58 &1587574458
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11880,8 +12124,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1587574462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587574455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57771410347ecb244b0a67e9c4ac5876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 1
+  max: 3
 --- !u!4 &1597414424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3769374253920474503, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
@@ -11901,7 +12159,7 @@ GameObject:
   - component: {fileID: 1604442382}
   - component: {fileID: 1604442381}
   - component: {fileID: 1604442380}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11942,7 +12200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1604442382
 CircleCollider2D:
@@ -12375,6 +12633,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -12475,7 +12741,7 @@ GameObject:
   - component: {fileID: 1680649463}
   - component: {fileID: 1680649462}
   - component: {fileID: 1680649461}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12516,7 +12782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1680649463
 CircleCollider2D:
@@ -12793,7 +13059,7 @@ GameObject:
   - component: {fileID: 1726742421}
   - component: {fileID: 1726742420}
   - component: {fileID: 1726742419}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12834,7 +13100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1726742421
 CircleCollider2D:
@@ -12953,7 +13219,7 @@ GameObject:
   - component: {fileID: 1733187489}
   - component: {fileID: 1733187488}
   - component: {fileID: 1733187487}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12994,7 +13260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1733187489
 CircleCollider2D:
@@ -13248,7 +13514,7 @@ GameObject:
   - component: {fileID: 1768633409}
   - component: {fileID: 1768633408}
   - component: {fileID: 1768633407}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13289,7 +13555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1768633409
 CircleCollider2D:
@@ -13392,7 +13658,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1774753699
 PrefabInstance:
@@ -13401,6 +13667,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 3769374253920474503, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -13463,6 +13737,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 3769374253920474503, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -13532,7 +13814,7 @@ GameObject:
   - component: {fileID: 1779764982}
   - component: {fileID: 1779764981}
   - component: {fileID: 1779764980}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13573,7 +13855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1779764982
 CircleCollider2D:
@@ -13733,6 +14015,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: movingPlatform (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
 --- !u!4 &1803291540 stripped
@@ -13747,6 +14037,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -14257,7 +14555,7 @@ GameObject:
   - component: {fileID: 1963168100}
   - component: {fileID: 1963168099}
   - component: {fileID: 1963168098}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: meteor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14298,7 +14596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
-  animTimer: 0
+  meteorSpeed: 1
   anim: {fileID: 0}
 --- !u!58 &1963168100
 CircleCollider2D:
@@ -14410,6 +14708,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 3769374253920474503, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -15005,6 +15311,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769374253920474501, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 3769374253920474503, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -15109,6 +15423,14 @@ PrefabInstance:
     - target: {fileID: 4884878364908368123, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
       propertyPath: m_Name
       value: movingPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884878364908368126, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048f35a5f57fb2e47948a09068dbb63d, type: 3}
@@ -15280,6 +15602,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632807547724574960, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7632807547724574962, guid: 41e1cbf3f3cadfa44a3e6a2a1dcc9b29, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -15337,6 +15667,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343243256}
     m_Modifications:
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861214875453283203, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 31735
+      objectReference: {fileID: 0}
     - target: {fileID: 7861214875453283260, guid: 7a9c777c1f38d804394b58ab256619e6, type: 3}
       propertyPath: m_RootOrder
       value: 0

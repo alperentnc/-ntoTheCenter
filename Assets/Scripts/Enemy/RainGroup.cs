@@ -8,8 +8,7 @@ public class RainGroup : MonoBehaviour
     Rigidbody2D rb;
     PlayerController player;
     PlayerHealth playerHealth;
-    public float timer;
-    public float animTimer;
+    public float timer,meteorSpeed;
     public Animator anim;
     void Start()
     {
@@ -30,7 +29,7 @@ public class RainGroup : MonoBehaviour
             if (timer >= 2)
             {
                 anim.SetBool("isStarting", true);
-                rb.velocity = new Vector2(0, -1);
+                rb.velocity = new Vector2(0, -meteorSpeed);
             }
 
         }
@@ -45,7 +44,6 @@ public class RainGroup : MonoBehaviour
         else if(collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerHealth>().health = 0;
-
         }
     }
 }
