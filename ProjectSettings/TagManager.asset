@@ -11,6 +11,9 @@ TagManager:
   - LeftPlatform
   - RightPlatform
   - MiddlePlatform
+  - LeftSlow
+  - MidSlow
+  - RightSlow
   layers:
   - Default
   - TransparentFX

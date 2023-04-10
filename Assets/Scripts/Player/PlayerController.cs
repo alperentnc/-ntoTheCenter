@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask ground;
     public Animator animator;
     private float slowTimer = 3;
-    private bool slow;
+    public bool slow,slowPlatform;
     public float speed;
     public float slowSpeed;
     private bool isMoving;
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<CapsuleCollider2D>();
         slow = false;
+        slowPlatform = false;
     }
 
     void Update()
@@ -42,6 +43,16 @@ public class PlayerController : MonoBehaviour
         {
             slowTimer = 3;
             slow = false;
+        }
+        if (slowPlatform == true)
+        {
+            speed = 1.5f;
+            if (!IsGrounded())
+            {
+                speed = 3;
+                slowPlatform = false;
+            }
+            
         }
         if (Input.touchCount > 0)
         {
@@ -158,7 +169,8 @@ public class PlayerController : MonoBehaviour
             else
             {
                 isJumping = false;
-            }        }
+            }        
+        }
     }
 
     private bool IsGrounded()
@@ -171,8 +183,16 @@ public class PlayerController : MonoBehaviour
         {
             slow = true;
         }
+        
     }
-    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("LeftSlow") || collision.gameObject.CompareTag("RightSlow") || collision.gameObject.CompareTag("MidSlow"))
+        {
+            slowPlatform = true;
+        }
+    }
+
 }
 
 
