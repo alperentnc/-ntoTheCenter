@@ -19,6 +19,7 @@ public class PlatformManager : MonoBehaviour
         // Spawn initial platforms
         for (int i = 0; i < maxPlatformCount; i++)
         {
+            
             SpawnPlatform();
         }
     }
@@ -26,16 +27,15 @@ public class PlatformManager : MonoBehaviour
     private void Update()
     {
         // Check if the last platform in the list is too far from the character
-        if (spawnedPlatforms.Count > 0 && spawnedPlatforms[0].transform.position.y < characterTransform.position.y - platformSpawnDistance)
+        if (spawnedPlatforms.Count > 0 && -spawnedPlatforms[0].transform.position.y < -characterTransform.position.y - platformSpawnDistance)
         {
-            Debug.Log("baþ");
+
             // Remove the last platform from the list and destroy it
             Destroy(spawnedPlatforms[0]);
             spawnedPlatforms.RemoveAt(0);
-            Debug.Log("orta");
             // Spawn a new platform at the end
             SpawnPlatform();
-            Debug.Log("son");
+            
         }
     }
 
@@ -49,22 +49,22 @@ public class PlatformManager : MonoBehaviour
         GameObject newPlatform = Instantiate(platformPrefab, transform);
 
         // Position the platform randomly
-        Vector3 platformPosition = new Vector3(Random.Range(-2f, 2f), 0f, 0f);
+        Vector3 platformPosition = new Vector3(Random.Range(-2f, 2f), 3.75f, 0f);
 
         // Align the platform based on its tag
         if (newPlatform.CompareTag(leftPlatformTag))
         {
             platformPosition.x = -1.875f;
         }
-        else if (newPlatform.CompareTag(rightPlatformTag))
+        if (newPlatform.CompareTag(rightPlatformTag))
         {
             platformPosition.x = 1.54f;
         }
-        else if (newPlatform.CompareTag(middlePlatformTag))
+        if (newPlatform.CompareTag(middlePlatformTag))
         {
-            platformPosition.x = -0.4f;
+            platformPosition.x = Random.Range(-.6f, .6f);
         }
-
+        
         // Position the platform relative to the last platform in the list (if there is one)
         if (spawnedPlatforms.Count > 0)
         {

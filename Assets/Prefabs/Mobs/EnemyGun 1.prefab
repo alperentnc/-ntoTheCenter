@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.6
   direction: 1
-  animator: {fileID: 0}
+  animator: {fileID: 2813658542559145866}
 --- !u!95 &2813658542559145866
 Animator:
   serializedVersion: 5

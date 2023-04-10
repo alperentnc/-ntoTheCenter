@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7632807547724574963
+--- !u!1 &3769374253920474504
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7632807547724574962}
-  - component: {fileID: 7632807547724574967}
-  - component: {fileID: 7632807547724574960}
-  - component: {fileID: 7632807547724574961}
+  - component: {fileID: 3769374253920474503}
+  - component: {fileID: 3769374253920474500}
+  - component: {fileID: 3769374253920474501}
+  - component: {fileID: 3769374253920474502}
   m_Layer: 6
-  m_Name: rightPlatform
-  m_TagString: RightPlatform
+  m_Name: -MiddlePlatform
+  m_TagString: MiddlePlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7632807547724574962
+--- !u!4 &3769374253920474503
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7632807547724574963}
+  m_GameObject: {fileID: 3769374253920474504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.54, y: 0, z: 0}
-  m_LocalScale: {x: 0.5068212, y: 0.33657935, z: 1.1754123}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.50379366, y: 0.31601033, z: 1.1754123}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7632807547724574967
+--- !u!212 &3769374253920474500
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7632807547724574963}
+  m_GameObject: {fileID: 3769374253920474504}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf760ac1cd041d14fab69b821710b589, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57b3eea1edf89294db14f46304a5e144, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,13 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!251 &7632807547724574960
+--- !u!251 &3769374253920474501
 PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7632807547724574963}
+  m_GameObject: {fileID: 3769374253920474504}
   m_Enabled: 1
   m_UseColliderMask: 1
   m_ColliderMask:
@@ -105,13 +105,13 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!68 &7632807547724574961
+--- !u!68 &3769374253920474502
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7632807547724574963}
+  m_GameObject: {fileID: 3769374253920474504}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -121,9 +121,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.0724716, y: -0.0615163}
-  - {x: 0.62502694, y: -0.1496695}
-  - {x: 2.8375964, y: -0.19178577}
+  - {x: -2.7955124, y: 0.06430976}
+  - {x: 2.5439003, y: 0.07493991}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
