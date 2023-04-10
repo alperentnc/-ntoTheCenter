@@ -10,15 +10,17 @@ public class fastMeteor : MonoBehaviour
     PlayerHealth playerHealth;
     public float min,max;
     private float timer, meteorStartTimer;
-    public GameObject symbol;
+    public GameObject symbol,meteorPrefab;
     GameObject symbolObj;
     public Camera cam;
     public bool symbolBool=false;
     float symbolTimer;
+    Vector2 startPos;
     void Start()
     {
         meteorStartTimer = Random.Range(min, max);
         rb = GetComponent<Rigidbody2D>();
+        startPos = new Vector2(transform.position.x, transform.position.y);
     }
 
     // Update is called once per frame
@@ -35,6 +37,8 @@ public class fastMeteor : MonoBehaviour
         }
         if (transform.position.y <= cam.transform.position.y - 8)
         {
+            Instantiate(meteorPrefab, new Vector2(startPos.x, cam.transform.position.y+15), Quaternion.identity);
+            timer = 0;
             Destroy(this.gameObject);
         }
         if (PlayerController.meteorStarter == true) 
@@ -57,6 +61,7 @@ public class fastMeteor : MonoBehaviour
         else if (transform.position.y < cam.transform.position.y+7)
         {
             Destroy(symbolObj.gameObject);
+            symbolBool = false;
         }
 
     }

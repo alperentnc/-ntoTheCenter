@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aedf97f3ed8e77d4eb588f207a43ebe6
+guid: 180f4fbd88ee76a4e94f4c7c664d6ce8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheets-jump_0
+      name: dusme_2
       rect:
         serializedVersion: 2
-        x: 116
-        y: 68
-        width: 514
-        height: 585
+        x: 986
+        y: 653
+        width: 1822
+        height: 2371
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0687e9ad5886cf64191e00e4e0d007dd
-      internalID: 600541822
+      spriteID: 40d02c4d1da6b0649a86fa948707749d
+      internalID: 629808784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheets-jump_1
+      name: dusme_4
       rect:
         serializedVersion: 2
-        x: 812
-        y: 83
-        width: 488
-        height: 630
+        x: 3845
+        y: 659
+        width: 1459
+        height: 2380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc297edad8d81bc448aa0775c0b070c0
-      internalID: -2119368954
+      spriteID: 132a38e7c6955864697942a89014f8a8
+      internalID: 988713542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheets-jump_2
+      name: dusme_5
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 41
-        width: 523
-        height: 655
+        x: 6346
+        y: 665
+        width: 1805
+        height: 2341
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4ba0e39bd89624e800799b4e281d66
-      internalID: 2104396594
+      spriteID: 00b6bce0f6e10da4f98f7a47c3a06941
+      internalID: -1082324304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheets-jump_3
+      name: dusme_11
       rect:
         serializedVersion: 2
-        x: 2119
-        y: 179
-        width: 589
-        height: 615
+        x: 8973
+        y: 724
+        width: 1799
+        height: 2243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +206,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6683d3f950757dd479442bb3f2ce7ae4
-      internalID: 1275652599
+      spriteID: f39f9740716787740b0bd6380d7f3e54
+      internalID: -667643836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dusme_16
+      rect:
+        serializedVersion: 2
+        x: 10757
+        y: 2110
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1a42a7e2fc1a14585a7d101ea84f62
+      internalID: 1211064504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dusme_20
+      rect:
+        serializedVersion: 2
+        x: 5111
+        y: 644
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352f017f9c769104ebb660c5aae2c11a
+      internalID: -856807598
       vertices: []
       indices: 
       edges: []
@@ -223,10 +265,29 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spritesheets-jump_1: -2119368954
-      spritesheets-jump_0: 600541822
-      spritesheets-jump_3: 1275652599
-      spritesheets-jump_2: 2104396594
+      dusme_18: 1614829576
+      dusme_4: 988713542
+      dusme_22: 1135455816
+      dusme_0: 1140263251
+      dusme_6: -1343218184
+      dusme_14: 16456122
+      dusme_12: -78180721
+      dusme_15: -1293577992
+      dusme_21: 192202385
+      dusme_17: -1017820636
+      dusme_10: -249919744
+      dusme_13: 460010113
+      dusme_20: -856807598
+      dusme_9: -1678328769
+      dusme_2: 629808784
+      dusme_3: -252657839
+      dusme_19: -940918333
+      dusme_7: 1551744589
+      dusme_16: 1211064504
+      dusme_1: -532395845
+      dusme_8: 1637571476
+      dusme_5: -1082324304
+      dusme_11: -667643836
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
