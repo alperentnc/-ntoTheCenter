@@ -62,7 +62,7 @@ public class PlatformManager : MonoBehaviour
         }
         if (newPlatform.CompareTag(middlePlatformTag))
         {
-            platformPosition.x = Random.Range(-.6f, .6f);
+            platformPosition.x = Random.Range(-2f, 1.2f);
         }
         
         // Position the platform relative to the last platform in the list (if there is one)
