@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5374809718222455447}
   - component: {fileID: -480252060848510383}
   m_Layer: 8
-  m_Name: Player
+  m_Name: Player Endless
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   minSwipeDistance: 20
   jumpForce: 8
   jumpTime: 0.5
+  isJumping: 0
 --- !u!95 &5374809718222455446
 Animator:
   serializedVersion: 5
@@ -196,4 +197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5980248af28070469f4b7a852e5468e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  HighscoreText: {fileID: 0}
+  highscore: 0
+  firstPos: {x: 0, y: 0}
+  yDifferance: 0
+  firstPosY: 0
+  playerController: {fileID: 0}
