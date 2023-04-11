@@ -38,7 +38,7 @@ public class RainGroup : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag=="MiddlePlatform" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "LeftPlatform" || collision.gameObject.tag == "RightPlatform" ||
-            collision.gameObject.tag == "LeftSlow" || collision.gameObject.tag == "RightSlow" || collision.gameObject.tag == "MiddleSlow")
+            collision.gameObject.tag == "LeftSlow" || collision.gameObject.tag == "RightSlow" || collision.gameObject.tag == "MidSlow")
         {
             Destroy(collision.gameObject);
         }
@@ -47,4 +47,5 @@ public class RainGroup : MonoBehaviour
             collision.gameObject.GetComponent<PlayerHealth>().health = 0;
         }
     }
+
 }

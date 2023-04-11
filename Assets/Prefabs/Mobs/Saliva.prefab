@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7283011019552451056}
   - component: {fileID: 4517619363053476036}
   - component: {fileID: 7152029053273738102}
-  - component: {fileID: -6379062390341587457}
+  - component: {fileID: 2977496410174313869}
   - component: {fileID: -5095275955380051288}
   - component: {fileID: 4833221643587965169}
   m_Layer: 15
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8887242015602702739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.4379, y: 0.4342, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 2e7d66ebf740f334e9854f2d091ae86a, type: 3}
-  m_Color: {r: 0.30847597, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 902631367, guid: 413e7ed3e8dc10e4aaddbcfe0d920031, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -109,7 +109,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &-6379062390341587457
+--- !u!114 &2977496410174313869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,11 +118,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8887242015602702739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf644bc0a8aa632458a8b796d27e8b99, type: 3}
+  m_Script: {fileID: 11500000, guid: 006bf525c1b459641ba8299d0456f067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   force: 5
+  animator: {fileID: 4833221643587965169}
 --- !u!58 &-5095275955380051288
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -136,9 +137,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.037238747, y: 0.03930755}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.14209293
 --- !u!95 &4833221643587965169
 Animator:
   serializedVersion: 5
@@ -149,7 +150,7 @@ Animator:
   m_GameObject: {fileID: 8887242015602702739}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 783504c1ccd46c9499768a343316028c, type: 2}
+  m_Controller: {fileID: 9100000, guid: e3721ce795832b1458b836e2817c6daa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
