@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public float minSwipeDistance;
     public float jumpForce = 2f;
     public float jumpTime = 0.5f;
-    private bool isJumping;
+    public bool isJumping;
     private float jumpTimer;
     public static bool meteorStarter=false;
 
@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, ground);
     }

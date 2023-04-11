@@ -1519,6 +1519,9 @@ MonoBehaviour:
   - {fileID: 3769374253920474504, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
   - {fileID: 3769374253920474504, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
   - {fileID: 3769374253920474504, guid: 523b8d01a4849ab4397b05480ed2ad9e, type: 3}
+  - {fileID: 1820808437376460984, guid: c232cdf3fddb89c4e9a1f50c800a5d6d, type: 3}
+  - {fileID: 4706676376810424350, guid: 4568764d770b18244b218a7a8bfa7e13, type: 3}
+  - {fileID: 2488219929665544866, guid: d95c9fcb33be20b44ab1f3f9f3a25ca2, type: 3}
   characterTransform: {fileID: 406990440}
   platformSpawnDistance: 18
   maxPlatformCount: 50
@@ -3191,10 +3194,10 @@ RectTransform:
   m_Father: {fileID: 1130015070}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -333.18, y: 770.74}
-  m_SizeDelta: {x: 161.64, y: 73.491}
+  m_AnchorMin: {x: 0, y: 0.90887195}
+  m_AnchorMax: {x: 0.19431524, y: 0.9506051}
+  m_AnchoredPosition: {x: 0.32000732, y: 0.23999023}
+  m_SizeDelta: {x: 0.6399994, y: -1.5090332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &857476207
 CanvasRenderer:
@@ -3226,11 +3229,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b8af58820f69b474e8f63dc40a702fbc, type: 3}
-    m_FontSize: 40
-    m_FontStyle: 0
+    m_FontSize: 60
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -7051,7 +7054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455453, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455453, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: m_FlipY

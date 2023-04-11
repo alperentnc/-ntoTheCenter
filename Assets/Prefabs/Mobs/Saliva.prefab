@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6379062390341587457}
   - component: {fileID: -5095275955380051288}
   - component: {fileID: 4833221643587965169}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Saliva
   m_TagString: salivaBullet
   m_Icon: {fileID: 0}
