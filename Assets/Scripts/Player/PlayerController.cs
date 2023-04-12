@@ -37,6 +37,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (slowPlatform == true)
+        {
+            speed = 1.5f;
+            if (!IsGrounded())
+            {
+                speed = 3;
+                slowPlatform = false;
+            }
+
+        }
         if (slow)
         {
             slowTimer -= Time.deltaTime;
@@ -46,6 +56,10 @@ public class PlayerController : MonoBehaviour
             slowTimer = 3;
             slow = false;
         }
+        if (slowTimer > 0 && slowTimer < 3 && slow)
+        {
+            speed = 1.5f;
+        }
         if (stun)
         {
             stunTimer -= Time.deltaTime;
@@ -54,27 +68,13 @@ public class PlayerController : MonoBehaviour
         {
             stunTimer = 1.2f;
             stun = false;
-        }
-        if (slowPlatform == true)
-        {
-            speed = 1.5f;
-            if (!IsGrounded())
-            {
-                speed = 3;
-                slowPlatform = false;
-            }
-            
-        }
+        } 
         if (stunTimer > 0 && stunTimer < 1.2f && stun)
         {
             speed = 0;
             animator.SetBool("isWalking", false);
         }
-        else if (slowTimer > 0 && slowTimer < 3 && slow)
-        {
-            speed = 1.5f;
-        }
-        else
+        if(!slow && !stun && !slowPlatform)
         {
             speed = 3;
         }
