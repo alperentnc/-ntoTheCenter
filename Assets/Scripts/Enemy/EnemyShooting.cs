@@ -18,6 +18,7 @@ public class EnemyShooting : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         enemyPatrolling = gameObject.GetComponent<EnemyPatrolling>();
         animator = gameObject.GetComponent<Animator>();
+        
     }
 
     

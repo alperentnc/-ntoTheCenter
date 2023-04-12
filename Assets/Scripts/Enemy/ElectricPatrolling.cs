@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrolling : MonoBehaviour
+public class ElectricPatrolling : MonoBehaviour
 {
     public float speed;
     private float leftBound;
@@ -13,12 +13,8 @@ public class EnemyPatrolling : MonoBehaviour
 
     public float direction = 1.0f;
     private Vector3 scale;
-    public Animator animator;
     void Start()
     {
-
-        enemyShooting = gameObject.GetComponent<EnemyShooting>();
-        animator = gameObject.GetComponent<Animator>();
 
     }
 
@@ -45,17 +41,17 @@ public class EnemyPatrolling : MonoBehaviour
         if (transform.position.x > rightBound)
         {
             direction = -1.0f;
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
-            transform.GetChild(0).localPosition = new Vector3(-0.4f, transform.GetChild(0).localPosition.y, transform.GetChild(0).localPosition.z);
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            transform.GetChild(0).localPosition = new Vector3(-1, transform.GetChild(0).localPosition.y, transform.GetChild(0).localPosition.z);
 
         }
         else if (transform.position.x < leftBound)
         {
             direction = 1.0f;
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
-            transform.GetChild(0).localPosition = new Vector3(0.4f, transform.GetChild(0).localPosition.y, transform.GetChild(0).localPosition.z);
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            transform.GetChild(0).localPosition = new Vector3(1, transform.GetChild(0).localPosition.y, transform.GetChild(0).localPosition.z);
         }
-        else
+        //else
         {
         }
     }

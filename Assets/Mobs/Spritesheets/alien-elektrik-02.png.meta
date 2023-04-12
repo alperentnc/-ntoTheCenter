@@ -127,7 +127,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: alien-elektrik-02_0
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 74
+        width: 52
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08f04db4a7bbd541abd2dee554bac86
+      internalID: 1038519280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien-elektrik-02_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 77
+        width: 89
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cb994d98b244b4888c1db9ed803a20
+      internalID: 618502851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien-elektrik-02_3
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 75
+        width: 116
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8062165c6da614d45af90da2159fe30a
+      internalID: -334389002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien-elektrik-02_4
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 75
+        width: 82
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b23e353b9de72488dfca029618b399
+      internalID: 1270938497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien-elektrik-02_24
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 72
+        width: 80
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d1c03d798300a4a9092b4cf8dc520f
+      internalID: 720391425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien-elektrik-02_26
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 72
+        width: 61
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6df36ee331779b4393a9de7d94c7abe
+      internalID: 317839437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +264,41 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alien-elektrik-02_9: 1665016389
+      alien-elektrik-02_22: -615342295
+      alien-elektrik-02_7: -963286770
+      alien-elektrik-02_28: 417529424
+      alien-elektrik-02_21: 1549080779
+      alien-elektrik-02_17: 1958993509
+      alien-elektrik-02_5: -1015268285
+      alien-elektrik-02_10: 49399486
+      alien-elektrik-02_16: -213520139
+      alien-elektrik-02_0: 1038519280
+      alien-elektrik-02_27: 1502409627
+      alien-elektrik-02_29: 1623647857
+      alien-elektrik-02_33: 2088195281
+      alien-elektrik-02_14: -463303776
+      alien-elektrik-02_18: -657750840
+      alien-elektrik-02_30: -1752998107
+      alien-elektrik-02_8: 473515859
+      alien-elektrik-02_13: -647293368
+      alien-elektrik-02_12: -139793898
+      alien-elektrik-02_11: 1225499232
+      alien-elektrik-02_3: -334389002
+      alien-elektrik-02_25: 2049506825
+      alien-elektrik-02_15: -185565515
+      alien-elektrik-02_20: 292704695
+      alien-elektrik-02_32: -1671099322
+      alien-elektrik-02_26: 317839437
+      alien-elektrik-02_24: 720391425
+      alien-elektrik-02_6: -265137294
+      alien-elektrik-02_19: 1508321362
+      alien-elektrik-02_23: -1385000340
+      alien-elektrik-02_31: -2109956731
+      alien-elektrik-02_4: 1270938497
+      alien-elektrik-02_1: 618502851
+      alien-elektrik-02_2: 2083773579
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
