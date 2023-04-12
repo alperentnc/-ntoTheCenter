@@ -15,6 +15,7 @@ TagManager:
   - MidSlow
   - RightSlow
   - gunBullet
+  - electricBullet
   layers:
   - Default
   - TransparentFX

@@ -35,13 +35,13 @@ public class ElectricShooting : MonoBehaviour
             if (transform.position.x <= player.transform.position.x)
             {
                 gameObject.GetComponent<SpriteRenderer>().flipX = false;
-                transform.GetChild(0).localPosition = new Vector3(1, transform.GetChild(0).localPosition.y, transform.GetChild(0).localPosition.z);
+                transform.GetChild(0).localPosition = new Vector3(1.8f, transform.GetChild(0).localPosition.y, transform.GetChild(0).localPosition.z);
                 
             }
             else
             {
                 gameObject.GetComponent<SpriteRenderer>().flipX = true;
-                transform.GetChild(0).localPosition = new Vector3(-1, transform.GetChild(0).localPosition.y, transform.GetChild(0).localPosition.z);
+                transform.GetChild(0).localPosition = new Vector3(-1.8f, transform.GetChild(0).localPosition.y, transform.GetChild(0).localPosition.z);
             }
             timer += Time.deltaTime;
             if (timer > bulletFrequency)

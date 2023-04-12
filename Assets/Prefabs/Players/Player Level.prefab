@@ -144,10 +144,11 @@ MonoBehaviour:
   animator: {fileID: 5374809718222455446}
   slow: 0
   slowPlatform: 0
+  stun: 0
   speed: 0
   slowSpeed: 0
   minSwipeDistance: 20
-  jumpForce: 8
+  jumpForce: 5
   jumpTime: 0.5
   isJumping: 0
 --- !u!95 &5374809718222455446
