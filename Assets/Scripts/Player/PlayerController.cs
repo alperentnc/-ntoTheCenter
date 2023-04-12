@@ -12,9 +12,10 @@ public class PlayerController : MonoBehaviour
     private float stunTimer = 1.2f;
     public bool slow,slowPlatform,stun;
     public float speed;
-    public float slowSpeed;
     private bool isMoving;
-    
+    public float normalSpeed;
+    public float slowSpeed;
+
     private Vector2 direction;
 
     private Vector2 initialTouchPos;
@@ -39,10 +40,10 @@ public class PlayerController : MonoBehaviour
     {
         if (slowPlatform == true)
         {
-            speed = 1.5f;
+            speed = slowSpeed;
             if (!IsGrounded())
             {
-                speed = 3;
+                speed = normalSpeed;
                 slowPlatform = false;
             }
 
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour
         }
         if (slowTimer > 0 && slowTimer < 3 && slow)
         {
-            speed = 1.5f;
+            speed = slowSpeed;
         }
         if (stun)
         {
@@ -76,7 +77,7 @@ public class PlayerController : MonoBehaviour
         }
         if(!slow && !stun && !slowPlatform)
         {
-            speed = 3;
+            speed = normalSpeed;
         }
         if (Input.touchCount > 0)
         {

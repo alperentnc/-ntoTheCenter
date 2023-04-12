@@ -146,7 +146,8 @@ MonoBehaviour:
   slowPlatform: 0
   stun: 0
   speed: 0
-  slowSpeed: 0
+  normalSpeed: 3
+  slowSpeed: 1.5
   minSwipeDistance: 20
   jumpForce: 5
   jumpTime: 0.5
