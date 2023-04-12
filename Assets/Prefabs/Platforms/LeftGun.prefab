@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4570097b576055841b65b20b1d61ff69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8887242015602702739, guid: 6418f64deb62cdf4098a94c52d968599, type: 3}
+  bullet: {fileID: 8887242015602702739, guid: 84255b1533f74014abebd2ba7b94f29d, type: 3}
   bulletPos: {fileID: 6971943183046485488}
   bulletFrequency: 1
   fireDistance: 4

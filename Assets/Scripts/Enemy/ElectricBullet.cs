@@ -9,6 +9,7 @@ public class ElectricBullet : MonoBehaviour
     public float force;
     private float timer, animTimer;
     public Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,11 +26,12 @@ public class ElectricBullet : MonoBehaviour
         //{
         //    animator.SetBool("isStop", true);
         //}
-        timer += Time.deltaTime;
-        if (timer > 5)
-        {
-            Destroy(gameObject);
-        }
+        //timer += Time.deltaTime;
+        //if (timer > 5)
+        //{
+        //    Destroy(gameObject);
+        //}
+        Destroy(gameObject, 0.3f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -37,11 +39,11 @@ public class ElectricBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealth>().health -= 5;
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
-        else if (collision.gameObject.CompareTag("Platform"))
-        {
-            Destroy(gameObject);
-        }
+        //else if (collision.gameObject.CompareTag("Platform"))
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }

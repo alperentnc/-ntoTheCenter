@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask ground;
     public Animator animator;
     private float slowTimer = 3;
-    public bool slow,slowPlatform;
+    private float stunTimer = 1.2f;
+    public bool slow,slowPlatform,stun;
     public float speed;
     public float slowSpeed;
     private bool isMoving;
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<CapsuleCollider2D>();
         slow = false;
+        stun = false;
         slowPlatform = false;
     }
 
@@ -44,6 +46,15 @@ public class PlayerController : MonoBehaviour
             slowTimer = 3;
             slow = false;
         }
+        if (stun)
+        {
+            stunTimer -= Time.deltaTime;
+        }
+        if (stunTimer <= 0)
+        {
+            stunTimer = 1.2f;
+            stun = false;
+        }
         if (slowPlatform == true)
         {
             speed = 1.5f;
@@ -54,6 +65,19 @@ public class PlayerController : MonoBehaviour
             }
             
         }
+        if (stunTimer > 0 && stunTimer < 1.2f && stun)
+        {
+            speed = 0;
+            animator.SetBool("isWalking", false);
+        }
+        else if (slowTimer > 0 && slowTimer < 3 && slow)
+        {
+            speed = 1.5f;
+        }
+        else
+        {
+            speed = 3;
+        }
         if (Input.touchCount > 0)
         {
             meteorStarter = true;
@@ -62,15 +86,7 @@ public class PlayerController : MonoBehaviour
             {
                 isMoving = true;
                 direction = Vector2.zero;
-                initialTouchPos = touch.position; 
-                if (slowTimer > 0 && slowTimer < 3 && slow)
-                {
-                    speed = 1.5f;
-                }
-                else
-                {
-                    speed = 3;
-                }
+                initialTouchPos = touch.position;
 
 
             }
@@ -183,7 +199,11 @@ public class PlayerController : MonoBehaviour
         {
             slow = true;
         }
-        
+        if (collision.gameObject.CompareTag("electricBullet"))
+        {
+            stun = true;
+        }
+
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
