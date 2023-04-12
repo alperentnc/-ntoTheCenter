@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class HighScore : MonoBehaviour
 {
-    public Text HighscoreText;
+    public Text CurrentScoreText;
+    public Text HighScoreText;
     public int highscore;
+    public int score;
     public Vector2 firstPos;
     public int yDifferance;
     public int firstPosY;
@@ -15,16 +17,23 @@ public class HighScore : MonoBehaviour
     {
         firstPos = new Vector2(transform.position.x, firstPosY);
         playerController = gameObject.GetComponent<PlayerController>();
+        PlayerPrefs.GetInt("score");
+        if (PlayerPrefs.GetInt("score") > score)
+        {
+            PlayerPrefs.SetInt("highscore", PlayerPrefs.GetInt("score"));
+        }
+        HighScoreText.text = "HighSCORE: " + PlayerPrefs.GetInt("highscore").ToString();
     }
-
     void Update()
     {
-        
         if (!playerController.isJumping && playerController.IsGrounded())
         {
             yDifferance = Mathf.Abs((int)transform.position.y - firstPosY - 5);
         }
-        int hscore = yDifferance * 17/4;
-        HighscoreText.text = hscore.ToString();
+        score = yDifferance * 17 / 4;
+        PlayerPrefs.SetInt("score", score);
+        CurrentScoreText.text = "Score: " + PlayerPrefs.GetInt("score").ToString();
     }
+    
+    
 }
