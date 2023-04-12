@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 9799186eb5a279a428f11e7c52f76bf6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Druk Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b08b3742c43005b4590bddbda37cfed6, type: 3}
+  - {fileID: 12800000, guid: 9569f95ec6d32a44cadf1061f041619d, type: 3}
+  - {fileID: 12800000, guid: 84e04dee95d5ba24591b6a761a014771, type: 3}
+  - {fileID: 12800000, guid: e0d06c00efcd0464bb1c0e3bca0d266e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
