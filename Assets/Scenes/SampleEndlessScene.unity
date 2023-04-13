@@ -2418,7 +2418,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.90887195}
   m_AnchorMax: {x: 0.19431524, y: 0.9506051}
-  m_AnchoredPosition: {x: 187.65726, y: -290}
+  m_AnchoredPosition: {x: 68, y: -158}
   m_SizeDelta: {x: 375.3145, y: -1.509}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &617606410
@@ -2451,7 +2451,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b8af58820f69b474e8f63dc40a702fbc, type: 3}
-    m_FontSize: 60
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -3279,7 +3279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.90887195}
   m_AnchorMax: {x: 0.19431524, y: 0.9506051}
-  m_AnchoredPosition: {x: 187.66, y: -201}
+  m_AnchoredPosition: {x: 68.00275, y: -69}
   m_SizeDelta: {x: 375.31, y: -1.509}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &857476207
@@ -3312,7 +3312,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b8af58820f69b474e8f63dc40a702fbc, type: 3}
-    m_FontSize: 60
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -3661,9 +3661,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -480252060848510383, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 418291627}
+    - target: {fileID: -480252060848510383, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 857476208}
+    - target: {fileID: -480252060848510383, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: HighScoreText
       value: 
       objectReference: {fileID: 617606411}
+    - target: {fileID: -480252060848510383, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
+      propertyPath: highScoreText
+      value: 
+      objectReference: {fileID: 617606411}
+    - target: {fileID: -480252060848510383, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 418291627}
     - target: {fileID: -480252060848510383, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
       propertyPath: CurrentScoreText
       value: 
