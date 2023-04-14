@@ -13,10 +13,10 @@ public class MainMenu : MonoBehaviour
     public GameObject LevelMode;
     public GameObject FreeFall;
     public GameObject FreeFallPanel;
-
     public void Play()
     {
-        SceneManager.LoadScene("SampleSceneMob");
+        Debug.Log(Door.levelCompleted);
+        SceneManager.LoadScene(Door.levelCompleted);
         Time.timeScale = 1.0f;
     }
 
