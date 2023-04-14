@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         Debug.Log(Door.levelCompleted);
-        SceneManager.LoadScene(Door.levelCompleted);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("levelCompleted"));
         Time.timeScale = 1.0f;
     }
 
