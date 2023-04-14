@@ -9,14 +9,19 @@ public class PlayerHealth : MonoBehaviour
 
 	public Slider slider;
     public int health=100;
+    public bool isGameOver = false;
 
    void Update()
     {
         slider.value = health;
         if (health<=0)
         {
-            SceneManager.LoadScene("MainMenu");
             PlayerController.meteorStarter = false;
+            isGameOver = true;
+        }
+        else
+        {
+            isGameOver = false;
         }
     }
 }

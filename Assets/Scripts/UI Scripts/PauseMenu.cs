@@ -27,10 +27,11 @@ public class PauseMenu : MonoBehaviour
         PausePanel.SetActive(false);
         Time.timeScale = 1.0f;
     }
-    public void Levels()
+    public void RestartGame()
     {
-        LevelsPanel.SetActive(true);
         PausePanel.SetActive(false);
+        SceneManager.LoadScene("SampleEndlessScene");
+        Time.timeScale = 1.0f;
     }
 
     public void CloseLevels()

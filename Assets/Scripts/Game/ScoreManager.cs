@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public Transform character; // The Transform component of the character object
-    public Text scoreText; // The UI Text component for displaying the current score
-    public Text highScoreText; // The UI Text component for displaying the high score
+    public TMP_Text scoreText; // The UI Text component for displaying the current score
+    public TMP_Text highScoreText; // The UI Text component for displaying the high score
 
     private float highScore; // The saved high score
-    private float currentScore; // The current score
+    public float currentScore; // The current score
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         // Update the UI high score text
-        highScoreText.text = "High Score: " + Mathf.RoundToInt(highScore);
+        highScoreText.text = "Best: " + Mathf.RoundToInt(highScore);
     }
 }
 
