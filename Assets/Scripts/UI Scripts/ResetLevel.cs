@@ -16,7 +16,7 @@ public class ResetLevel : MonoBehaviour
     {
         
     }
-    void reseter()
+    public void reseter()
     {
         PlayerPrefs.SetInt("levelCompleted", 1);
     }

@@ -8,7 +8,7 @@ public class Door : MonoBehaviour
     void Start()
     {
         // Load the level that was last completed, or start at level 1 if none have been completed yet
-        levelCompleted = PlayerPrefs.GetInt("levelCompleted", 0);
+        levelCompleted = PlayerPrefs.GetInt("levelCompleted", 1);
     }
 
     void OnCollisionEnter2D(Collision2D other)
