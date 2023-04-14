@@ -4,7 +4,7 @@ using TMPro;
 public class CoinDisplay : MonoBehaviour
 {
     public TMP_Text CoinText;
-    private int currentGold;
+    public int currentGold;
     void Start()
     {
         currentGold = PlayerPrefs.GetInt("Gold", 0);
