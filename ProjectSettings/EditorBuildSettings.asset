@@ -9,11 +9,26 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: efe0f0b6cf6bbf543a7f030a708ccf4e
   - enabled: 1
-    path: Assets/Scenes/SampleSceneMob.unity
-    guid: 21e5f7f031e1fe94ca4fa9fb0755591c
+    path: Assets/Scenes/Level1.unity
+    guid: 10a905a6c519d464a9ae5b3bd3e83a9d
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: d47a18cc579efa44588676907f7fe111
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 052a36dbe61a5bb42be9c3679109f654
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 223b03792e89b4d4699bec66f9a8e66c
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: aa21ff29c3e17cd4f8efae952fb8329e
   - enabled: 1
     path: Assets/Scenes/SampleEndlessScene.unity
     guid: 8612ab1be81865144a0bf7f48bcac088
+  - enabled: 1
+    path: Assets/Scenes/SampleSceneMob.unity
+    guid: 21e5f7f031e1fe94ca4fa9fb0755591c
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5b13eca39c128bb438715351fc5eba50, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 7767d043792a9c349982b4478cc5e928, type: 2}
