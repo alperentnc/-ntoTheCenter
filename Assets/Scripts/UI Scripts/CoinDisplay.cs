@@ -7,6 +7,11 @@ public class CoinDisplay : MonoBehaviour
     public int currentGold;
     void Start()
     {
+        
+        
+    }
+    private void Update()
+    {
         currentGold = PlayerPrefs.GetInt("Gold", 0);
         CoinText.text = currentGold.ToString();
     }

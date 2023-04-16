@@ -338,7 +338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &68317232
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1973,7 +1973,7 @@ RectTransform:
   m_Children:
   - {fileID: 1003983210}
   m_Father: {fileID: 1455338511}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2562,7 +2562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 300
+  m_text: 20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ee70f398d782f4684be7681741b8f3, type: 2}
   m_sharedMaterial: {fileID: -7825157874465225546, guid: 46ee70f398d782f4684be7681741b8f3, type: 2}
@@ -2778,7 +2778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &464154351
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3473,7 +3473,7 @@ RectTransform:
   m_Children:
   - {fileID: 488486365}
   m_Father: {fileID: 1455338511}
-  m_RootOrder: 9
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.68820775, y: 0.91300005}
   m_AnchorMax: {x: 0.9317923, y: 0.94376796}
@@ -3550,7 +3550,7 @@ RectTransform:
   m_Children:
   - {fileID: 1340126294}
   m_Father: {fileID: 1455338511}
-  m_RootOrder: 10
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.68820775, y: 0.862884}
   m_AnchorMax: {x: 0.9317923, y: 0.895442}
@@ -3804,7 +3804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 150
+  m_text: 20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ee70f398d782f4684be7681741b8f3, type: 2}
   m_sharedMaterial: {fileID: -7825157874465225546, guid: 46ee70f398d782f4684be7681741b8f3, type: 2}
@@ -4427,7 +4427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &718988075
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4879,7 +4879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &752998277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5090,7 +5090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &774240267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5469,7 +5469,7 @@ GameObject:
   - component: {fileID: 835340992}
   - component: {fileID: 835340991}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5490,10 +5490,10 @@ RectTransform:
   m_Father: {fileID: 335759471}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.81241554, y: 0.90427697}
-  m_AnchorMax: {x: 0.95758456, y: 0.95276785}
-  m_AnchoredPosition: {x: -1.3369751, y: -1}
-  m_SizeDelta: {x: -53.7119, y: -37.010895}
+  m_AnchorMin: {x: 0.071, y: 0.906}
+  m_AnchorMax: {x: 0.20667633, y: 0.95276785}
+  m_AnchoredPosition: {x: 2, y: -2.5}
+  m_SizeDelta: {x: -45.711914, y: -34.010895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &835340991
 Animator:
@@ -5626,7 +5626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &860047655
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6958,7 +6958,7 @@ RectTransform:
   m_Children:
   - {fileID: 335759471}
   m_Father: {fileID: 1455338511}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7613,7 +7613,7 @@ RectTransform:
   m_Children:
   - {fileID: 318995044}
   m_Father: {fileID: 1455338511}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8324,7 +8324,7 @@ RectTransform:
   - {fileID: 730464307}
   - {fileID: 263519111}
   m_Father: {fileID: 1455338511}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -9589,14 +9589,14 @@ RectTransform:
   - {fileID: 130512868}
   - {fileID: 68317232}
   - {fileID: 718988075}
-  - {fileID: 556803483}
-  - {fileID: 574570478}
+  - {fileID: 1940505660}
   - {fileID: 355694434}
   - {fileID: 1467444476}
   - {fileID: 1305933614}
   - {fileID: 1077835489}
   - {fileID: 1187995629}
-  - {fileID: 1940505660}
+  - {fileID: 556803483}
+  - {fileID: 574570478}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9914,7 +9914,7 @@ RectTransform:
   m_Children:
   - {fileID: 528801670}
   m_Father: {fileID: 1455338511}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10086,7 +10086,6 @@ MonoBehaviour:
   - {fileID: 630322743}
   - {fileID: 830624134}
   - {fileID: 1309985978}
-  coinDisplay: {fileID: 1785873793}
   speedBuyText: {fileID: 450783421}
   healthBuyText: {fileID: 611716666}
 --- !u!4 &1518500817
@@ -10295,7 +10294,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1575236204}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1518500816}
+        m_TargetAssemblyTypeName: Upgrades, Assembly-CSharp
+        m_MethodName: HealthUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1575236204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10889,7 +10900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1706551855
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11598,7 +11609,7 @@ RectTransform:
   m_Children:
   - {fileID: 437371926}
   m_Father: {fileID: 1455338511}
-  m_RootOrder: 16
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13234,7 +13245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2120684944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13532,7 +13543,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2135085422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1518500816}
+        m_TargetAssemblyTypeName: Upgrades, Assembly-CSharp
+        m_MethodName: SpeedUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2135085422
 MonoBehaviour:
   m_ObjectHideFlags: 0
