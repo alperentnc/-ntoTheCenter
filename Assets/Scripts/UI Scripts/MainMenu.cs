@@ -13,9 +13,14 @@ public class MainMenu : MonoBehaviour
     public GameObject LevelMode;
     public GameObject FreeFall;
     public GameObject FreeFallPanel;
+    public GameObject resetLevel;
+    public static int levelCompleted = 1;
+    void Start()
+    {
+        levelCompleted = PlayerPrefs.GetInt("levelCompleted", 1);
+    }
     public void Play()
     {
-        Debug.Log(Door.levelCompleted);
         SceneManager.LoadScene(PlayerPrefs.GetInt("levelCompleted"));
         Time.timeScale = 1.0f;
     }
@@ -58,6 +63,7 @@ public class MainMenu : MonoBehaviour
         ShopPanel.SetActive(true);
         LevelMode.SetActive(false);
         FreeFall.SetActive(false);
+        resetLevel.SetActive(false);
     }
 
     public void Settings()
@@ -65,6 +71,7 @@ public class MainMenu : MonoBehaviour
         SettingsPanel.SetActive(true);
         LevelMode.SetActive(false);
         FreeFall.SetActive(false);
+        resetLevel.SetActive(false);
     }
 
     public void Power()
@@ -72,18 +79,21 @@ public class MainMenu : MonoBehaviour
         PowerPanel.SetActive(true);
         LevelMode.SetActive(false);
         FreeFall.SetActive(false);
+        resetLevel.SetActive(false);
     }
     public void Levels()
     {
         LevelsPanel.SetActive(true);
         LevelMode.SetActive(false);
         FreeFall.SetActive(false);
+        resetLevel.SetActive(false);
     }
     public void CloseShop()
     {
         ShopPanel.SetActive(false);
         LevelMode.SetActive(true);
         FreeFall.SetActive(true);
+        resetLevel.SetActive(true);
     }
 
     public void CloseSettings()
@@ -91,6 +101,7 @@ public class MainMenu : MonoBehaviour
         SettingsPanel.SetActive(false);
         LevelMode.SetActive(true);
         FreeFall.SetActive(true);
+        resetLevel.SetActive(true);
     }
 
     public void ClosePower()
@@ -98,12 +109,14 @@ public class MainMenu : MonoBehaviour
         PowerPanel.SetActive(false);
         LevelMode.SetActive(true);
         FreeFall.SetActive(true);
+        resetLevel.SetActive(true);
     }
     public void CloseLevels()
     {
         LevelsPanel.SetActive(false);
         LevelMode.SetActive(true);
         FreeFall.SetActive(true);
+        resetLevel.SetActive(true);
     }
 
 

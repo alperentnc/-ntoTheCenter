@@ -1657,6 +1657,7 @@ MonoBehaviour:
   LevelMode: {fileID: 1839770499}
   FreeFall: {fileID: 1085554027}
   FreeFallPanel: {fileID: 1187995628}
+  resetLevel: {fileID: 1940505659}
 --- !u!114 &294052978
 MonoBehaviour:
   m_ObjectHideFlags: 0

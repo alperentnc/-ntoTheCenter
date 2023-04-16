@@ -64,11 +64,13 @@ public class PlayerController : MonoBehaviour
         if (stun)
         {
             stunTimer -= Time.deltaTime;
+            animator.SetBool("isShocking", true);
         }
         if (stunTimer <= 0)
         {
             stunTimer = 1.2f;
             stun = false;
+            animator.SetBool("isShocking", false);
         } 
         if (stunTimer > 0 && stunTimer < 1.2f && stun)
         {
@@ -141,12 +143,12 @@ public class PlayerController : MonoBehaviour
             if (IsGrounded())
             {
                 rb.gravityScale = 1f;
-                if (direction.x == -1)
+                if (direction.x == -1 && animator.GetBool("isShocking")==false)
                 {
                     animator.SetBool("isWalking", true);
                     transform.eulerAngles = new Vector3(0, 180, 0);
                 }
-                else if (direction.x == 1)
+                else if (direction.x == 1 && animator.GetBool("isShocking") == false)
                 {
                     animator.SetBool("isWalking", true);
                     transform.eulerAngles = new Vector3(0, 0, 0);
