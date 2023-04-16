@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class WheelManager : MonoBehaviour {
 
@@ -9,13 +10,11 @@ public class WheelManager : MonoBehaviour {
     int money = 2500;
     public GameObject go;
     //public Text text;
-    //public GameObject win;
-    //public Text winT;
+    public Text winT;
 
 	void Start () {
         //Keep track of the player money
         UpdateText();
-       
 
         //Sets the gameobject
         wheel.setWheel(gameObject);
@@ -27,50 +26,42 @@ public class WheelManager : MonoBehaviour {
                 case 1:
                     money += 100;
                     PlayerPrefs.SetInt("money", money);
-                    //win.SetActive(true);
-                    //winT.text = "100";
+                    winT.text = "100";
                     break;
                 case 2:
                     money += 500;
                     PlayerPrefs.SetInt("money", money);
-                    //win.SetActive(true);
-                    //winT.text = "500";
+                    winT.text = "500";
                     break;
                 case 3:
                     money += 100;
                     PlayerPrefs.SetInt("money", money);
-                    //win.SetActive(true);
-                    //winT.text = "100";
+                    winT.text = "100";
                     break;
                 case 4:
                     money += 100;
                     PlayerPrefs.SetInt("money", money);
-                    //win.SetActive(true);
-                    //winT.text = "100";
+                    winT.text = "100";
                     break;
                 case 5:
                     money += 200;
                     PlayerPrefs.SetInt("money", money);
-                    //win.SetActive(true);
-                    //winT.text = "200";
+                    winT.text = "200";
                     break;
                 case 6:
                     money += 100;
                     PlayerPrefs.SetInt("money", money);
-                    //win.SetActive(true);
-                    //winT.text = "100";
+                    winT.text = "100";
                     break;
                 case 7:
                     money += 200;
                     PlayerPrefs.SetInt("money", money);
-                    //win.SetActive(true);
-                    //winT.text = "200";
+                    winT.text = "200";
                     break;
                 case 8:
                     money += 300;
                     PlayerPrefs.SetInt("money", money);
-                    //win.SetActive(true);
-                    //winT.text = "300";
+                    winT.text = "300";
                     break;
             }
             UpdateText();
