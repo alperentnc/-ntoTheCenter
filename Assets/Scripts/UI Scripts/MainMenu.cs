@@ -28,36 +28,8 @@ public class MainMenu : MonoBehaviour
     public void FreeFallPopUp()
     {
         SceneManager.LoadScene("SampleEndlessScene");
-        //FreeFallPanel.SetActive(true);
-        //LevelMode.SetActive(false);
-        //FreeFall.SetActive(false);
+
     }
-    //public void CloseFreeFallPopUp()
-    //{
-    //    FreeFallPanel.SetActive(false);
-    //    LevelMode.SetActive(true);
-    //    FreeFall.SetActive(true);
-    //}
-    //public void OpenSpace()
-    //{
-    //    //SceneManager.LoadScene("");
-    //}
-    //public void OpenAir()
-    //{
-    //    //SceneManager.LoadScene("");
-    //}
-    //public void OpenIce()
-    //{
-    //    //SceneManager.LoadScene("");
-    //}
-    //public void OpenStone()
-    //{
-    //    //SceneManager.LoadScene("");
-    //}
-    //public void OpenMagma()
-    //{
-    //    //SceneManager.LoadScene("");
-    //}
     public void Shop()
     {
         ShopPanel.SetActive(true);

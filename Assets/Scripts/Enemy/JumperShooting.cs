@@ -15,6 +15,9 @@ public class JumperShooting : MonoBehaviour
     bool catcher;
     public GameObject explode;
     public Animator animator;
+
+    private const string HealthKey = "PlayerHealth";
+    public int health;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -22,8 +25,14 @@ public class JumperShooting : MonoBehaviour
         coll = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
         animator.SetBool("isShooting", false);
+
+        if (PlayerPrefs.HasKey(HealthKey))
+        {
+            health = PlayerPrefs.GetInt(HealthKey);
+        }
     }
 
+    
 
     void Update()
     {
@@ -64,6 +73,14 @@ public class JumperShooting : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            // Reduce the player's health
+            health -= 10;
+
+            // Save the player's health to PlayerPrefs
+            PlayerPrefs.SetInt(HealthKey, health);
+
+            Destroy(gameObject);
+
             collision.gameObject.GetComponent<PlayerHealth>().health -= 30;
             GameObject explodingAnim =  Instantiate(explode, transform.position, Quaternion.identity);
             Destroy(gameObject);

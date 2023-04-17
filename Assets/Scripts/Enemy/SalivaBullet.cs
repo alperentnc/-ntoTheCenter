@@ -9,6 +9,9 @@ public class SalivaBullet : MonoBehaviour
     public float force;
     private float timer,animTimer;
     public Animator animator;
+
+    private const string HealthKey = "PlayerHealth";
+    public int health;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,6 +19,11 @@ public class SalivaBullet : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+
+        if (PlayerPrefs.HasKey(HealthKey))
+        {
+            health = PlayerPrefs.GetInt(HealthKey);
+        }
     }
 
     void Update()
@@ -36,7 +44,11 @@ public class SalivaBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().health -= 5;
+            // Reduce the player's health
+            health -= 10;
+
+            // Save the player's health to PlayerPrefs
+            PlayerPrefs.SetInt(HealthKey, health);
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Platform"))

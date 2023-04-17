@@ -9,6 +9,10 @@ public class Bullet : MonoBehaviour
     public float force;
     private float timer,animTimer;
     public Animator animator;
+
+    private const string HealthKey = "PlayerHealth";
+    public int health;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,6 +24,10 @@ public class Bullet : MonoBehaviour
         float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0,rot);
 
+        if (PlayerPrefs.HasKey(HealthKey))
+        {
+            health = PlayerPrefs.GetInt(HealthKey);
+        }
     }
 
     void Update()
@@ -40,6 +48,12 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            // Reduce the player's health
+            health -= 20;
+
+            // Save the player's health to PlayerPrefs
+            PlayerPrefs.SetInt(HealthKey, health);
+
             collision.gameObject.GetComponent<PlayerHealth>().health -= 10;
             Destroy(gameObject);
         }

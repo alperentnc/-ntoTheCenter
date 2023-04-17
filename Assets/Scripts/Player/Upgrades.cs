@@ -18,8 +18,29 @@ public class Upgrades : MonoBehaviour
     private int savedSpeedBuyValue;
     private int savedHealthBuyValue;
 
+    public GameObject playerEndless;
+    public GameObject playerLevel;
+    PlayerController playerControllerEndless;
+    PlayerController playerControllerLevel;
+    PlayerHealth playerHealthEndless;
+    PlayerHealth playerHealthLevel;
+
+    private const string HealthKey = "PlayerHealth";
+    public int maxHealth;
     void Start()
     {
+        if (PlayerPrefs.HasKey(HealthKey))
+        {
+            maxHealth= PlayerPrefs.GetInt(HealthKey);
+        }
+
+        
+        playerControllerEndless = playerEndless.GetComponent<PlayerController>();
+        playerControllerLevel = playerLevel.GetComponent<PlayerController>();
+        playerHealthEndless = playerEndless.GetComponent<PlayerHealth>();
+        playerHealthLevel = playerLevel.GetComponent<PlayerHealth>();
+
+
         currentGold = PlayerPrefs.GetInt("Gold", 0);
         savedIndexSpeed = PlayerPrefs.GetInt("IndexSpeed", 0);
         savedIndexHealth = PlayerPrefs.GetInt("IndexHealth", 0);
@@ -64,10 +85,13 @@ public class Upgrades : MonoBehaviour
             savedSpeedBuyValue = newValue;
             currentGold -= currentValue;
             PlayerPrefs.SetInt("Gold", currentGold);
+            PlayerPrefs.SetInt("IndexSpeed", currentIndexSpeed);
+            PlayerPrefs.SetInt("SpeedBuyValue", int.Parse(speedBuyText.text));
+            //playerControllerEndless.normalSpeed += 0.3f;
+            //playerControllerLevel.normalSpeed += 0.3f;
+            //playerControllerEndless.slowSpeed += 0.3f;
+            //playerControllerLevel.slowSpeed += 0.3f;
 
-            GameObject player = GameObject.FindWithTag("Player");
-            PlayerController playerController = player.GetComponent<PlayerController>();
-            playerController.speed += 0.3f;
         }
     }
 
@@ -85,9 +109,10 @@ public class Upgrades : MonoBehaviour
             currentGold -= currentValue;
             PlayerPrefs.SetInt("Gold", currentGold);
 
-            //GameObject player = GameObject.FindWithTag("Player");
-            //PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-            //playerHealth.health += 10;
+            playerHealthEndless.maxHalth += 10;
+            PlayerPrefs.SetInt(HealthKey, playerHealthEndless.maxHalth);
+            PlayerPrefs.SetInt("IndexHealth", currentIndexHealth++);
+            PlayerPrefs.SetInt("HealthBuyValue", int.Parse(healthBuyText.text));
         }
     }
 }

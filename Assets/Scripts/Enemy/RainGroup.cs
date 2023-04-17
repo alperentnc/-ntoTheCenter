@@ -10,6 +10,8 @@ public class RainGroup : MonoBehaviour
     PlayerHealth playerHealth;
     public float timer,meteorSpeed;
     public Animator anim;
+
+    private const string HealthKey = "PlayerHealth";
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -17,6 +19,8 @@ public class RainGroup : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GetComponent<PlayerController>();
         playerHealth = GetComponent<PlayerHealth>();
+
+        
 
     }
 
@@ -42,9 +46,10 @@ public class RainGroup : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        else if(collision.gameObject.tag == "Player")
+        else if(collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().health = 0;
+            playerHealth.health -= 100;
+            PlayerPrefs.SetInt(HealthKey, playerHealth.health);
         }
     }
 

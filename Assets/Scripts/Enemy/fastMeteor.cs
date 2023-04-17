@@ -6,8 +6,8 @@ public class fastMeteor : MonoBehaviour
 {
     // Start is called before the first frame update
     Rigidbody2D rb;
-    PlayerController player;
-    PlayerHealth playerHealth;
+    private PlayerController player;
+    private PlayerHealth playerHealth;
     public float min,max;
     private float timer, meteorStartTimer;
     public GameObject symbol,meteorPrefab;
@@ -16,11 +16,22 @@ public class fastMeteor : MonoBehaviour
     public bool symbolBool=false;
     float symbolTimer;
     Vector2 startPos;
+
+  
+
+    private const string HealthKey = "PlayerHealth";
+
     void Start()
     {
+
+        player = FindObjectOfType<PlayerController>();
+        playerHealth = player.gameObject.GetComponent<PlayerHealth>();
+
         meteorStartTimer = Random.Range(min, max);
         rb = GetComponent<Rigidbody2D>();
         startPos = new Vector2(transform.position.x, transform.position.y);
+
+
     }
 
     // Update is called once per frame
@@ -67,10 +78,11 @@ public class fastMeteor : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().health = 0;
 
+            playerHealth.health -= 100;
+            PlayerPrefs.SetInt(HealthKey, playerHealth.health);
         }
     }
 }

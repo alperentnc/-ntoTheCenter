@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
     public bool slow,slowPlatform,stun;
     public float speed;
     private bool isMoving;
-    public float normalSpeed;
-    public float slowSpeed;
+    //public float normalSpeed;
+    //public float slowSpeed;
 
     private Vector2 direction;
 
@@ -26,9 +26,24 @@ public class PlayerController : MonoBehaviour
     private float jumpTimer;
     public static bool meteorStarter=false;
 
+    private const string NormalSpeedKey = "PlayerSpeed";
+    private const string SlowSpeedKey = "PlayerSpeed";
+
+
     void Start()
     {
         
+        if (PlayerPrefs.GetInt("IndexHealth") + 1 == 0)
+        {
+            PlayerPrefs.SetFloat(NormalSpeedKey, 6f);
+            PlayerPrefs.SetFloat(SlowSpeedKey, 3f);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat(NormalSpeedKey, (PlayerPrefs.GetInt("IndexSpeed")) * .3f + 6f);
+            PlayerPrefs.SetFloat(SlowSpeedKey, (PlayerPrefs.GetInt("IndexSpeed")) * .6f + 3f);
+        }
+
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<CapsuleCollider2D>();
         slow = false;
@@ -38,12 +53,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        
         if (slowPlatform == true)
         {
-            speed = slowSpeed;
+            speed = PlayerPrefs.GetFloat(SlowSpeedKey)/2;
             if (!IsGrounded())
             {
-                speed = normalSpeed;
+                speed = PlayerPrefs.GetFloat(NormalSpeedKey);
                 slowPlatform = false;
             }
 
@@ -59,7 +75,7 @@ public class PlayerController : MonoBehaviour
         }
         if (slowTimer > 0 && slowTimer < 3 && slow)
         {
-            speed = slowSpeed;
+            speed = PlayerPrefs.GetFloat(SlowSpeedKey)/2;
         }
         if (stun)
         {
@@ -79,7 +95,7 @@ public class PlayerController : MonoBehaviour
         }
         if(!slow && !stun && !slowPlatform)
         {
-            speed = normalSpeed;
+            speed = PlayerPrefs.GetFloat(NormalSpeedKey);
         }
         if (Input.touchCount > 0)
         {

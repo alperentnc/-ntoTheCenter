@@ -16,7 +16,7 @@ public class GameOverEndless : MonoBehaviour
     {
         playerHealth = player.GetComponent<PlayerHealth>();
         coinManager = coin.GetComponent<CoinManager>();
-        Time.timeScale = 1.0f;
+        
     }
     public void MainMenu()
     {
@@ -33,12 +33,14 @@ public class GameOverEndless : MonoBehaviour
     {
         GameOverPanel.SetActive(false);
         SceneManager.LoadScene("SampleEndlessScene");
+        Time.timeScale = 1.0f;
     }
     private void Update()
     {
         if (playerHealth.isGameOver)
         {
             GameOver();
+            Time.timeScale = 0f;
         }
         //else
         //{
