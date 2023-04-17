@@ -149,7 +149,7 @@ MonoBehaviour:
   speed: 0
   normalSpeed: 3
   slowSpeed: 1.5
-  minSwipeDistance: 20
+  minSwipeDistance: 0
   jumpForce: 5
   jumpTime: 0.5
   isJumping: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   health: 0
+  isGameOver: 0
 --- !u!114 &-480252060848510383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,9 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5980248af28070469f4b7a852e5468e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighscoreText: {fileID: 0}
-  highscore: 0
-  firstPos: {x: 0, y: 0}
-  yDifferance: 0
-  firstPosY: 0
-  playerController: {fileID: 0}
+  character: {fileID: 0}
+  scoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
+  currentScore: 0

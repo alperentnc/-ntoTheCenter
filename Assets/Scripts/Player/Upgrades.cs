@@ -65,9 +65,9 @@ public class Upgrades : MonoBehaviour
             currentGold -= currentValue;
             PlayerPrefs.SetInt("Gold", currentGold);
 
-            //GameObject player = GameObject.FindWithTag("Player");
-            //PlayerController playerController = player.GetComponent<PlayerController>();
-            //playerController.speed += 0.3f;
+            GameObject player = GameObject.FindWithTag("Player");
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            playerController.speed += 0.3f;
         }
     }
 

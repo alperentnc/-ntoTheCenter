@@ -148,7 +148,7 @@ MonoBehaviour:
   speed: 0
   normalSpeed: 3
   slowSpeed: 1.5
-  minSwipeDistance: 20
+  minSwipeDistance: 0
   jumpForce: 5
   jumpTime: 0.5
   isJumping: 0
@@ -186,3 +186,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   health: 0
+  isGameOver: 0
