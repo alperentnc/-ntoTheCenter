@@ -11,8 +11,11 @@ public class WheelManager : MonoBehaviour {
     public GameObject go;
     //public Text text;
     public Text winT;
+    public bool oneTime;
 
-	void Start () {
+    void Start () {
+        oneTime = false;
+        int currentGold = PlayerPrefs.GetInt("Gold", 0);
         //Keep track of the player money
         UpdateText();
 
@@ -24,44 +27,68 @@ public class WheelManager : MonoBehaviour {
             switch (index)
             {
                 case 1:
-                    money += 100;
-                    PlayerPrefs.SetInt("money", money);
-                    winT.text = "100";
+                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.2f);
+                    currentGold += LevelsCoin.totalGold;
+                    PlayerPrefs.SetInt("Gold", currentGold);
+                    PlayerPrefs.Save();
+                    winT.text = "1.2x";
+                    Debug.Log(LevelsCoin.totalGold);
                     break;
                 case 2:
-                    money += 500;
-                    PlayerPrefs.SetInt("money", money);
-                    winT.text = "500";
+                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.4f);
+                    currentGold += LevelsCoin.totalGold;
+                    PlayerPrefs.SetInt("Gold", currentGold);
+                    PlayerPrefs.Save();
+                    winT.text = "1.4x";
+                    Debug.Log(LevelsCoin.totalGold);
                     break;
                 case 3:
-                    money += 100;
-                    PlayerPrefs.SetInt("money", money);
-                    winT.text = "100";
+                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.8f);
+                    currentGold += LevelsCoin.totalGold;
+                    PlayerPrefs.SetInt("Gold", currentGold);
+                    PlayerPrefs.Save();
+                    winT.text = "Diamond";
+                    Debug.Log(LevelsCoin.totalGold);
                     break;
                 case 4:
-                    money += 100;
-                    PlayerPrefs.SetInt("money", money);
-                    winT.text = "100";
+                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.2f);
+                    currentGold += LevelsCoin.totalGold;
+                    PlayerPrefs.SetInt("Gold", currentGold);
+                    PlayerPrefs.Save();
+                    winT.text = "1.8x";
+                    Debug.Log(LevelsCoin.totalGold);
                     break;
                 case 5:
-                    money += 200;
-                    PlayerPrefs.SetInt("money", money);
-                    winT.text = "200";
+                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.6f);
+                    currentGold += LevelsCoin.totalGold;
+                    PlayerPrefs.SetInt("Gold", currentGold);
+                    PlayerPrefs.Save();
+                    winT.text = "1.6x";
+                    Debug.Log(LevelsCoin.totalGold);
                     break;
                 case 6:
-                    money += 100;
-                    PlayerPrefs.SetInt("money", money);
-                    winT.text = "100";
+                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 2);
+                    currentGold += LevelsCoin.totalGold;
+                    PlayerPrefs.SetInt("Gold", currentGold);
+                    PlayerPrefs.Save();
+                    winT.text = "2x";
+                    Debug.Log(LevelsCoin.totalGold);
                     break;
                 case 7:
-                    money += 200;
-                    PlayerPrefs.SetInt("money", money);
-                    winT.text = "200";
+                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 3);
+                    currentGold += LevelsCoin.totalGold;
+                    PlayerPrefs.SetInt("Gold", currentGold);
+                    PlayerPrefs.Save();
+                    winT.text = "3x";
+                    Debug.Log(LevelsCoin.totalGold);
                     break;
                 case 8:
-                    money += 300;
-                    PlayerPrefs.SetInt("money", money);
-                    winT.text = "300";
+                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 4);
+                    currentGold += LevelsCoin.totalGold;
+                    PlayerPrefs.SetInt("Gold", currentGold);
+                    PlayerPrefs.Save();
+                    winT.text = "4x";
+                    Debug.Log(LevelsCoin.totalGold);
                     break;
             }
             UpdateText();
@@ -80,17 +107,10 @@ public class WheelManager : MonoBehaviour {
 
     public void Spin()
     {
-        if (money >= 300)
-        {
-            money -= 300;
-            PlayerPrefs.SetInt("money", money);
-
             StartCoroutine(wheel.StartNewRun());
             UpdateText();
-        } else
-        {
-            go.SetActive(true);
-        }
+            go.SetActive(false);
+            
     }
 
     public void ok()

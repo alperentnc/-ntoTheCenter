@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    
+   
 
     void Start()
     {
@@ -16,9 +16,10 @@ public class Door : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // Save the current level as completed
+           
+            LevelsCoin.LevelCompleted = true;
             PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex+1);
             // Load the next level
-            SceneManager.LoadScene(PlayerPrefs.GetInt("levelCompleted"));
         }
     }
 }
