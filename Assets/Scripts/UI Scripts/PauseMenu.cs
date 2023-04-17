@@ -10,7 +10,19 @@ public class PauseMenu : MonoBehaviour
     public GameObject LevelsPanel;
     public GameObject PausePanel;
     public Button Pause;
+    private bool pause;
 
+    private void Update()
+    {
+        if (pause)
+        {
+            Time.timeScale = 0f;
+        }
+        else if (!pause)
+        {
+            Time.timeScale = 1f;
+        }
+    }
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -19,13 +31,13 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         PausePanel.SetActive(true);
-        Time.timeScale = 0f;
+        pause = true;
     }
 
     public void UnPauseGame()
     {
         PausePanel.SetActive(false);
-        Time.timeScale = 1.0f;
+        pause = false;
     }
     public void RestartGame()
     {
