@@ -6,6 +6,7 @@ using TMPro;
 
 public class LevelsGameOver : MonoBehaviour
 {
+    public GameObject Spinner;
     public GameObject GameOverPanel;
     public PlayerHealth playerHealth;
     public LevelsCoin levelsCoin;
@@ -25,9 +26,8 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void GameOver()
     {
-        GameOverPanel.SetActive(true);
-        Time.timeScale = 0f;
-        CoinText.text = "   You Earned: " + levelsCoin.totalGold.ToString() + " Coins";
+        Spinner.SetActive(true);     
+        Time.timeScale = 0f;  
     }
     private void Update()
     {
@@ -40,5 +40,15 @@ public class LevelsGameOver : MonoBehaviour
         //    Time.timeScale = 1.0f;
         //}
 
+    }
+    public void WatchAd()
+    {
+
+    }
+    public void Skip()
+    {
+        Spinner.SetActive(false);
+        GameOverPanel.SetActive(true);
+        CoinText.text = "   You Earned: " + levelsCoin.totalGold.ToString() + " Coins";
     }
 }
