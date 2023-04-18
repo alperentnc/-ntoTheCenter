@@ -6,7 +6,7 @@ public class LevelsCoin : MonoBehaviour
 {
     // Start is called before the first frame update
     PlayerHealth playerHealth;
-    public GameObject player;
+    GameObject player;
     public GameObject spinner;
     public static bool LevelCompleted,count;
     // How much gold the player earns per score point
@@ -14,6 +14,7 @@ public class LevelsCoin : MonoBehaviour
     public static int totalGold;
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
         LevelCompleted = false;
         count = false;

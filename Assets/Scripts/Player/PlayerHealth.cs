@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public Slider slider;
+    Slider slider;
     public int maxHalth = 100;
     public int health = 100;
     public bool isGameOver = false;
@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        slider = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
         PlayerPrefs.SetInt(HealthKey, health);
         if (PlayerPrefs.GetInt("IndexHealth") == 0)
         {

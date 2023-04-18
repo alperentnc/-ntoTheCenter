@@ -6,11 +6,11 @@ public class CameraFollow : MonoBehaviour
 {
     public float FollowSpeed = 2f;
     public float yOffset = 1f;
-    public Transform target;
+    Transform target;
     public Transform upper, lower;
     void Start()
     {
-
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     void Update()

@@ -9,16 +9,16 @@ public class LevelsGameOver : MonoBehaviour
     public GameObject Spinner;
     public GameObject GameOverPanel;
     public GameObject LevelCompletedPanel;
-    public PlayerHealth playerHealth;
+    PlayerHealth playerHealth;
     public LevelsCoin levelsCoin;
-    public GameObject player;
+    GameObject player;
     Rigidbody2D rb;
     public GameObject coin;
     public TMP_Text CoinTextOver,CoinTextCompleted;
     public bool over,overlevel,levelbool;
     private void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
         levelsCoin = coin.GetComponent<LevelsCoin>();
         Time.timeScale = 1.0f;
