@@ -26,7 +26,11 @@ public class GameOverEndless : MonoBehaviour
     public void GameOver()
     {
         GameOverPanel.SetActive(true);
-        Time.timeScale = 0f;
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+        }
+        
         CoinText.text ="   You Earned: " + coinManager.totalGold.ToString() + " Coins";
     }
     public void RestartGame()
@@ -40,7 +44,6 @@ public class GameOverEndless : MonoBehaviour
         if (playerHealth.isGameOver)
         {
             GameOver();
-            Time.timeScale = 0f;
         }
         //else
         //{

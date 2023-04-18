@@ -16,7 +16,10 @@ public class PauseMenu : MonoBehaviour
     {
         if (pause)
         {
-            Time.timeScale = 0f;
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+            }
         }
         else if (!pause)
         {
@@ -31,6 +34,7 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         PausePanel.SetActive(true);
+        Time.timeScale = 0f;
         pause = true;
     }
 

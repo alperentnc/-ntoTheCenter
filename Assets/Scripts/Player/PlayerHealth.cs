@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
         {
             PlayerController.meteorStarter = false;
             isGameOver = true;
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
         }
         else
         {

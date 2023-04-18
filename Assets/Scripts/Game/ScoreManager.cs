@@ -36,7 +36,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         highScoreText.text = "Best: " + Mathf.RoundToInt(highScore);
-        Time.timeScale = 1 + currentScore * 1 / 5000;
+        //Time.timeScale = 1 + currentScore * 1 / 5000;
     }
 }
 
