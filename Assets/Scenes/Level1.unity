@@ -4325,6 +4325,7 @@ MonoBehaviour:
   CoinTextOver: {fileID: 1528677228}
   CoinTextCompleted: {fileID: 1522293237}
   over: 0
+  overlevel: 0
 --- !u!1 &735130853
 GameObject:
   m_ObjectHideFlags: 0
@@ -12550,10 +12551,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5374809718222455441, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
-      propertyPath: jumpForce
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455442, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -12599,29 +12596,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455447, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
-      propertyPath: health
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5374809718222455447, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
       propertyPath: slider
       value: 
       objectReference: {fileID: 1607774713}
-    - target: {fileID: 5374809718222455453, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
-      propertyPath: m_Size.x
-      value: 4.3528266
-      objectReference: {fileID: 0}
-    - target: {fileID: 5374809718222455453, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
-      propertyPath: m_Size.y
-      value: 5.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 5374809718222455453, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1217247458, guid: cab8a3ab9a05cb94fa064fc0e14e39d6, type: 3}
-    - target: {fileID: 5374809718222455453, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5374809718222455454, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
       propertyPath: m_Name
       value: Player Level

@@ -51,19 +51,19 @@ public class WheelManager : MonoBehaviour {
                     Debug.Log(LevelsCoin.totalGold);
                     break;
                 case 4:
-                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.2f);
-                    currentGold += LevelsCoin.totalGold;
-                    PlayerPrefs.SetInt("Gold", currentGold);
-                    PlayerPrefs.Save();
-                    winT.text = "1.8x";
-                    Debug.Log(LevelsCoin.totalGold);
-                    break;
-                case 5:
                     LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.6f);
                     currentGold += LevelsCoin.totalGold;
                     PlayerPrefs.SetInt("Gold", currentGold);
                     PlayerPrefs.Save();
                     winT.text = "1.6x";
+                    Debug.Log(LevelsCoin.totalGold);
+                    break;
+                case 5:
+                    LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.8f);
+                    currentGold += LevelsCoin.totalGold;
+                    PlayerPrefs.SetInt("Gold", currentGold);
+                    PlayerPrefs.Save();
+                    winT.text = "1.8x";
                     Debug.Log(LevelsCoin.totalGold);
                     break;
                 case 6:

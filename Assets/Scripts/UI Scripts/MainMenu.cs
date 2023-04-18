@@ -18,6 +18,10 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         levelCompleted = PlayerPrefs.GetInt("levelCompleted", 1);
+        if (PlayerPrefs.GetInt("levelCompleted") == 0)
+        {
+            PlayerPrefs.SetInt("levelCompleted", 1);
+        }
     }
     public void Play()
     {

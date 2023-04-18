@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1711017594, guid: cab8a3ab9a05cb94fa064fc0e14e39d6, type: 3}
+  m_Sprite: {fileID: -1217247458, guid: cab8a3ab9a05cb94fa064fc0e14e39d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 4.3528266, y: 5.86}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -147,8 +147,6 @@ MonoBehaviour:
   slowPlatform: 0
   stun: 0
   speed: 0
-  normalSpeed: 3
-  slowSpeed: 1.5
   minSwipeDistance: 0
   jumpForce: 5
   jumpTime: 0.5
@@ -186,6 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+  maxHalth: 100
   health: 100
   isGameOver: 0
 --- !u!114 &-480252060848510383
