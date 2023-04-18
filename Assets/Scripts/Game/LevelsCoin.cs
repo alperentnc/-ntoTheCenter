@@ -15,6 +15,7 @@ public class LevelsCoin : MonoBehaviour
     void Start()
     {
         playerHealth = player.GetComponent<PlayerHealth>();
+        count = false;
     }
 
     // Update is called once per frame

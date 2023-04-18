@@ -23,6 +23,7 @@ public class LevelsGameOver : MonoBehaviour
         levelsCoin = coin.GetComponent<LevelsCoin>();
         Time.timeScale = 1.0f;
         rb = player.GetComponent<Rigidbody2D>();
+        Spinner.SetActive(false);
     }
     public void MainMenu()
     {
