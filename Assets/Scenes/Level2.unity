@@ -179,7 +179,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1918669
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -544,7 +543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &67769142
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -704,7 +702,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &69465288
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -864,7 +861,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &94950285
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1490,7 +1486,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &199960935
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2130,7 +2125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &380775893
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4009,7 +4003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4424,6 +4418,7 @@ MonoBehaviour:
   CoinTextCompleted: {fileID: 1522293237}
   over: 0
   overlevel: 0
+  levelbool: 0
 --- !u!1 &735130853
 GameObject:
   m_ObjectHideFlags: 0
@@ -4613,7 +4608,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &765334822
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5407,7 +5401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5843,7 +5837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6445,7 +6439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7145,7 +7139,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1194785849
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7305,7 +7298,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1199416510
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7877,7 +7869,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1272448301
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8271,7 +8262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8363,7 +8354,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1322848235
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8523,7 +8513,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1343911668
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8816,7 +8805,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1365376752
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9737,7 +9725,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1472269673
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9862,7 +9849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9954,7 +9941,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1500711987
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10249,7 +10235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1524450407
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10749,7 +10734,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1541458064
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11643,7 +11627,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1638532552
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11768,7 +11751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11828,7 +11811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657251992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -11.3, z: 143}
+  m_LocalPosition: {x: 0, y: -17, z: 143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12303,7 +12286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8290364072001608368, guid: 0032a9e78d5fd5340a14eaa0c6152bf7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12933,7 +12916,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &1954836286
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13285,7 +13267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &2008233559
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14015,7 +13996,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &2050244844
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14432,7 +14412,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.6
-  anim: {fileID: 0}
 --- !u!58 &2089836570
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14676,7 +14655,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 0.5
-  anim: {fileID: 0}
 --- !u!58 &2146216448
 CircleCollider2D:
   m_ObjectHideFlags: 0

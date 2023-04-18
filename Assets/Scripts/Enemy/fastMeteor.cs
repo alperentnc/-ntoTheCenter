@@ -81,7 +81,7 @@ public class fastMeteor : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
 
-            playerHealth.health -= 100;
+            playerHealth.health =0;
             PlayerPrefs.SetInt(HealthKey, playerHealth.health);
         }
     }

@@ -15,7 +15,7 @@ public class LevelsGameOver : MonoBehaviour
     Rigidbody2D rb;
     public GameObject coin;
     public TMP_Text CoinTextOver,CoinTextCompleted;
-    public bool over,overlevel;
+    public bool over,overlevel,levelbool;
     private void Start()
     {
 
@@ -24,6 +24,7 @@ public class LevelsGameOver : MonoBehaviour
         Time.timeScale = 1.0f;
         rb = player.GetComponent<Rigidbody2D>();
         Spinner.SetActive(false);
+        overlevel = false;
     }
     public void MainMenu()
     {

@@ -15,6 +15,7 @@ public class LevelsCoin : MonoBehaviour
     void Start()
     {
         playerHealth = player.GetComponent<PlayerHealth>();
+        LevelCompleted = false;
         count = false;
     }
 

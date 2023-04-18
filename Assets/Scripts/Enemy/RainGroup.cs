@@ -6,19 +6,16 @@ public class RainGroup : MonoBehaviour
 {
     // Start is called before the first frame update
     Rigidbody2D rb;
-    PlayerController player;
-    PlayerHealth playerHealth;
+    private PlayerController player;
+    private PlayerHealth playerHealth;
     public float timer,meteorSpeed;
-    public Animator anim;
 
     private const string HealthKey = "PlayerHealth";
     void Start()
     {
-        anim = GetComponent<Animator>();
-        anim.SetBool("isStarting", false);
         rb = GetComponent<Rigidbody2D>();
-        player = GetComponent<PlayerController>();
-        playerHealth = GetComponent<PlayerHealth>();
+        player = FindObjectOfType<PlayerController>();
+        playerHealth = player.gameObject.GetComponent<PlayerHealth>();
 
         
 
@@ -32,7 +29,6 @@ public class RainGroup : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 2)
             {
-                anim.SetBool("isStarting", true);
                 rb.velocity = new Vector2(0, -meteorSpeed);
             }
 
@@ -48,7 +44,7 @@ public class RainGroup : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
-            playerHealth.health -= 100;
+            playerHealth.health = 0;
             PlayerPrefs.SetInt(HealthKey, playerHealth.health);
         }
     }
