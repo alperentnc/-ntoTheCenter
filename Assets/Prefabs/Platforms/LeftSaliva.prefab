@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561705080138889078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.467, y: 0.242, z: 0}
+  m_LocalPosition: {x: 0.09, y: 0.242, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41,11 +41,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1561705081559898368}
   - component: {fileID: 1561705081559898369}
-  - component: {fileID: 1561705081559898374}
   - component: {fileID: 4641672894035923717}
   - component: {fileID: 4757446940988916515}
   - component: {fileID: 8058236180207987984}
   - component: {fileID: 8058236180207987990}
+  - component: {fileID: 3092713902879074495}
   m_Layer: 7
   m_Name: EnemySaliva (1)
   m_TagString: Enemy
@@ -121,23 +121,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1561705081559898374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561705081559898375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4570097b576055841b65b20b1d61ff69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 8887242015602702739, guid: 8d01186ac1b7d5e4c88ef96ab3d88880, type: 3}
-  bulletPos: {fileID: 1561705080138889073}
-  bulletFrequency: 1
-  fireDistance: 4
-  animator: {fileID: 0}
 --- !u!70 &4641672894035923717
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -210,6 +193,23 @@ MonoBehaviour:
   speed: 0.8
   direction: 1
   animator: {fileID: 8058236180207987984}
+--- !u!114 &3092713902879074495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561705081559898375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8803e23395ea54abb58e9952728f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 8887242015602702739, guid: 8d01186ac1b7d5e4c88ef96ab3d88880, type: 3}
+  bulletPos: {fileID: 1561705080138889073}
+  bulletFrequency: 1
+  fireDistance: 4
+  animator: {fileID: 4427409311707125574, guid: 5f7704760aba7644796c2784d3937ba4, type: 3}
 --- !u!1 &4898192654301256299
 GameObject:
   m_ObjectHideFlags: 0

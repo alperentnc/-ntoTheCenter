@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShooting : MonoBehaviour
+public class SalivaShooting : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletPos;
@@ -18,13 +18,13 @@ public class EnemyShooting : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         enemyPatrolling = gameObject.GetComponent<EnemyPatrolling>();
         animator = gameObject.GetComponent<Animator>();
-        
+
     }
 
-    
+
     void Update()
     {
-        
+
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
         yDifferance = player.transform.position.y - transform.position.y;
@@ -33,7 +33,7 @@ public class EnemyShooting : MonoBehaviour
         if (distance < fireDistance && System.Math.Abs(yDifferance) <= 1.5f)
         {
             animator.SetBool("isShooting", true);
-            if (transform.position.x<=player.transform.position.x)
+            if (transform.position.x <= player.transform.position.x)
             {
                 gameObject.GetComponent<SpriteRenderer>().flipX = true;
                 transform.GetChild(0).localPosition = new Vector3(0.4f, transform.GetChild(0).localPosition.y, transform.GetChild(0).localPosition.z);
@@ -55,13 +55,14 @@ public class EnemyShooting : MonoBehaviour
             enemyPatrolling.Patroll();
             animator.SetBool("isShooting", false);
         }
-        
-        
+
+
     }
 
-    void Shoot() {
+    void Shoot()
+    {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
-        AudioManager.Instance.PlaySFX("Laser");
+        AudioManager.Instance.PlaySFX("Saliva");
     }
 
 }

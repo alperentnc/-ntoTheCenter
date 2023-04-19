@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5118763378365227862}
   - component: {fileID: 5118763378365227863}
-  - component: {fileID: 5118763378365227856}
   - component: {fileID: 1355375356984568147}
   - component: {fileID: 1197977954145663349}
   - component: {fileID: 4427409311707125574}
   - component: {fileID: 4427409311707125568}
+  - component: {fileID: -7010292782693003492}
   m_Layer: 7
   m_Name: EnemySaliva (1)
   m_TagString: Enemy
@@ -90,23 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5118763378365227856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5118763378365227857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4570097b576055841b65b20b1d61ff69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 8887242015602702739, guid: 8d01186ac1b7d5e4c88ef96ab3d88880, type: 3}
-  bulletPos: {fileID: 5118763379282529575}
-  bulletFrequency: 1
-  fireDistance: 4
-  animator: {fileID: 0}
 --- !u!70 &1355375356984568147
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,6 +161,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.8
   direction: 1
+  animator: {fileID: 4427409311707125574}
+--- !u!114 &-7010292782693003492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5118763378365227857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8803e23395ea54abb58e9952728f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 8887242015602702739, guid: 8d01186ac1b7d5e4c88ef96ab3d88880, type: 3}
+  bulletPos: {fileID: 5118763379282529575}
+  bulletFrequency: 1
+  fireDistance: 4
   animator: {fileID: 4427409311707125574}
 --- !u!1 &5118763379282529568
 GameObject:

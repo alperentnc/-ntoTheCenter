@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 251708635202933267}
   - component: {fileID: 251708635202933266}
-  - component: {fileID: 251708635202933269}
   - component: {fileID: 6249022879920658454}
   - component: {fileID: 6113545362214897712}
   - component: {fileID: 8720920272671663619}
   - component: {fileID: 8720920272671663621}
+  - component: {fileID: 8141975525576134416}
   m_Layer: 7
   m_Name: EnemySaliva (1)
   m_TagString: Enemy
@@ -90,23 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &251708635202933269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251708635202933268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4570097b576055841b65b20b1d61ff69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 8887242015602702739, guid: 8d01186ac1b7d5e4c88ef96ab3d88880, type: 3}
-  bulletPos: {fileID: 251708636542172258}
-  bulletFrequency: 1
-  fireDistance: 4
-  animator: {fileID: 0}
 --- !u!70 &6249022879920658454
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -179,6 +162,23 @@ MonoBehaviour:
   speed: 0.8
   direction: 1
   animator: {fileID: 8720920272671663619}
+--- !u!114 &8141975525576134416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251708635202933268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8803e23395ea54abb58e9952728f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 8887242015602702739, guid: 8d01186ac1b7d5e4c88ef96ab3d88880, type: 3}
+  bulletPos: {fileID: 251708636542172258}
+  bulletFrequency: 1
+  fireDistance: 4
+  animator: {fileID: 4427409311707125574, guid: 5f7704760aba7644796c2784d3937ba4, type: 3}
 --- !u!1 &251708636542172261
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251708636542172261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.467, y: 0.242, z: 0}
+  m_LocalPosition: {x: 0.128, y: 0.242, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

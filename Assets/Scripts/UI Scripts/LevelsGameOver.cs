@@ -9,6 +9,7 @@ public class LevelsGameOver : MonoBehaviour
     public GameObject Spinner;
     public GameObject GameOverPanel;
     public GameObject LevelCompletedPanel;
+    public GameObject SettingsPanel;
     PlayerHealth playerHealth;
     public LevelsCoin levelsCoin;
     GameObject player;
@@ -86,5 +87,26 @@ public class LevelsGameOver : MonoBehaviour
     public void replay()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void SettingsWin()
+    {
+        SettingsPanel.SetActive(true);
+        LevelCompletedPanel.SetActive(false);
+    }
+    public void CloseSettingsWin()
+    {
+        SettingsPanel.SetActive(false);
+        LevelCompletedPanel.SetActive(true);
+    }
+
+    public void SettingsLose()
+    {
+        SettingsPanel.SetActive(true);
+        GameOverPanel.SetActive(false);
+    }
+    public void CloseSettingsLose()
+    {
+        SettingsPanel.SetActive(false);
+        GameOverPanel.SetActive(true);
     }
 }

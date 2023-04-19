@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
 
-    public GameObject LevelsPanel;
+    public GameObject SettingsPanel;
     public GameObject PausePanel;
     public Button Pause;
     private bool pause;
@@ -50,9 +50,15 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
-    public void CloseLevels()
+    public void Settings()
     {
-        LevelsPanel.SetActive(false);
+        SettingsPanel.SetActive(true);
+        PausePanel.SetActive(false);
+    }
+    public void CloseSettings()
+    {
+        SettingsPanel.SetActive(false);
         PausePanel.SetActive(true);
     }
+
 }

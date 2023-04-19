@@ -83,6 +83,7 @@ public class JumperShooting : MonoBehaviour
 
             collision.gameObject.GetComponent<PlayerHealth>().health -= 30;
             GameObject explodingAnim =  Instantiate(explode, transform.position, Quaternion.identity);
+            AudioManager.Instance.PlaySFX("Explode");
             Destroy(gameObject);
             Destroy(explodingAnim, .5f);
         }

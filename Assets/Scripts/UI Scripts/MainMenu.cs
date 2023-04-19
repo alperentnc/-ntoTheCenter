@@ -95,5 +95,13 @@ public class MainMenu : MonoBehaviour
         resetLevel.SetActive(true);
     }
 
+    public void ToggleMusic()
+    {
+        AudioManager.Instance.ToggleMusic();
+    }
 
+    public void ToggleSFX()
+    {
+        AudioManager.Instance.ToggleSFX();
+    }
 }
