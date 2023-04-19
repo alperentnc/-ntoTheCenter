@@ -3947,8 +3947,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FollowSpeed: 2
   yOffset: 0
-  upper: {fileID: 0}
-  lower: {fileID: 0}
+  upper: {fileID: 301183308}
+  lower: {fileID: 1251082841}
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
