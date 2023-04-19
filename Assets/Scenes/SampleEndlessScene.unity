@@ -6608,7 +6608,7 @@ GameObject:
   - component: {fileID: 1607774713}
   m_Layer: 5
   m_Name: HP
-  m_TagString: Untagged
+  m_TagString: Slider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
