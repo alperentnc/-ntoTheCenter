@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformManager : MonoBehaviour
 {
     public GameObject[] platformPrefabs; // Array of platform prefabs to spawn
-    public Transform characterTransform; // Reference to the transform of the main character
+    GameObject characterTransform; // Reference to the transform of the main character
     public float platformSpawnDistance = 20f; // Distance from the character at which a new platform should be spawned
     public int maxPlatformCount = 10; // Maximum number of platforms that can exist at any given time
     public string leftPlatformTag = "LeftPlatform"; // Tag for left-aligned platforms
@@ -16,6 +16,7 @@ public class PlatformManager : MonoBehaviour
 
     private void Start()
     {
+        characterTransform = GameObject.FindGameObjectWithTag("Player");
         // Spawn initial platforms
         for (int i = 0; i < maxPlatformCount; i++)
         {
@@ -33,7 +34,7 @@ public class PlatformManager : MonoBehaviour
     private void Update()
     {
         // Check if the last platform in the list is too far from the character
-        if (spawnedPlatforms.Count > 0 && -spawnedPlatforms[0].transform.position.y < -characterTransform.position.y - platformSpawnDistance)
+        if (spawnedPlatforms.Count > 0 && -spawnedPlatforms[0].transform.position.y < -characterTransform.transform.position.y - platformSpawnDistance)
         {
 
             // Remove the last platform from the list and destroy it
