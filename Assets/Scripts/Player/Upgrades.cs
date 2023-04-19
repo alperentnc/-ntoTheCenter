@@ -9,6 +9,7 @@ public class Upgrades : MonoBehaviour
     [SerializeField] private GameObject[] speedUpgradeBars;
     [SerializeField] private GameObject[] healthUpgradeBars;
     private int currentGold;
+    private int currentDiamond;
     [SerializeField] private TMP_Text speedBuyText;
     [SerializeField] private TMP_Text healthBuyText;
     private int currentIndexSpeed = 0;
@@ -42,6 +43,7 @@ public class Upgrades : MonoBehaviour
 
 
         currentGold = PlayerPrefs.GetInt("Gold", 0);
+        currentDiamond = PlayerPrefs.GetInt("Diamond", 0);
         savedIndexSpeed = PlayerPrefs.GetInt("IndexSpeed", 0);
         savedIndexHealth = PlayerPrefs.GetInt("IndexHealth", 0);
         savedSpeedBuyValue = PlayerPrefs.GetInt("SpeedBuyValue", int.Parse(speedBuyText.text));
@@ -113,6 +115,14 @@ public class Upgrades : MonoBehaviour
             PlayerPrefs.SetInt(HealthKey, playerHealthEndless.maxHalth);
             PlayerPrefs.SetInt("IndexHealth", currentIndexHealth++);
             PlayerPrefs.SetInt("HealthBuyValue", int.Parse(healthBuyText.text));
+        }
+    }
+    public void BuyMonkey()
+    {
+        if (currentDiamond >= 10)
+        {
+            currentDiamond -= 10;
+            PlayerPrefs.SetInt("Diamond", currentDiamond);
         }
     }
 }

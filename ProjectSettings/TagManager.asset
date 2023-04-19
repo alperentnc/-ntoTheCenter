@@ -17,6 +17,8 @@ TagManager:
   - gunBullet
   - electricBullet
   - Slider
+  - CurrentScore
+  - HighScore
   layers:
   - Default
   - TransparentFX

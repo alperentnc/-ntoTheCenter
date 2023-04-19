@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09f270ae451523241ba060cbf2133e2f
+guid: b622a9c1fcd585845b9ccc60e4c0d5d1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pumpkin-astronotwalk_0
+      name: monkey-walk_0
       rect:
         serializedVersion: 2
         x: 148
         y: 97
         width: 465
-        height: 600
+        height: 618
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a166a874439999419b40d7236e8665f
-      internalID: 1016559138
+      spriteID: c57b5b5bca539a74fa169249efdefba7
+      internalID: 136832413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pumpkin-astronotwalk_1
+      name: monkey-walk_1
       rect:
         serializedVersion: 2
         x: 877
         y: 74
         width: 481
-        height: 657
+        height: 641
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88c18713fc6a29c448fc171dd8bb7971
-      internalID: -1205685762
+      spriteID: 544e7bdf9f2803942a3ab461356d66c1
+      internalID: 1308548513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pumpkin-astronotwalk_2
+      name: monkey-walk_2
       rect:
         serializedVersion: 2
         x: 1576
@@ -185,19 +185,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 114d34072a7529544972ee53da8cf7a3
-      internalID: -1347081834
+      spriteID: 819ed28cb25e4e24cbd4f5157b3df7d2
+      internalID: 1617379448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pumpkin-astronotwalk_3
+      name: monkey-walk_3
       rect:
         serializedVersion: 2
         x: 2197
         y: 90
         width: 462
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd0c9f6f185375428d12c49da40d6bc
+      internalID: 1707917302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey-walk_4
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 95
+        width: 481
+        height: 620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f445f45caf9deb478984863681490c8
+      internalID: -1545775412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey-walk_5
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 92
+        width: 483
         height: 623
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -206,62 +248,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 219c8169f3e6520469877023a2ca7e04
-      internalID: 1108193457
+      spriteID: f03b0de7d58a9c042bbb5098d5fcedb5
+      internalID: 1667900665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pumpkin-astronotwalk_4
-      rect:
-        serializedVersion: 2
-        x: 2727
-        y: 95
-        width: 481
-        height: 635
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9eb089ebeaedbe142bd35e74120f0159
-      internalID: -191717240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pumpkin-astronotwalk_5
-      rect:
-        serializedVersion: 2
-        x: 3379
-        y: 92
-        width: 483
-        height: 639
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db703622435fb53459483e6bf5a3a657
-      internalID: -1723489549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pumpkin-astronotwalk_6
+      name: monkey-walk_6
       rect:
         serializedVersion: 2
         x: 3985
         y: 91
         width: 505
-        height: 639
+        height: 609
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +269,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef5952c1bfafe2f4792e6c072ec531bb
-      internalID: -1877173132
+      spriteID: 69e616efb50df4d4492cd74d936f1ada
+      internalID: -1272096856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pumpkin-astronotwalk_7
+      name: monkey-walk_7
       rect:
         serializedVersion: 2
         x: 4622
         y: 95
         width: 435
-        height: 636
+        height: 620
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dbb760b0b74e43458e69915cf7088fb
-      internalID: 439282356
+      spriteID: 8efefff5a209caa49b7a79a2c9f8b97f
+      internalID: 921229051
       vertices: []
       indices: 
       edges: []
@@ -307,14 +307,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pumpkin-astronotwalk_0: 1016559138
-      pumpkin-astronotwalk_5: -1723489549
-      pumpkin-astronotwalk_1: -1205685762
-      pumpkin-astronotwalk_3: 1108193457
-      pumpkin-astronotwalk_2: -1347081834
-      pumpkin-astronotwalk_4: -191717240
-      pumpkin-astronotwalk_7: 439282356
-      pumpkin-astronotwalk_6: -1877173132
+      monkey-walk_3: 1707917302
+      monkey-walk_7: 921229051
+      monkey-walk_2: 1617379448
+      monkey-walk_0: 136832413
+      monkey-walk_6: -1272096856
+      monkey-walk_1: 1308548513
+      monkey-walk_5: 1667900665
+      monkey-walk_4: -1545775412
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

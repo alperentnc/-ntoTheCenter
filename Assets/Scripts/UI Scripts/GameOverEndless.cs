@@ -7,13 +7,14 @@ using TMPro;
 public class GameOverEndless : MonoBehaviour
 {
     public GameObject GameOverPanel;
-    public PlayerHealth playerHealth;
+    PlayerHealth playerHealth;
     public CoinManager coinManager;
-    public GameObject player;
+    GameObject player;
     public GameObject coin;
     public TMP_Text CoinText;
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
         coinManager = coin.GetComponent<CoinManager>();
         
