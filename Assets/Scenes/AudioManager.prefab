@@ -175,8 +175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MusicSounds:
-  - Name: 
-    Clip: {fileID: 0}
+  - Name: Theme
+    Clip: {fileID: 8300000, guid: ca7a5a92ae480924395ef06a5f3ab6a4, type: 3}
   SFXSounds:
   - Name: Saliva
     Clip: {fileID: 8300000, guid: f2a2b815c9580774593fc24629e34705, type: 3}
@@ -242,7 +242,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
