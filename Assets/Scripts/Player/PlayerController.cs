@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         slow = false;
         stun = false;
         slowPlatform = false;
+        meteorStarter = false;
     }
 
     void Update()

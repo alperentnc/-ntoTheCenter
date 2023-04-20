@@ -16,6 +16,7 @@ public class RainGroup : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<PlayerController>();
         playerHealth = player.gameObject.GetComponent<PlayerHealth>();
+        timer = 0;
 
         
 
@@ -30,9 +31,15 @@ public class RainGroup : MonoBehaviour
             if (timer >= 2)
             {
                 rb.velocity = new Vector2(0, -meteorSpeed);
+                if (transform.position.y >= Camera.main.transform.position.y+10)
+                {
+                    transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y+8, transform.position.z);
+                }
             }
+            
 
         }
+        
 
     }
     void OnCollisionEnter2D(Collision2D collision)

@@ -10,7 +10,7 @@ public class SkinBuy : MonoBehaviour
     public Button PumpkinBuyer,PumpkinEquiper,PumpkinEquiped;
     public Button MonkeyBuyer,MonkeyEquiper,MonkeyEquiped;
     public Button DefaultSkinEquiper;
-    public int haveDuck, havePumpkin, haveMonkey,equipDuck,equipPumpkin,equipMonkey;
+    public int haveDuck, havePumpkin, haveMonkey,equipDuck,equipPumpkin,equipMonkey,equipDefault;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,7 @@ public class SkinBuy : MonoBehaviour
         PlayerPrefs.GetInt("equipDuck", 0);
         PlayerPrefs.GetInt("equipMonkey", 0);
         PlayerPrefs.GetInt("equipPumpkin", 0);
+        PlayerPrefs.GetInt("equipDefault", 0);
 
     }
 
@@ -57,7 +58,6 @@ public class SkinBuy : MonoBehaviour
             PumpkinEquiped.gameObject.SetActive(false);
             MonkeyEquiped.gameObject.SetActive(true);
             DefaultSkinEquiper.gameObject.SetActive(true);
-            DefaultSkinEquiper.gameObject.SetActive(true);
             PumpkinEquiper.gameObject.SetActive(true);
             DuckEquiper.gameObject.SetActive(true);
         }
@@ -68,9 +68,18 @@ public class SkinBuy : MonoBehaviour
             PumpkinEquiped.gameObject.SetActive(true);
             MonkeyEquiped.gameObject.SetActive(false);
             DefaultSkinEquiper.gameObject.SetActive(true);
-            DefaultSkinEquiper.gameObject.SetActive(true);
             DuckEquiper.gameObject.SetActive(true);
             MonkeyEquiper.gameObject.SetActive(true);
+        }
+        if (PlayerPrefs.GetInt("equipDefault") == 1)
+        {
+            PumpkinEquiper.gameObject.SetActive(false);
+            DuckEquiped.gameObject.SetActive(false);
+            PumpkinEquiped.gameObject.SetActive(false);
+            MonkeyEquiped.gameObject.SetActive(false);
+            DuckEquiper.gameObject.SetActive(true);
+            MonkeyEquiper.gameObject.SetActive(true);
+            PumpkinEquiper.gameObject.SetActive(true);
         }
 
     }
@@ -123,6 +132,7 @@ public class SkinBuy : MonoBehaviour
         PlayerPrefs.SetInt("equipMonkey", 1);
         PlayerPrefs.SetInt("equipDuck", 0);
         PlayerPrefs.SetInt("equipPumpkin", 0);
+        PlayerPrefs.SetInt("equipDefault", 0);
     }
     public void DuckEquip()
     {
@@ -133,6 +143,7 @@ public class SkinBuy : MonoBehaviour
         PlayerPrefs.SetInt("equipMonkey", 0);
         PlayerPrefs.SetInt("equipDuck", 1);
         PlayerPrefs.SetInt("equipPumpkin", 0);
+        PlayerPrefs.SetInt("equipDefault", 0);
         DuckEquiper.gameObject.SetActive(false);
 
     }
@@ -157,5 +168,6 @@ public class SkinBuy : MonoBehaviour
         PlayerPrefs.SetInt("equipMonkey", 0);
         PlayerPrefs.SetInt("equipDuck", 0);
         PlayerPrefs.SetInt("equipPumpkin", 0);
+        PlayerPrefs.SetInt("equipDefault", 1);
     }
 }
