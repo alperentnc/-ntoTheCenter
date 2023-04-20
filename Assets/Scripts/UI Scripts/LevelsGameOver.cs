@@ -17,8 +17,25 @@ public class LevelsGameOver : MonoBehaviour
     public GameObject coin;
     public TMP_Text CoinTextOver,CoinTextCompleted;
     public bool over,overlevel,levelbool;
+    public GameObject Monkey, Duck, Pumpkin, Default;
     private void Start()
     {
+        if (PlayerPrefs.GetInt("equipDuck") == 1)
+        {
+            Instantiate(Duck, new Vector3(-2, 4.9f, 4),Quaternion.identity);
+        }
+        if (PlayerPrefs.GetInt("equipMonkey") == 1)
+        {
+            Instantiate(Monkey, new Vector3(-2, 4.9f, 4), Quaternion.identity);
+        }
+        if (PlayerPrefs.GetInt("equipPumpkin") == 1)
+        {
+            Instantiate(Pumpkin, new Vector3(-2, 4.9f, 4), Quaternion.identity);
+        }
+        if (PlayerPrefs.GetInt("equipDefault") == 1)
+        {
+            Instantiate(Default, new Vector3(-2, 4.9f, 4), Quaternion.identity);
+        }
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
         levelsCoin = coin.GetComponent<LevelsCoin>();

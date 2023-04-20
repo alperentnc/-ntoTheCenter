@@ -11,9 +11,26 @@ public class GameOverEndless : MonoBehaviour
     public CoinManager coinManager;
     GameObject player;
     public GameObject coin;
+    public GameObject Duck, Monkey, Pumpkin, Default;
     public TMP_Text CoinText;
     private void Start()
     {
+        if (PlayerPrefs.GetInt("equipDuck") == 1)
+        {
+            Instantiate(Duck, new Vector3(-2, 5.1f, 4), Quaternion.identity);
+        }
+        if (PlayerPrefs.GetInt("equipMonkey") == 1)
+        {
+            Instantiate(Monkey, new Vector3(-2, 5.1f, 4), Quaternion.identity);
+        }
+        if (PlayerPrefs.GetInt("equipPumpkin") == 1)
+        {
+            Instantiate(Pumpkin, new Vector3(-2, 5.1f, 4), Quaternion.identity);
+        }
+        if (PlayerPrefs.GetInt("equipDefault") == 1)
+        {
+            Instantiate(Default, new Vector3(-2, 5.1f, 4), Quaternion.identity);
+        }
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
         coinManager = coin.GetComponent<CoinManager>();

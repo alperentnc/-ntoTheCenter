@@ -19,6 +19,8 @@ TagManager:
   - Slider
   - CurrentScore
   - HighScore
+  - WatchAdder
+  - Spinner
   layers:
   - Default
   - TransparentFX
