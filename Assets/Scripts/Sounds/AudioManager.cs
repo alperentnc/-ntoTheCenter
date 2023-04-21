@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] MusicSounds, SFXSounds;
     public AudioSource MusicSource, SFXSource;
 
+
     private void Awake()
     {
         if (Instance == null)
@@ -20,7 +21,6 @@ public class AudioManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            return;
         }
     }
 
@@ -28,7 +28,6 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic("Theme");
     }
-
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(MusicSounds, x => x.Name == name);

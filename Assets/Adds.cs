@@ -54,15 +54,11 @@ public class Adds : MonoBehaviour
     {
         if (IronSource.Agent.isInterstitialReady())
         {
-            Debug.Log("AD");
-            IronSource.Agent.loadInterstitial();
-            Debug.Log("NOT READY");
             IronSource.Agent.showInterstitial();
-            Debug.Log("READY");
         }
         else
         {
-            //Debug.Log("AD NOT READY");
+            Debug.Log("AD NOT READY");
         }
 
     }
@@ -72,9 +68,7 @@ public class Adds : MonoBehaviour
         
         if (IronSource.Agent.isRewardedVideoAvailable())
         {
-           
             IronSource.Agent.showRewardedVideo();
-            
         }
         else
         {
