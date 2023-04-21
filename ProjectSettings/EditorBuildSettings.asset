@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level6.unity
     guid: ab45363f0bd512c42bdc921447902460
   - enabled: 1
+    path: Assets/Scenes/ToBeContinue.unity
+    guid: 3d1f76d8237b8b44c9ec7a97b11e8b39
+  - enabled: 1
     path: Assets/Scenes/SampleEndlessScene.unity
     guid: 8612ab1be81865144a0bf7f48bcac088
   - enabled: 1
