@@ -64,7 +64,7 @@ public class Adds : MonoBehaviour
         {
             //Debug.Log("AD NOT READY");
         }
-        
+
     }
     //rewarded buttons
     public void ShowRewardedAd()

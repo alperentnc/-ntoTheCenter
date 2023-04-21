@@ -9,7 +9,6 @@ public class CoinDisplay : MonoBehaviour
     void Start()
     {
 
-        PlayerPrefs.SetInt("Diamond", 20);
     }
     private void Update()
     {

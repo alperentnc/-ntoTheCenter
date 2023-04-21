@@ -8,18 +8,19 @@ public class WheelManager : MonoBehaviour {
     //Creates the wheel
     SpinWheel wheel = new SpinWheel(8);
     GameObject watchAdder,spinner;
-    int money = 2500;
     private int diamondValue;
     public GameObject go;
     //public Text text;
     public Text winT;
-    public bool oneTime;
+    public bool oneTime,isShowing;
+    Adds adds;
 
     void Start () {
         spinner = GameObject.FindGameObjectWithTag("Spinner");
         watchAdder = GameObject.FindGameObjectWithTag("WatchAdder");
         oneTime = false;
         int currentGold = PlayerPrefs.GetInt("Gold", 0);
+        adds = GetComponent<Adds>();
         //Keep track of the player money
         UpdateText();
 
@@ -89,6 +90,13 @@ public class WheelManager : MonoBehaviour {
             UpdateText();
         });
 	}
+    void Update()
+    {
+        if (adds == null)
+        {
+            adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
+        }
+    }
 
     public void UpdateText()
     {
@@ -111,6 +119,7 @@ public class WheelManager : MonoBehaviour {
     }
     public void WatchAd()
     {
+        adds.LoadFullSize();
         watchAdder.SetActive(false);
     }
 

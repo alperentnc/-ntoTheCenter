@@ -3081,6 +3081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1900d439144a1c149ac8eb7fe7d9c445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 --- !u!114 &532825211 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5227546180124094514, guid: f95c88aeaad2dd1469e4af0c375ea9e4, type: 3}
@@ -3092,6 +3093,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc8a9846cd136147831046b3458a1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> Stashed changes
 --- !u!1 &532912118
 GameObject:
   m_ObjectHideFlags: 0
@@ -12175,7 +12178,7 @@ RectTransform:
   m_GameObject: {fileID: 1613536020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 4}
-  m_LocalScale: {x: 0.027789738, y: 0.03843026, z: 0.79399246}
+  m_LocalScale: {x: 0.027, y: 0.026, z: 0.79399246}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1691456245}
@@ -12263,7 +12266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 68f90164a3221444281c0844ff5e2234, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91008baf3deb6bd44ac8e1974244a2ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12314,6 +12317,7 @@ MonoBehaviour:
   go: {fileID: 1296456759}
   winT: {fileID: 827635890}
   oneTime: 0
+  isShowing: 0
 --- !u!212 &1627124848
 SpriteRenderer:
   m_ObjectHideFlags: 0

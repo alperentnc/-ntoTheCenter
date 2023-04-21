@@ -24,15 +24,15 @@ public class LevelsGameOver : MonoBehaviour
         {
             Instantiate(Duck, new Vector3(-2, 4.9f, 4),Quaternion.identity);
         }
-        if (PlayerPrefs.GetInt("equipMonkey") == 1)
+        else if (PlayerPrefs.GetInt("equipMonkey") == 1)
         {
             Instantiate(Monkey, new Vector3(-2, 4.9f, 4), Quaternion.identity);
         }
-        if (PlayerPrefs.GetInt("equipPumpkin") == 1)
+        else if (PlayerPrefs.GetInt("equipPumpkin") == 1)
         {
             Instantiate(Pumpkin, new Vector3(-2, 4.9f, 4), Quaternion.identity);
         }
-        if (PlayerPrefs.GetInt("equipDefault") == 1)
+        else
         {
             Instantiate(Default, new Vector3(-2, 4.9f, 4), Quaternion.identity);
         }

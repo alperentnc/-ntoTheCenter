@@ -6,12 +6,15 @@ public class PlayerHealth : MonoBehaviour
     Slider slider;
     public int maxHalth = 100;
     public int health = 100;
-    public bool isGameOver = false;
+    public bool isGameOver = false,isLoading;
+    Adds adds;
 
     private const string HealthKey = "PlayerHealth";
 
     void Start()
     {
+        isLoading = false;
+        adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
         slider = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
         PlayerPrefs.SetInt(HealthKey, health);
         if (PlayerPrefs.GetInt("IndexHealth") == 0)
@@ -44,6 +47,13 @@ public class PlayerHealth : MonoBehaviour
         {
             PlayerController.meteorStarter = false;
             isGameOver = true;
+            if (!isLoading)
+            {
+                isLoading=true;
+                adds.LoadFullSize();
+            }
+            
+
             //Time.timeScale = 0f;
         }
         else
