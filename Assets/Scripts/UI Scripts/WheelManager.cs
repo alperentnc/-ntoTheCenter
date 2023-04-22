@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.Networking;
 public class WheelManager : MonoBehaviour {
 
     //Creates the wheel
@@ -14,9 +14,13 @@ public class WheelManager : MonoBehaviour {
     //public Text text;
     public Text winT;
     public bool oneTime,isShowing;
+    private bool internet = false;
     Adds adds;
     
     void Start () {
+
+        StartCoroutine(CheckInternetConnection());
+
         Scene scene = SceneManager.GetActiveScene();
         spinner = GameObject.FindGameObjectWithTag("Spinner");
         watchAdder = GameObject.FindGameObjectWithTag("WatchAdder");
@@ -169,6 +173,19 @@ public class WheelManager : MonoBehaviour {
         }
     }
 
+    IEnumerator CheckInternetConnection()
+    {
+        UnityWebRequest request = new UnityWebRequest("http://google.com");
+        yield return request.SendWebRequest();
+        if (request.error != null)
+        {
+            internet = false;
+        }
+        else
+        {
+            internet = true;
+        }
+    }
     public void UpdateText()
     {
         //text.text = money + "";
@@ -188,12 +205,15 @@ public class WheelManager : MonoBehaviour {
             spinner.SetActive(false);
             
     }
+    
     public void WatchAd()
     {
-        adds.ShowFullSize();
-        if (adds.test)
+        
+        if (internet)
         {
+            Debug.Log("intyok");
             watchAdder.SetActive(false);
+            adds.ShowFullSize();
         }
         
     }

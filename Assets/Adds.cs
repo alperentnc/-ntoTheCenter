@@ -50,38 +50,39 @@ public class Adds : MonoBehaviour
     public void LoadFullSize()
     {
         IronSource.Agent.loadInterstitial();
-        test = true;
+        
         Debug.Log("sa");
     }
 
     public void ShowFullSize()
     {
         Debug.Log("as");
+        //test = true;
         IronSource.Agent.showInterstitial();
-        if (IronSource.Agent.isInterstitialReady())
-        {
-            IronSource.Agent.showInterstitial();
+        //if (IronSource.Agent.isInterstitialReady())
+        //{
+        //    IronSource.Agent.showInterstitial();
             
 
-        }
-        else
-        {
-            Debug.Log("AD NOT READY");
-        }
+        //}
+        //else
+        //{
+        //    Debug.Log("AD NOT READY");
+        //}
 
     }
     //rewarded buttons
     public void ShowRewardedAd()
     {
-        
-        if (IronSource.Agent.isRewardedVideoAvailable())
-        {
-            IronSource.Agent.showRewardedVideo();
-        }
-        else
-        {
-            Debug.Log("AD NOT READY");
-        }
+        IronSource.Agent.showRewardedVideo();
+        //if (IronSource.Agent.isRewardedVideoAvailable())
+        //{
+        //    IronSource.Agent.showRewardedVideo();
+        //}
+        //else
+        //{
+        //    Debug.Log("AD NOT READY");
+        //}
     }
 
 
@@ -149,7 +150,7 @@ public class Adds : MonoBehaviour
     {
 
 
-        //reward player
+        //test = true;
  
     }
     // The rewarded video ad was failed to show.
