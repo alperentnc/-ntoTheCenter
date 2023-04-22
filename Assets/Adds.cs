@@ -48,6 +48,7 @@ public class Adds : MonoBehaviour
     public void LoadFullSize()
     {
         IronSource.Agent.loadInterstitial();
+        Debug.Log("sa");
     }
 
     public void ShowFullSize()
@@ -55,6 +56,7 @@ public class Adds : MonoBehaviour
         if (IronSource.Agent.isInterstitialReady())
         {
             IronSource.Agent.showInterstitial();
+            Debug.Log("as");
         }
         else
         {

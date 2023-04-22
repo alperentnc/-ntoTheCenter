@@ -7,7 +7,7 @@ public class Door : MonoBehaviour
     Adds adds;
     void Start()
     {
-        adds = gameObject.GetComponent<Adds>();
+        adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -15,9 +15,9 @@ public class Door : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // Save the current level as completed
-            adds.LoadFullSize();
             LevelsCoin.LevelCompleted = true;
             PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex+1);
+            adds.LoadFullSize();
             // Load the next level
         }
     }

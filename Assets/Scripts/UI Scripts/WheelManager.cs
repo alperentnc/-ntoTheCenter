@@ -119,7 +119,7 @@ public class WheelManager : MonoBehaviour {
     }
     public void WatchAd()
     {
-        adds.LoadFullSize();
+        adds.ShowFullSize();
         watchAdder.SetActive(false);
     }
 
