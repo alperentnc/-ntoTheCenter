@@ -5,8 +5,10 @@ using UnityEngine;
 public class Adds : MonoBehaviour
 {
     // Start is called before the first frame update
+    public bool test;
     void Start()
     {
+        test = false;
         IronSource.Agent.init("19a506065");
         IronSource.Agent.validateIntegration();
     }
@@ -48,15 +50,19 @@ public class Adds : MonoBehaviour
     public void LoadFullSize()
     {
         IronSource.Agent.loadInterstitial();
+        test = true;
         Debug.Log("sa");
     }
 
     public void ShowFullSize()
     {
+        Debug.Log("as");
+        IronSource.Agent.showInterstitial();
         if (IronSource.Agent.isInterstitialReady())
         {
             IronSource.Agent.showInterstitial();
-            Debug.Log("as");
+            
+
         }
         else
         {

@@ -15,7 +15,6 @@ public class PlayerHealth : MonoBehaviour
     {
         isLoading = false;
         adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
-        adds.LoadFullSize();
         slider = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
         PlayerPrefs.SetInt(HealthKey, health);
         if (PlayerPrefs.GetInt("IndexHealth") == 0)

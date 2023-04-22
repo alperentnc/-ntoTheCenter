@@ -14,7 +14,7 @@ public class WheelManager : MonoBehaviour {
     public Text winT;
     public bool oneTime,isShowing;
     Adds adds;
-
+    
     void Start () {
         spinner = GameObject.FindGameObjectWithTag("Spinner");
         watchAdder = GameObject.FindGameObjectWithTag("WatchAdder");
@@ -120,7 +120,11 @@ public class WheelManager : MonoBehaviour {
     public void WatchAd()
     {
         adds.ShowFullSize();
-        watchAdder.SetActive(false);
+        if (adds.test)
+        {
+            watchAdder.SetActive(false);
+        }
+        
     }
 
     public void ok()
