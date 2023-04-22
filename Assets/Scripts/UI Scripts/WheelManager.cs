@@ -213,7 +213,7 @@ public class WheelManager : MonoBehaviour {
         {
             Debug.Log("intyok");
             watchAdder.SetActive(false);
-            adds.ShowFullSize();
+            adds.ShowRewardedAd();
         }
         
     }

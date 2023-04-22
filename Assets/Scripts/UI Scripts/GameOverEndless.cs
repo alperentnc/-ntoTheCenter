@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameOverEndless : MonoBehaviour
 {
-    public GameObject GameOverPanel,Spinner;
+    public GameObject GameOverPanel,Spinner, hp, best, score, pause;
     PlayerHealth playerHealth;
     public CoinManager coinManager;
     GameObject player;
@@ -47,21 +47,31 @@ public class GameOverEndless : MonoBehaviour
     {
         Spinner.SetActive(true);
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        score.SetActive(false);
+        hp.SetActive(false);
+        pause.SetActive(false);
+        best.SetActive(false);
     }
     public void Skip()
     {
+        Spinner.SetActive(false);
         GameOverPanel.SetActive(true);
+        
         if (Time.timeScale == 1)
         {
             Time.timeScale = 0;
         }
-        Spinner.SetActive(false);
+        Time.timeScale = 0;
         CoinText.text = "   You Earned: " + CoinManager.totalGold.ToString() + " Coins";
     }
     public void RestartGame()
     {
         GameOverPanel.SetActive(false);
         SceneManager.LoadScene("SampleEndlessScene");
+        score.SetActive(true);
+        hp.SetActive(true);
+        pause.SetActive(true);
+        best.SetActive(true);
         Time.timeScale = 1.0f;
     }
     private void Update()
