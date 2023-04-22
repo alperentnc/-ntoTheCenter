@@ -7,7 +7,7 @@ public class CoinManager : MonoBehaviour
     GameObject player;
     public float goldPerScore; // How much gold the player earns per score point
 
-    public int totalGold; // Total gold earned by the player
+    public static int totalGold; // Total gold earned by the player
 
     void Start()
     {
@@ -27,9 +27,6 @@ public class CoinManager : MonoBehaviour
 
             
             int currentGold = PlayerPrefs.GetInt("Gold", 0);
-            currentGold += totalGold;
-            PlayerPrefs.SetInt("Gold", currentGold);
-            PlayerPrefs.Save();
             
             // Disable this script so that it doesn't keep calculating gold after the game is over
             enabled = false;

@@ -6,10 +6,11 @@ using TMPro;
 
 public class GameOverEndless : MonoBehaviour
 {
-    public GameObject GameOverPanel;
+    public GameObject GameOverPanel,Spinner;
     PlayerHealth playerHealth;
     public CoinManager coinManager;
     GameObject player;
+    Rigidbody2D rb;
     public GameObject coin;
     public GameObject Duck, Monkey, Pumpkin, Default;
     public TMP_Text CoinText;
@@ -34,6 +35,7 @@ public class GameOverEndless : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
         coinManager = coin.GetComponent<CoinManager>();
+        rb = player.GetComponent<Rigidbody2D>();
         
     }
     public void MainMenu()
@@ -43,13 +45,18 @@ public class GameOverEndless : MonoBehaviour
     }
     public void GameOver()
     {
+        Spinner.SetActive(true);
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+    public void Skip()
+    {
         GameOverPanel.SetActive(true);
         if (Time.timeScale == 1)
         {
             Time.timeScale = 0;
         }
-        
-        CoinText.text ="   You Earned: " + coinManager.totalGold.ToString() + " Coins";
+        Spinner.SetActive(false);
+        CoinText.text = "   You Earned: " + CoinManager.totalGold.ToString() + " Coins";
     }
     public void RestartGame()
     {
