@@ -51,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
                 isLoading=true;
                 adds.LoadFullSize();
             }
-            
+
 
             //Time.timeScale = 0f;
         }

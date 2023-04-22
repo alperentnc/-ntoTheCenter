@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("Diamond",8);
+        //PlayerPrefs.SetInt("Diamond",8);
         if (PlayerPrefs.GetInt("IndexHealth") + 1 == 0)
         {
             PlayerPrefs.SetFloat(NormalSpeedKey, 6f);
