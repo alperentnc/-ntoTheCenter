@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4736341475943501039}
   m_Layer: 14
   m_Name: meteor
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   meteorSpeed: 1
-  anim: {fileID: 0}
 --- !u!50 &4736341475943501039
 Rigidbody2D:
   serializedVersion: 4

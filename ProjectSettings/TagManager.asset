@@ -21,6 +21,7 @@ TagManager:
   - HighScore
   - WatchAdder
   - Spinner
+  - meteor
   layers:
   - Default
   - TransparentFX

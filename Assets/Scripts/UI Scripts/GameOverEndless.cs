@@ -9,13 +9,17 @@ public class GameOverEndless : MonoBehaviour
     public GameObject GameOverPanel,Spinner, hp, best, score, pause;
     PlayerHealth playerHealth;
     public CoinManager coinManager;
-    GameObject player;
+    GameObject player, enemy, gun, explode, electric, fastmeteor;
     Rigidbody2D rb;
     public GameObject coin;
     public GameObject Duck, Monkey, Pumpkin, Default;
     public TMP_Text CoinText;
+    bool test;
+    bool scale;
     private void Start()
     {
+        test = false;
+        scale = false;
         if (PlayerPrefs.GetInt("equipDuck") == 1)
         {
             Instantiate(Duck, new Vector3(-2, 5.1f, 4), Quaternion.identity);
@@ -33,10 +37,12 @@ public class GameOverEndless : MonoBehaviour
             Instantiate(Default, new Vector3(-2, 5.1f, 4), Quaternion.identity);
         }
         player = GameObject.FindGameObjectWithTag("Player");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        fastmeteor = GameObject.FindGameObjectWithTag("meteor");
         playerHealth = player.GetComponent<PlayerHealth>();
         coinManager = coin.GetComponent<CoinManager>();
         rb = player.GetComponent<Rigidbody2D>();
-        
+
     }
     public void MainMenu()
     {
@@ -45,18 +51,37 @@ public class GameOverEndless : MonoBehaviour
     }
     public void GameOver()
     {
-        Spinner.SetActive(true);
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        score.SetActive(false);
-        hp.SetActive(false);
-        pause.SetActive(false);
-        best.SetActive(false);
+        if (!test)
+        {
+            Spinner.SetActive(true);
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            //enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            //fastmeteor.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            score.SetActive(false);
+            hp.SetActive(false);
+            pause.SetActive(false);
+            best.SetActive(false);
+            test = true;
+        }
+        
     }
     public void Skip()
     {
         Spinner.SetActive(false);
         GameOverPanel.SetActive(true);
-        
+        scale = true;
+        //if (!test)
+        //{
+        //    Spinner.SetActive(false);
+        //    rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        //    enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        //    fastmeteor.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        //    score.SetActive(false);
+        //    hp.SetActive(false);
+        //    pause.SetActive(false);
+        //    best.SetActive(false);
+        //    test = true;
+        //}
         if (Time.timeScale == 1)
         {
             Time.timeScale = 0;
@@ -84,6 +109,10 @@ public class GameOverEndless : MonoBehaviour
         //{
         //    Time.timeScale = 1.0f;
         //}
+        if (scale)
+        {
+            Time.timeScale = 0f;
+        }
 
     }
 }
