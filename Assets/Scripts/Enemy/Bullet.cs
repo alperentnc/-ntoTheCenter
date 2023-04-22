@@ -49,12 +49,12 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Reduce the player's health
-            health -= 20;
+            health -= 10;
 
             // Save the player's health to PlayerPrefs
             PlayerPrefs.SetInt(HealthKey, health);
 
-            collision.gameObject.GetComponent<PlayerHealth>().health -= 20;
+            collision.gameObject.GetComponent<PlayerHealth>().health -= 10;
             Debug.Log(health);
             Destroy(gameObject);
         }
