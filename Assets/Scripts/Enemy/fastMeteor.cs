@@ -15,7 +15,7 @@ public class fastMeteor : MonoBehaviour
     public Camera cam;
     public bool symbolBool=false;
     float symbolTimer;
-    Vector2 startPos;
+    Vector3 startPos;
 
   
 
@@ -48,7 +48,7 @@ public class fastMeteor : MonoBehaviour
         }
         if (transform.position.y <= cam.transform.position.y - 8)
         {
-            Instantiate(meteorPrefab, new Vector2(startPos.x, cam.transform.position.y+15), Quaternion.identity);
+            Instantiate(meteorPrefab, new Vector3(startPos.x, cam.transform.position.y+15,4), Quaternion.identity);
             timer = 0;
             Destroy(this.gameObject);
         }

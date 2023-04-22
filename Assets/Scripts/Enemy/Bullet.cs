@@ -54,7 +54,8 @@ public class Bullet : MonoBehaviour
             // Save the player's health to PlayerPrefs
             PlayerPrefs.SetInt(HealthKey, health);
 
-            collision.gameObject.GetComponent<PlayerHealth>().health -= 10;
+            collision.gameObject.GetComponent<PlayerHealth>().health -= 20;
+            Debug.Log(health);
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Platform"))

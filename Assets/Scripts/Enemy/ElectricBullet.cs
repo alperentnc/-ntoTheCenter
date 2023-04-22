@@ -9,6 +9,8 @@ public class ElectricBullet : MonoBehaviour
     public float force;
     private float timer, animTimer;
     public Animator animator;
+    private const string HealthKey = "PlayerHealth";
+    public int health;
 
     void Start()
     {
@@ -17,6 +19,10 @@ public class ElectricBullet : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         Vector3 direction = player.transform.position - transform.position;
         transform.rotation = Quaternion.Euler(0, 0, -90);
+        if (PlayerPrefs.HasKey(HealthKey))
+        {
+            health = PlayerPrefs.GetInt(HealthKey);
+        }
     }
 
     void Update()
@@ -38,6 +44,11 @@ public class ElectricBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            health -= 5;
+
+            // Save the player's health to PlayerPrefs
+            PlayerPrefs.SetInt(HealthKey, health);
+
             collision.gameObject.GetComponent<PlayerHealth>().health -= 5;
             //Destroy(gameObject);
         }

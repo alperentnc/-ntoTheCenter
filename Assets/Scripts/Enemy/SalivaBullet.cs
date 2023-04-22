@@ -45,10 +45,11 @@ public class SalivaBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Reduce the player's health
-            health -= 10;
+            health -= 5;
 
             // Save the player's health to PlayerPrefs
             PlayerPrefs.SetInt(HealthKey, health);
+            collision.gameObject.GetComponent<PlayerHealth>().health -= 5;
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Platform"))
