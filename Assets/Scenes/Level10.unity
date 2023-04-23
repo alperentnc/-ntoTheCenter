@@ -265,7 +265,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -470,7 +470,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -535,7 +535,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -1024,7 +1024,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -2338,7 +2338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141975525576134416, guid: 861b6259b3e70574d96db0ed0407f072, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8141975525576134416, guid: 861b6259b3e70574d96db0ed0407f072, type: 3}
       propertyPath: bulletFrequency
@@ -2839,7 +2839,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -2904,7 +2904,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -3111,7 +3111,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -5986,7 +5986,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -6565,7 +6565,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -7940,7 +7940,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -8053,7 +8053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141975525576134416, guid: 861b6259b3e70574d96db0ed0407f072, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8141975525576134416, guid: 861b6259b3e70574d96db0ed0407f072, type: 3}
       propertyPath: bulletFrequency
@@ -9680,7 +9680,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -11756,7 +11756,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -12426,7 +12426,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -12491,7 +12491,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -13817,7 +13817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -14438,7 +14438,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -14503,7 +14503,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -15271,7 +15271,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -15476,7 +15476,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -16102,7 +16102,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6317311626679910681, guid: 02a799d011a377d459f4fda10d691bd1, type: 3}
       propertyPath: bulletFrequency
@@ -16235,7 +16235,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
@@ -16422,7 +16422,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: fireDistance
-      value: 0.3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3092713902879074495, guid: 309215feb7362fc498012189424d1cc6, type: 3}
       propertyPath: bulletFrequency
