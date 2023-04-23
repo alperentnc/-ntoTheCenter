@@ -16,9 +16,10 @@ public class WheelManager : MonoBehaviour {
     public bool oneTime,isShowing;
     private bool internet = false;
     Adds adds;
+    public static bool isTook;
     
     void Start () {
-
+        isTook = false;
         StartCoroutine(CheckInternetConnection());
 
         Scene scene = SceneManager.GetActiveScene();
@@ -38,6 +39,7 @@ public class WheelManager : MonoBehaviour {
         {
             wheel.AddCallback((index) =>
             {
+                isTook = true;
                 switch (index)
                 {
                     case 1:
@@ -103,6 +105,7 @@ public class WheelManager : MonoBehaviour {
         {
             wheel.AddCallback((index) =>
             {
+                isTook = true;
                 switch (index)
                 {
                     case 1:

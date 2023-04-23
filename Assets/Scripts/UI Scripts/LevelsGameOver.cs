@@ -18,8 +18,10 @@ public class LevelsGameOver : MonoBehaviour
     public TMP_Text CoinTextOver,CoinTextCompleted;
     public bool over,overlevel,levelbool;
     public GameObject Monkey, Duck, Pumpkin, Default;
+    private int currentGold;
     private void Start()
     {
+        currentGold = 0;
         if (PlayerPrefs.GetInt("equipDuck") == 1)
         {
             Instantiate(Duck, new Vector3(-2, 4.9f, 4),Quaternion.identity);
@@ -82,6 +84,12 @@ public class LevelsGameOver : MonoBehaviour
         
         if (LevelsCoin.LevelCompleted == true)
         {
+            if (!WheelManager.isTook)
+            {
+                currentGold = PlayerPrefs.GetInt("Gold");
+                currentGold += LevelsCoin.totalGold;
+                PlayerPrefs.SetInt("Gold", currentGold);
+            }
             LevelCompletedPanel.SetActive(true);
             CoinTextCompleted.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
             Spinner.SetActive(false);
@@ -89,6 +97,12 @@ public class LevelsGameOver : MonoBehaviour
         }
         else
         {
+            if (!WheelManager.isTook)
+            {
+                currentGold = PlayerPrefs.GetInt("Gold");
+                currentGold += LevelsCoin.totalGold;
+                PlayerPrefs.SetInt("Gold", currentGold);
+            }
             GameOverPanel.SetActive(true);
             CoinTextOver.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
             Spinner.SetActive(false);

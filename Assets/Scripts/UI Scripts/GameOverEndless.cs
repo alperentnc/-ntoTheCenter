@@ -16,8 +16,10 @@ public class GameOverEndless : MonoBehaviour
     public TMP_Text CoinText;
     bool test;
     bool scale;
+    private int currentGold;
     private void Start()
     {
+        currentGold = 0;
         test = false;
         scale = false;
         if (PlayerPrefs.GetInt("equipDuck") == 1)
@@ -67,6 +69,12 @@ public class GameOverEndless : MonoBehaviour
     }
     public void Skip()
     {
+        if (!WheelManager.isTook)
+        {
+            currentGold = PlayerPrefs.GetInt("Gold");
+            currentGold += CoinManager.totalGold;
+            PlayerPrefs.SetInt("Gold", currentGold);
+        }
         Spinner.SetActive(false);
         GameOverPanel.SetActive(true);
         scale = true;
