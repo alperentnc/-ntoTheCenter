@@ -22,6 +22,12 @@ TagManager:
   - WatchAdder
   - Spinner
   - meteor
+  - MusicMute
+  - MusicUnmute
+  - SFXMute
+  - SFXUnmute
+  - MusicToggle
+  - SFXToggle
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class AudioManager : MonoBehaviour
@@ -9,7 +10,7 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] MusicSounds, SFXSounds;
     public AudioSource MusicSource, SFXSource;
-
+    public bool testMusic, testSFX;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic("Theme");
+
     }
     public void PlayMusic(string name)
     {
@@ -60,10 +62,31 @@ public class AudioManager : MonoBehaviour
     public void ToggleMusic()
     {
         MusicSource.mute = !MusicSource.mute;
+        if (!MusicSource.mute)
+        {
+            Debug.Log(1);
+            testMusic = true;
+        }
+        if (MusicSource.mute)
+        {
+            Debug.Log(0);
+            testMusic = false;
+        }
+        
     }
 
     public void ToggleSFX()
     {
         SFXSource.mute = !SFXSource.mute;
+        if (!SFXSource.mute)
+        {
+            Debug.Log(1);
+            testSFX = true;
+        }
+        if (SFXSource.mute)
+        {
+            Debug.Log(0);
+            testSFX = false;
+        }
     }
 }

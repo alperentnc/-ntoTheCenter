@@ -110,11 +110,12 @@ public class Upgrades : MonoBehaviour
             savedHealthBuyValue = newValue;
             currentGold -= currentValue;
             PlayerPrefs.SetInt("Gold", currentGold);
-
+            PlayerPrefs.SetInt("IndexHealth", currentIndexHealth);
+            PlayerPrefs.SetInt("HealthBuyValue", int.Parse(healthBuyText.text));
             playerHealthEndless.maxHalth += 10;
             PlayerPrefs.SetInt(HealthKey, playerHealthEndless.maxHalth);
-            PlayerPrefs.SetInt("IndexHealth", currentIndexHealth++);
-            PlayerPrefs.SetInt("HealthBuyValue", int.Parse(healthBuyText.text));
+           
+            
         }
     }
     public void BuyMonkey()
