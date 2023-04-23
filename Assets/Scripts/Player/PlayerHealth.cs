@@ -8,11 +8,13 @@ public class PlayerHealth : MonoBehaviour
     public int health = 100;
     public bool isGameOver = false,isLoading;
     Adds adds;
+    public static bool freezer;
 
     private const string HealthKey = "PlayerHealth";
 
     void Start()
     {
+        freezer = false;
         isLoading = false;
         adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
         slider = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
@@ -40,9 +42,12 @@ public class PlayerHealth : MonoBehaviour
     {
         // Update the health slider
         slider.value = health;
-
+        if (freezer == true)
+        {
+            Time.timeScale = 0f;
+        }
         // Check if the player has run out of health
-        if (health <= 0)
+        if (health <= 0 && Door.levelComplete==false)
         {
             PlayerController.meteorStarter = false;
             isGameOver = true;
@@ -51,9 +56,8 @@ public class PlayerHealth : MonoBehaviour
                 isLoading=true;
                 adds.LoadFullSize();
             }
+            
 
-
-            //Time.timeScale = 0f;
         }
         else
         {

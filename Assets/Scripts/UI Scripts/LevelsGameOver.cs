@@ -81,9 +81,9 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void Skip()
     {
-        
         if (LevelsCoin.LevelCompleted == true)
         {
+            PlayerHealth.freezer = true;
             if (!WheelManager.isTook)
             {
                 currentGold = PlayerPrefs.GetInt("Gold");
@@ -97,6 +97,7 @@ public class LevelsGameOver : MonoBehaviour
         }
         else
         {
+            PlayerHealth.freezer = true;
             if (!WheelManager.isTook)
             {
                 currentGold = PlayerPrefs.GetInt("Gold");

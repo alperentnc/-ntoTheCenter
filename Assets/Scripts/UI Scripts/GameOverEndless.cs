@@ -69,6 +69,7 @@ public class GameOverEndless : MonoBehaviour
     }
     public void Skip()
     {
+        PlayerHealth.freezer = true;
         if (!WheelManager.isTook)
         {
             currentGold = PlayerPrefs.GetInt("Gold");
