@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 158949218}
   m_Layer: 10
   m_Name: meteor (19)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1271,7 +1271,7 @@ GameObject:
   - component: {fileID: 212588941}
   m_Layer: 10
   m_Name: meteor (17)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4126,7 +4126,7 @@ GameObject:
   - component: {fileID: 598311518}
   m_Layer: 10
   m_Name: meteor (11)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4626,7 +4626,7 @@ GameObject:
   - component: {fileID: 617553209}
   m_Layer: 10
   m_Name: meteor (08)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4842,7 +4842,7 @@ GameObject:
   - component: {fileID: 647264513}
   m_Layer: 10
   m_Name: meteor (10)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5123,7 +5123,7 @@ GameObject:
   - component: {fileID: 670762061}
   m_Layer: 10
   m_Name: meteor (05)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5558,7 +5558,7 @@ GameObject:
   - component: {fileID: 712653952}
   m_Layer: 10
   m_Name: meteor (12)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6637,7 +6637,7 @@ GameObject:
   - component: {fileID: 842082126}
   m_Layer: 10
   m_Name: meteor (04)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7917,7 +7917,7 @@ GameObject:
   - component: {fileID: 1011298304}
   m_Layer: 10
   m_Name: meteor (14)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8154,7 +8154,7 @@ GameObject:
   - component: {fileID: 1029079437}
   m_Layer: 10
   m_Name: meteor (15)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8717,7 +8717,7 @@ GameObject:
   - component: {fileID: 1113609721}
   m_Layer: 10
   m_Name: meteor (21)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10216,7 +10216,7 @@ GameObject:
   - component: {fileID: 1268504727}
   m_Layer: 10
   m_Name: meteor (07)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10590,7 +10590,7 @@ GameObject:
   - component: {fileID: 1321399453}
   m_Layer: 10
   m_Name: meteor (06)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12763,7 +12763,7 @@ GameObject:
   - component: {fileID: 1542166350}
   m_Layer: 10
   m_Name: meteor (22)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13114,7 +13114,7 @@ GameObject:
   - component: {fileID: 1557903713}
   m_Layer: 10
   m_Name: meteor (18)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13330,7 +13330,7 @@ GameObject:
   - component: {fileID: 1605192567}
   m_Layer: 10
   m_Name: meteor (09)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13810,7 +13810,7 @@ GameObject:
   - component: {fileID: 1616633669}
   m_Layer: 10
   m_Name: meteor (1)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14516,7 +14516,7 @@ GameObject:
   - component: {fileID: 1796100996}
   m_Layer: 10
   m_Name: meteor (3)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14675,7 +14675,7 @@ GameObject:
   - component: {fileID: 1805860285}
   m_Layer: 10
   m_Name: meteor (20)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14891,7 +14891,7 @@ GameObject:
   - component: {fileID: 1853027907}
   m_Layer: 10
   m_Name: meteor (13)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16188,7 +16188,7 @@ GameObject:
   - component: {fileID: 2063724746}
   m_Layer: 10
   m_Name: meteor (23)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16603,7 +16603,7 @@ GameObject:
   - component: {fileID: 2115455865}
   m_Layer: 10
   m_Name: meteor (16)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
