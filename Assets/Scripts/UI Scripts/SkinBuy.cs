@@ -22,7 +22,6 @@ public class SkinBuy : MonoBehaviour
         PlayerPrefs.GetInt("equipMonkey", 0);
         PlayerPrefs.GetInt("equipPumpkin", 0);
         PlayerPrefs.GetInt("equipDefault", 0);
-
     }
 
     // Update is called once per frame
