@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public bool isGameOver = false,isLoading;
     Adds adds;
     public static bool freezer;
+    GameObject[] enemy,meteor;
+    public int enemyLength, meteorLength;
 
     private const string HealthKey = "PlayerHealth";
 
@@ -18,6 +20,8 @@ public class PlayerHealth : MonoBehaviour
         isLoading = false;
         adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
         slider = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        meteor = GameObject.FindGameObjectsWithTag("meteor");
         PlayerPrefs.SetInt(HealthKey, health);
         if (PlayerPrefs.GetInt("IndexHealth") == 0)
         {
@@ -40,6 +44,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        enemyLength = enemy.Length;
+        meteorLength = meteor.Length;
         // Update the health slider
         slider.value = health;
         if (freezer == true)
@@ -49,6 +55,21 @@ public class PlayerHealth : MonoBehaviour
         // Check if the player has run out of health
         if (health <= 0 && Door.levelComplete==false)
         {
+            for (int i = 0; i < enemyLength; i++)
+            {
+                if (enemy[i] != null)
+                {
+                    Destroy(enemy[i]);
+                }
+            }
+            for (int j = 0; j < meteorLength; j++)
+            {
+                if(meteor[j] != null)
+                {
+                    meteor[j].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                }
+                
+            }
             PlayerController.meteorStarter = false;
             isGameOver = true;
             if (!isLoading)
