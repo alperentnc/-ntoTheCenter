@@ -42,7 +42,7 @@ public class fastMeteor : MonoBehaviour
         {
             if (symbolObj != null)
             {
-                symbolObj.transform.position = new Vector2(symbolObj.transform.position.x, cam.transform.position.y + 5);
+                symbolObj.transform.position = new Vector3(symbolObj.transform.position.x, cam.transform.position.y +4,3);
             }
             
         }

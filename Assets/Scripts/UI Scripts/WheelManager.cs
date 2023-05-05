@@ -57,9 +57,9 @@ public class WheelManager : MonoBehaviour {
                         winT.text = "You earned 1.4X gold";
                         break;
                     case 3:
-                        winT.text = "You earned a Diamond";
+                        winT.text = "You earned 10 Diamonds";
                         diamondValue = PlayerPrefs.GetInt("Diamond");
-                        diamondValue += 1;
+                        diamondValue += 10;
                         PlayerPrefs.SetInt("Diamond", diamondValue);
                         break;
                     case 4:
