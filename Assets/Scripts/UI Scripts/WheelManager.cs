@@ -57,6 +57,10 @@ public class WheelManager : MonoBehaviour {
                         winT.text = "You earned 1.4X gold";
                         break;
                     case 3:
+                        CoinManager.totalGold = (int)(CoinManager.totalGold * 1);
+                        currentGold += CoinManager.totalGold;
+                        PlayerPrefs.SetInt("Gold", currentGold);
+                        PlayerPrefs.Save();
                         winT.text = "You earned 10 Diamonds";
                         diamondValue = PlayerPrefs.GetInt("Diamond");
                         diamondValue += 10;
@@ -123,6 +127,10 @@ public class WheelManager : MonoBehaviour {
                         winT.text = "You earned 1.4X gold";
                         break;
                     case 3:
+                        CoinManager.totalGold = (int)(CoinManager.totalGold * 1);
+                        currentGold += CoinManager.totalGold;
+                        PlayerPrefs.SetInt("Gold", currentGold);
+                        PlayerPrefs.Save();
                         winT.text = "You earned 10 Diamonds";
                         diamondValue = PlayerPrefs.GetInt("Diamond");
                         diamondValue += 10;
@@ -214,11 +222,15 @@ public class WheelManager : MonoBehaviour {
         
         if (internet)
         {
-            Debug.Log("intyok");
             watchAdder.SetActive(false);
             adds.ShowRewardedAd();
         }
-        
+        else if (!internet)
+        {
+            Debug.Log("intyok");
+        }
+
+
     }
 
     public void ok()

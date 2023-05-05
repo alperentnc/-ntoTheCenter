@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -14,13 +15,18 @@ public class MainMenu : MonoBehaviour
     public GameObject FreeFall;
     public GameObject FreeFallPanel;
     public static int levelCompleted = 1;
+    Adds adds;
+    public GameObject cam;
+    private bool internet = false;
     void Start()
     {
+        StartCoroutine(CheckInternetConnection());
         levelCompleted = PlayerPrefs.GetInt("levelCompleted", 1);
         if (PlayerPrefs.GetInt("levelCompleted") == 0)
         {
             PlayerPrefs.SetInt("levelCompleted", 1);
         }
+        adds = cam.GetComponent<Adds>();
     }
     public void Play()
     {
@@ -94,5 +100,30 @@ public class MainMenu : MonoBehaviour
     public void ToggleSFX()
     {
         AudioManager.Instance.ToggleSFX();
+    }
+    
+    IEnumerator CheckInternetConnection()
+    {
+        UnityWebRequest request = new UnityWebRequest("http://google.com");
+        yield return request.SendWebRequest();
+        if (request.error != null)
+        {
+            internet = false;
+        }
+        else
+        {
+            internet = true;
+        }
+    }
+    public void AddforDiamond()
+    {
+        if (internet)
+        {
+            adds.ShowRewardedAd();
+        }
+        else if (!internet)
+        {
+            Debug.Log("intyokrewarded");
+        }
     }
 }

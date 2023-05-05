@@ -6,6 +6,8 @@ public class Adds : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool test;
+
+    private int diamondValue;
     void Start()
     {
         test = false;
@@ -75,6 +77,8 @@ public class Adds : MonoBehaviour
     public void ShowRewardedAd()
     {
         IronSource.Agent.showRewardedVideo();
+
+        Debug.Log("a");
         //if (IronSource.Agent.isRewardedVideoAvailable())
         //{
         //    IronSource.Agent.showRewardedVideo();
@@ -149,9 +153,10 @@ public class Adds : MonoBehaviour
     void RewardedVideoOnAdRewardedEvent(IronSourcePlacement placement, IronSourceAdInfo adInfo)
     {
 
+        diamondValue = PlayerPrefs.GetInt("Diamond");
+        diamondValue += 1;
+        PlayerPrefs.SetInt("Diamond", diamondValue);
 
-        //test = true;
- 
     }
     // The rewarded video ad was failed to show.
     void RewardedVideoOnAdShowFailedEvent(IronSourceError error, IronSourceAdInfo adInfo)
