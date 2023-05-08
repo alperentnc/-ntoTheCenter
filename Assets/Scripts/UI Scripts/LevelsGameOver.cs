@@ -63,7 +63,7 @@ public class LevelsGameOver : MonoBehaviour
             GameOver();
             over = true;
         }
-        if (LevelsCoin.LevelCompleted == true&& !overlevel)
+        if (LevelsCoin.LevelCompleted == true && !overlevel)
         {
             LevelsCompleted();
             overlevel = true;

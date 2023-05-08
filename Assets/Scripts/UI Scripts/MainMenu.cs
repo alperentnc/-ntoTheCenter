@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     Adds adds;
     public GameObject cam;
     private bool internet = false;
+    public static bool diamondPlus, coinPlus;
     void Start()
     {
         StartCoroutine(CheckInternetConnection());
@@ -120,6 +121,19 @@ public class MainMenu : MonoBehaviour
         if (internet)
         {
             adds.ShowRewardedAd();
+            diamondPlus = true;
+        }
+        else if (!internet)
+        {
+            Debug.Log("intyokrewarded");
+        }
+    }
+    public void AddforCoin()
+    {
+        if (internet)
+        {
+            adds.ShowRewardedAd();
+            coinPlus = true;
         }
         else if (!internet)
         {
