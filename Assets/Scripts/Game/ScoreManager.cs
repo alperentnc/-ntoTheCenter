@@ -13,15 +13,26 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        scoreText = GameObject.FindGameObjectWithTag("CurrentScore").GetComponent<TMP_Text>();
+      
+       scoreText = GameObject.FindGameObjectWithTag("CurrentScore").GetComponent<TMP_Text>();
         highScoreText= GameObject.FindGameObjectWithTag("HighScore").GetComponent<TMP_Text>();
         character = GameObject.FindGameObjectWithTag("Player");
+   
         // Load the saved high score from PlayerPrefs
         highScore = PlayerPrefs.GetFloat("HighScore", 0);
+        Cloud.Initialize(true, true);
+        if (highScore != 0)
+        {
+            Leaderboards.HighScore.SubmitScore(Mathf.RoundToInt(highScore));
+        }
+      
+      
     }
 
     void Update()
     {
+
+        
         // Update the current score based on the character's y position
         if (Mathf.Max(0, -(character.transform.position.y - 5) * 17 / 4) > currentScore)
         {
@@ -37,8 +48,10 @@ public class ScoreManager : MonoBehaviour
         {
             highScore = currentScore;
             PlayerPrefs.SetFloat("HighScore", highScore);
-            Leaderboards.CoreQuestHighscore.SubmitScore((long) highScore);
+            Leaderboards.HighScore.SubmitScore(Mathf.RoundToInt(highScore));
+          
         }
+
 
         highScoreText.text = "Best: " + Mathf.RoundToInt(highScore);
         //Time.timeScale = 1 + currentScore * 1 / 5000;

@@ -27,7 +27,7 @@ namespace CloudOnce
         /// </summary>
         public static class LeaderboardIDs
         {
-            public static string CoreQuestHighscore
+            public static string HighScore
             {
                 get
                 {
@@ -38,9 +38,9 @@ namespace CloudOnce
                     return string.Empty;
 #endif
 #elif (UNITY_IOS || UNITY_TVOS) && !UNITY_EDITOR
-                    return "";
+                    return "com.cerebrum.CoreQuest.HighScore";
 #elif UNITY_EDITOR
-                    return "CoreQuestHighscore";
+                    return "HighScore";
 #else
                     return string.Empty;
 #endif

@@ -14,19 +14,19 @@ namespace CloudOnce
     /// </summary>
     public static class Leaderboards
     {
-        private static readonly UnifiedLeaderboard s_coreQuestHighscore = new UnifiedLeaderboard("CoreQuestHighscore",
+        private static readonly UnifiedLeaderboard s_highScore = new UnifiedLeaderboard("HighScore",
 #if !UNITY_EDITOR && (UNITY_IOS || UNITY_TVOS)
-            ""
+            "com.cerebrum.CoreQuest.HighScore"
 #elif !UNITY_EDITOR && UNITY_ANDROID && CLOUDONCE_GOOGLE
             "CgkI7_2l1dwUEAIQAA"
 #else
-            "CoreQuestHighscore"
+            "HighScore"
 #endif
             );
 
-        public static UnifiedLeaderboard CoreQuestHighscore
+        public static UnifiedLeaderboard HighScore
         {
-            get { return s_coreQuestHighscore; }
+            get { return s_highScore; }
         }
 
         public static string GetPlatformID(string internalId)
@@ -38,7 +38,7 @@ namespace CloudOnce
 
         private static readonly Dictionary<string, UnifiedLeaderboard> s_leaderboardDictionary = new Dictionary<string, UnifiedLeaderboard>
         {
-            { "CoreQuestHighscore", s_coreQuestHighscore },
+            { "HighScore", s_highScore }
         };
     }
 }

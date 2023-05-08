@@ -2,8 +2,8 @@
 	"AchievementIDs":[],
 	"LeaderboardIDs":[
 		{
-			"InternalID":"CoreQuestHighscore",
-			"AppleID":"",
+			"InternalID":"HighScore",
+			"AppleID":"com.cerebrum.CoreQuest.HighScore",
 			"GoogleID":"CgkI7_2l1dwUEAIQAA"
 		}
 	],
