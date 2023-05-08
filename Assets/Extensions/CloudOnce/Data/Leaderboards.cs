@@ -38,7 +38,7 @@ namespace CloudOnce
 
         private static readonly Dictionary<string, UnifiedLeaderboard> s_leaderboardDictionary = new Dictionary<string, UnifiedLeaderboard>
         {
-            { "HighScore", s_highScore }
+            { "HighScore", s_highScore },
         };
     }
 }

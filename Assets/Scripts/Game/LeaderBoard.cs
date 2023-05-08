@@ -9,6 +9,7 @@ public class LeaderBoard : MonoBehaviour
     void Start()
     {
         Cloud.OnInitializeComplete += CloudOnceInitializeComplete;
+        Cloud.Initialize(false, true);
     }
 
     public void CloudOnceInitializeComplete()

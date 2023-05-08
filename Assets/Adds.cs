@@ -162,13 +162,15 @@ public class Adds : MonoBehaviour
             diamondValue = PlayerPrefs.GetInt("Diamond");
             diamondValue += 1;
             PlayerPrefs.SetInt("Diamond", diamondValue);
+            PlayerPrefs.Save();
             MainMenu.diamondPlus = false;
         }
         if (MainMenu.coinPlus)
         {
             coinValue = PlayerPrefs.GetInt("Gold");
-            coinValue += 20;
+            coinValue += 40;
             PlayerPrefs.SetInt("Gold", coinValue);
+            PlayerPrefs.Save();
             MainMenu.coinPlus = false;
         }
 

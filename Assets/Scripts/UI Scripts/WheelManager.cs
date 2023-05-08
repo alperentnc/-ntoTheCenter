@@ -229,7 +229,7 @@ public class WheelManager : MonoBehaviour {
         if (internet)
         {
             watchAdder.SetActive(false);
-            adds.ShowRewardedAd();
+            adds.ShowFullSize();
         }
         else if (!internet)
         {
