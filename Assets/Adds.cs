@@ -153,25 +153,25 @@ public class Adds : MonoBehaviour
     // When using server-to-server callbacks, you may ignore this event and wait for the ironSource server callback.
     void RewardedVideoOnAdRewardedEvent(IronSourcePlacement placement, IronSourceAdInfo adInfo)
     {
-        diamondValue = PlayerPrefs.GetInt("Diamond");
-        diamondValue += 1;
-        PlayerPrefs.SetInt("Diamond", diamondValue);
-        MainMenu.diamondPlus = false;
-        //if (MainMenu.diamondPlus)
-        //{
-        //    diamondValue = PlayerPrefs.GetInt("Diamond");
-        //    diamondValue += 1;
-        //    PlayerPrefs.SetInt("Diamond", diamondValue);
-        //    MainMenu.diamondPlus = false;
-        //}
-        //if (MainMenu.coinPlus)
-        //{
-        //    coinValue = PlayerPrefs.GetInt("Gold");
-        //    coinValue += 20;
-        //    PlayerPrefs.SetInt("Gold", coinValue);
-        //    MainMenu.coinPlus = false;
-        //}
-        
+        //diamondValue = PlayerPrefs.GetInt("Diamond");
+        //diamondValue += 1;
+        //PlayerPrefs.SetInt("Diamond", diamondValue);
+        //MainMenu.diamondPlus = false;
+        if (MainMenu.diamondPlus)
+        {
+            diamondValue = PlayerPrefs.GetInt("Diamond");
+            diamondValue += 1;
+            PlayerPrefs.SetInt("Diamond", diamondValue);
+            MainMenu.diamondPlus = false;
+        }
+        if (MainMenu.coinPlus)
+        {
+            coinValue = PlayerPrefs.GetInt("Gold");
+            coinValue += 20;
+            PlayerPrefs.SetInt("Gold", coinValue);
+            MainMenu.coinPlus = false;
+        }
+
 
     }
     // The rewarded video ad was failed to show.
