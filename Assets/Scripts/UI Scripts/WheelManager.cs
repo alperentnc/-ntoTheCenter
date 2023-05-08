@@ -10,15 +10,16 @@ public class WheelManager : MonoBehaviour {
     SpinWheel wheel = new SpinWheel(8);
     GameObject watchAdder,spinner;
     private int diamondValue;
-    public GameObject go;
+    public GameObject go,skip,price;
     //public Text text;
-    public Text winT;
+    public TMP_Text winT;
     public bool oneTime,isShowing;
     private bool internet = false;
     Adds adds;
     public static bool isTook;
     
     void Start () {
+        price.SetActive(false);
         isTook = false;
         StartCoroutine(CheckInternetConnection());
 
@@ -42,26 +43,27 @@ public class WheelManager : MonoBehaviour {
                 isTook = true;
                 switch (index)
                 {
+
                     case 1:
                         LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.2f);
                         currentGold += LevelsCoin.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 1.2X gold";
+                        winT.text = "1.2x";
                         break;
                     case 2:
                         LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.4f);
                         currentGold += LevelsCoin.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 1.4X gold";
+                        winT.text = "1.4x";
                         break;
                     case 3:
                         CoinManager.totalGold = (int)(CoinManager.totalGold * 1);
                         currentGold += CoinManager.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 10 Diamonds";
+                        winT.text = "10 Diamonds";
                         diamondValue = PlayerPrefs.GetInt("Diamond");
                         diamondValue += 10;
                         PlayerPrefs.SetInt("Diamond", diamondValue);
@@ -71,37 +73,39 @@ public class WheelManager : MonoBehaviour {
                         currentGold += LevelsCoin.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 1.6X gold";
+                        winT.text = "1.6x";
                         break;
                     case 5:
                         LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 1.8f);
                         currentGold += LevelsCoin.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 1.8X gold";
+                        winT.text = "1.8x";
                         break;
                     case 6:
                         LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 2);
                         currentGold += LevelsCoin.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 2X gold";
+                        winT.text = "2x";
                         break;
                     case 7:
                         LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 3);
                         currentGold += LevelsCoin.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 3X gold";
+                        winT.text = "3x";
                         break;
                     case 8:
                         LevelsCoin.totalGold = (int)(LevelsCoin.totalGold * 4);
                         currentGold += LevelsCoin.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 4X gold";
+                        winT.text = "4x";
                         break;
                 }
+                price.SetActive(true);
+                skip.SetActive(false);
                 UpdateText();
             });
         }
@@ -117,21 +121,21 @@ public class WheelManager : MonoBehaviour {
                         currentGold += CoinManager.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 1.2X gold";
+                        winT.text = "1.2x";
                         break;
                     case 2:
                         CoinManager.totalGold = (int)(CoinManager.totalGold * 1.4f);
                         currentGold += LevelsCoin.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 1.4X gold";
+                        winT.text = "1.4x";
                         break;
                     case 3:
                         CoinManager.totalGold = (int)(CoinManager.totalGold * 1);
                         currentGold += CoinManager.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 10 Diamonds";
+                        winT.text = "10 Diamonds";
                         diamondValue = PlayerPrefs.GetInt("Diamond");
                         diamondValue += 10;
                         PlayerPrefs.SetInt("Diamond", diamondValue);
@@ -141,37 +145,39 @@ public class WheelManager : MonoBehaviour {
                         currentGold += CoinManager.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 1.6X gold";
+                        winT.text = "1.6x";
                         break;
                     case 5:
                         CoinManager.totalGold = (int)(CoinManager.totalGold * 1.8f);
                         currentGold += CoinManager.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 1.8X gold";
+                        winT.text = "1.8x";
                         break;
                     case 6:
                         CoinManager.totalGold = (int)(CoinManager.totalGold * 2);
                         currentGold += CoinManager.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 2X gold";
+                        winT.text = "2X";
                         break;
                     case 7:
                         CoinManager.totalGold = (int)(CoinManager.totalGold * 3);
                         currentGold += CoinManager.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 3X gold";
+                        winT.text = "3x";
                         break;
                     case 8:
                         CoinManager.totalGold = (int)(CoinManager.totalGold * 4);
                         currentGold += CoinManager.totalGold;
                         PlayerPrefs.SetInt("Gold", currentGold);
                         PlayerPrefs.Save();
-                        winT.text = "You earned 4X gold";
+                        winT.text = "4x";
                         break;
                 }
+                price.SetActive(true);
+                skip.SetActive(false);
                 UpdateText();
             });
         }
