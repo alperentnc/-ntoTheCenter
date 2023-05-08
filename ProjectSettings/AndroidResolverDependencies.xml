@@ -2,6 +2,7 @@
   <packages>
     <package>com.google.android.gms:play-services-ads-identifier:18.0.1</package>
     <package>com.google.android.gms:play-services-basement:18.1.0</package>
+    <package>com.google.games:gpgs-plugin-support:0.10.14</package>
     <package>com.ironsource.sdk:mediationsdk:7.3.0.1</package>
   </packages>
   <files>
@@ -33,7 +34,16 @@
     <file>Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.0.aar</file>
     <file>Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-18.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-19.2.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-api-phone-17.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-base-17.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-base-17.5.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-18.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-drive-17.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-games-21.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-nearby-18.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.2.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.games.gpgs-plugin-support-0.10.14.aar</file>
     <file>Assets/Plugins/Android/com.ironsource.sdk.mediationsdk-7.3.0.1.aar</file>
     <file>Assets/Plugins/Android/org.jetbrains.annotations-13.0.jar</file>
     <file>Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-1.6.0.jar</file>

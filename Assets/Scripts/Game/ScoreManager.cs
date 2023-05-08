@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using CloudOnce;
 public class ScoreManager : MonoBehaviour
 {
     GameObject character; // The Transform component of the character object
@@ -36,6 +37,7 @@ public class ScoreManager : MonoBehaviour
         {
             highScore = currentScore;
             PlayerPrefs.SetFloat("HighScore", highScore);
+            Leaderboards.CoreQuestHighscore.SubmitScore((long) highScore);
         }
 
         highScoreText.text = "Best: " + Mathf.RoundToInt(highScore);
