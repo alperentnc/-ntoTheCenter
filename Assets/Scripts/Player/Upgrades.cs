@@ -42,8 +42,8 @@ public class Upgrades : MonoBehaviour
         playerHealthLevel = playerLevel.GetComponent<PlayerHealth>();
 
 
-        currentGold = PlayerPrefs.GetInt("Gold", 0);
-        currentDiamond = PlayerPrefs.GetInt("Diamond", 0);
+        //currentGold = PlayerPrefs.GetInt("Gold", 0);
+        //currentDiamond = PlayerPrefs.GetInt("Diamond", 0);
         savedIndexSpeed = PlayerPrefs.GetInt("IndexSpeed", 0);
         savedIndexHealth = PlayerPrefs.GetInt("IndexHealth", 0);
         savedSpeedBuyValue = PlayerPrefs.GetInt("SpeedBuyValue", int.Parse(speedBuyText.text));
@@ -117,6 +117,11 @@ public class Upgrades : MonoBehaviour
            
             
         }
+    }
+    private void Update()
+    {
+        currentGold = PlayerPrefs.GetInt("Gold", 0);
+        currentDiamond = PlayerPrefs.GetInt("Diamond", 0);
     }
     public void BuyMonkey()
     {
