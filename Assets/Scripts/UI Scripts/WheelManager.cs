@@ -16,9 +16,11 @@ public class WheelManager : MonoBehaviour {
     public bool oneTime,isShowing;
     private bool internet = false;
     Adds adds;
-    public static bool isTook;
+    public static bool isTook,reward,rewardAns;
+    public bool test;
     
     void Start () {
+        reward = false;
         price.SetActive(false);
         isTook = false;
         StartCoroutine(CheckInternetConnection());
@@ -188,6 +190,12 @@ public class WheelManager : MonoBehaviour {
         {
             adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
         }
+        test = !Adds.active;
+        if (rewardAns == true)
+        {
+            watchAdder.SetActive(false);
+            rewardAns = false;
+        }
     }
 
     IEnumerator CheckInternetConnection()
@@ -228,8 +236,9 @@ public class WheelManager : MonoBehaviour {
         
         if (internet)
         {
-            watchAdder.SetActive(false);
-            adds.ShowFullSize();
+            adds.ShowRewardedAd();
+            reward = true;
+            
         }
         else if (!internet)
         {

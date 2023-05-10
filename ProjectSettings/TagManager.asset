@@ -28,6 +28,8 @@ TagManager:
   - SFXUnmute
   - MusicToggle
   - SFXToggle
+  - pause
+  - upperUI
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameOverEndless : MonoBehaviour
 {
-    public GameObject GameOverPanel,Spinner, hp, best, score, pause;
+    public GameObject GameOverPanel,Spinner, hp, best, score, pause, settingspanel;
     PlayerHealth playerHealth;
     public CoinManager coinManager;
     GameObject player, enemy, gun, explode, electric, fastmeteor;
@@ -50,6 +50,16 @@ public class GameOverEndless : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1.0f;
+    }
+    public void Settings()
+    {
+        settingspanel.SetActive(true);
+        GameOverPanel.SetActive(false);
+    }
+    public void CloseSettings()
+    {
+        settingspanel.SetActive(false);
+        GameOverPanel.SetActive(true);
     }
     public void GameOver()
     {

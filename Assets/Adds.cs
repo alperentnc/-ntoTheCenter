@@ -5,17 +5,20 @@ using UnityEngine;
 public class Adds : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool test;
-
+    public static bool active;
+    GameObject watchAdder;
     private int diamondValue;
     private int coinValue;
     void Start()
     {
-        test = false;
+        active = false;
         IronSource.Agent.init("19a506065");
         IronSource.Agent.validateIntegration();
-    }
+        watchAdder = GameObject.FindGameObjectWithTag("WatchAdder");
 
+
+    }
+    
     private void OnEnable()
     {
         IronSourceEvents.onSdkInitializationCompletedEvent += SdkInitializationCompletedEvent;
@@ -53,13 +56,10 @@ public class Adds : MonoBehaviour
     public void LoadFullSize()
     {
         IronSource.Agent.loadInterstitial();
-        
-        Debug.Log("sa");
     }
 
     public void ShowFullSize()
     {
-        Debug.Log("as");
         //test = true;
         IronSource.Agent.showInterstitial();
         //if (IronSource.Agent.isInterstitialReady())
@@ -79,7 +79,6 @@ public class Adds : MonoBehaviour
     {
         IronSource.Agent.showRewardedVideo();
 
-        Debug.Log("a");
         //if (IronSource.Agent.isRewardedVideoAvailable())
         //{
         //    IronSource.Agent.showRewardedVideo();
@@ -153,10 +152,6 @@ public class Adds : MonoBehaviour
     // When using server-to-server callbacks, you may ignore this event and wait for the ironSource server callback.
     void RewardedVideoOnAdRewardedEvent(IronSourcePlacement placement, IronSourceAdInfo adInfo)
     {
-        //diamondValue = PlayerPrefs.GetInt("Diamond");
-        //diamondValue += 1;
-        //PlayerPrefs.SetInt("Diamond", diamondValue);
-        //MainMenu.diamondPlus = false;
         if (MainMenu.diamondPlus)
         {
             diamondValue = PlayerPrefs.GetInt("Diamond");
@@ -172,6 +167,11 @@ public class Adds : MonoBehaviour
             PlayerPrefs.SetInt("Gold", coinValue);
             PlayerPrefs.Save();
             MainMenu.coinPlus = false;
+        }
+        if (WheelManager.reward)
+        {
+           WheelManager.rewardAns = true;
+           WheelManager.reward = false;
         }
 
 

@@ -12,13 +12,15 @@ public class LevelsGameOver : MonoBehaviour
     public GameObject SettingsPanel;
     PlayerHealth playerHealth;
     public LevelsCoin levelsCoin;
-    GameObject player;
+    GameObject player,hp,index,pause;
     Rigidbody2D rb;
     public GameObject coin;
     public TMP_Text CoinTextOver,CoinTextCompleted;
     public bool over,overlevel,levelbool;
     public GameObject Monkey, Duck, Pumpkin, Default;
     private int currentGold;
+    private int random;
+    Adds adds;
     private void Start()
     {
         currentGold = 0;
@@ -39,6 +41,9 @@ public class LevelsGameOver : MonoBehaviour
             Instantiate(Default, new Vector3(-2, 4.9f, 4), Quaternion.identity);
         }
         player = GameObject.FindGameObjectWithTag("Player");
+        hp = GameObject.FindGameObjectWithTag("Slider");
+        pause = GameObject.FindGameObjectWithTag("pause");
+        index = GameObject.FindGameObjectWithTag("upperUI");
         playerHealth = player.GetComponent<PlayerHealth>();
         levelsCoin = coin.GetComponent<LevelsCoin>();
         Time.timeScale = 1.0f;
@@ -53,11 +58,24 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void GameOver()
     {
+        random = 1;
+        if (random == 1)
+        {
+            adds.ShowFullSize();
+            Debug.Log("re");
+        }
+        hp.SetActive(false);
+        index.SetActive(false);
+        pause.SetActive(false);
         Spinner.SetActive(true);
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
-    private void Update()
+    void Update()
     {
+        if (adds == null)
+        {
+            adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
+        }
         if (playerHealth.isGameOver&&!over)
         {
             GameOver();
@@ -113,6 +131,14 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void LevelsCompleted()
     {
+        random = 1;
+        if (random == 1)
+        {
+            adds.ShowFullSize();
+        }
+        hp.SetActive(false);
+        index.SetActive(false);
+        pause.SetActive(false);
         Spinner.SetActive(true);
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
