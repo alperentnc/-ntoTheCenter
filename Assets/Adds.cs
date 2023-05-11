@@ -5,17 +5,27 @@ using UnityEngine;
 public class Adds : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static bool active;
+    public static bool active = true;
     GameObject watchAdder;
     private int diamondValue;
     private int coinValue;
     void Start()
     {
-        active = false;
-        IronSource.Agent.init("19a506065");
-        IronSource.Agent.validateIntegration();
+#if     UNITY_ANDROID
+        string appKey = "19a506065";
+#elif UNITY_IPHONE
+                                        string appKey = "19addbb8d";
+#else
+                                        string appKey = "19a506065";
+#endif
+        if (active)
+        {
+            IronSource.Agent.validateIntegration();
+            IronSource.Agent.init(appKey);
+        }
+       
         watchAdder = GameObject.FindGameObjectWithTag("WatchAdder");
-
+        active = false;
 
     }
     
@@ -77,6 +87,7 @@ public class Adds : MonoBehaviour
     //rewarded buttons
     public void ShowRewardedAd()
     {
+        IronSource.Agent.loadRewardedVideo();
         IronSource.Agent.showRewardedVideo();
 
         //if (IronSource.Agent.isRewardedVideoAvailable())

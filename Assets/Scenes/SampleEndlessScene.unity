@@ -4030,6 +4030,7 @@ MonoBehaviour:
   Pumpkin: {fileID: 5374809718222455454, guid: fd672cfd204d78c4dbb29428ada90497, type: 3}
   Default: {fileID: 5374809718222455454, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
   CoinText: {fileID: 1754284887}
+  tester: 0
 --- !u!1 &761126302
 GameObject:
   m_ObjectHideFlags: 0
@@ -8249,7 +8250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1530164744
 RectTransform:
   m_ObjectHideFlags: 0
