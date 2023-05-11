@@ -16,7 +16,9 @@ public class GameOverEndless : MonoBehaviour
     public TMP_Text CoinText;
     bool test;
     bool scale;
-    private int currentGold;
+    private int currentGold,random;
+    Adds adds;
+    public bool tester;
     private void Start()
     {
         currentGold = 0;
@@ -63,6 +65,11 @@ public class GameOverEndless : MonoBehaviour
     }
     public void GameOver()
     {
+        random = Random.Range(0, 4);
+        if (random == 1)
+        {
+            adds.ShowFullSize();
+        }
         if (!test)
         {
             Spinner.SetActive(true);
@@ -120,6 +127,15 @@ public class GameOverEndless : MonoBehaviour
     }
     private void Update()
     {
+        if (adds == null)
+        {
+            adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
+        }
+        if (adds != null && tester == false)
+        {
+            adds.LoadFullSize();
+            tester = true;
+        }
         if (playerHealth.isGameOver)
         {
             GameOver();

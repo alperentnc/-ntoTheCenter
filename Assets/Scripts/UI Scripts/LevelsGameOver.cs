@@ -59,7 +59,7 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void GameOver()
     {
-        random = 1;
+        random =Random.Range(0,4);
         if (random == 1)
         {
             adds.ShowFullSize();
@@ -137,7 +137,7 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void LevelsCompleted()
     {
-        random = 1;
+        random = Random.Range(0, 4);
         if (random == 1)
         {
             adds.ShowFullSize();
