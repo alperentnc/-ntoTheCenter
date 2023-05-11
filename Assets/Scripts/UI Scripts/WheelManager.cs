@@ -8,11 +8,10 @@ public class WheelManager : MonoBehaviour {
 
     //Creates the wheel
     SpinWheel wheel = new SpinWheel(8);
-    GameObject watchAdder,spinner;
+    GameObject watchAdder,spinner,skip,price;
     private int diamondValue;
-    public GameObject go,skip,price;
     //public Text text;
-    public TMP_Text winT;
+    TMP_Text winT;
     public bool oneTime,isShowing;
     private bool internet = false;
     Adds adds;
@@ -21,13 +20,15 @@ public class WheelManager : MonoBehaviour {
     
     void Start () {
         reward = false;
-        price.SetActive(false);
         isTook = false;
         StartCoroutine(CheckInternetConnection());
 
         Scene scene = SceneManager.GetActiveScene();
         spinner = GameObject.FindGameObjectWithTag("Spinner");
         watchAdder = GameObject.FindGameObjectWithTag("WatchAdder");
+        skip = GameObject.FindGameObjectWithTag("Skip");
+        price = GameObject.FindGameObjectWithTag("Price");
+        winT = GameObject.FindGameObjectWithTag("PriceText").GetComponent<TMP_Text>();
         oneTime = false;
         int currentGold = PlayerPrefs.GetInt("Gold", 0);
         adds = GetComponent<Adds>();
@@ -226,7 +227,7 @@ public class WheelManager : MonoBehaviour {
 
             StartCoroutine(wheel.StartNewRun());
             UpdateText();
-            go.SetActive(false);
+            watchAdder.SetActive(false);
             spinner.SetActive(false);
             
     }
@@ -250,6 +251,6 @@ public class WheelManager : MonoBehaviour {
 
     public void ok()
     {
-        go.SetActive(false);
+        watchAdder.SetActive(false);
     }
 }

@@ -16,13 +16,14 @@ public class LevelsGameOver : MonoBehaviour
     Rigidbody2D rb;
     public GameObject coin;
     public TMP_Text CoinTextOver,CoinTextCompleted;
-    public bool over,overlevel,levelbool;
+    public bool over,overlevel,levelbool,tester;
     public GameObject Monkey, Duck, Pumpkin, Default;
     private int currentGold;
     private int random;
     Adds adds;
     private void Start()
     {
+        tester = false;
         currentGold = 0;
         if (PlayerPrefs.GetInt("equipDuck") == 1)
         {
@@ -75,6 +76,11 @@ public class LevelsGameOver : MonoBehaviour
         if (adds == null)
         {
             adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
+        }
+        if(adds != null && tester == false)
+        {
+            adds.LoadFullSize();
+            tester = true;
         }
         if (playerHealth.isGameOver&&!over)
         {

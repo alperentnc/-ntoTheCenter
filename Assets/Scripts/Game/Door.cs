@@ -40,7 +40,6 @@ public class Door : MonoBehaviour
             levelComplete = true;
             LevelsCoin.LevelCompleted = true;
             PlayerPrefs.SetInt("levelCompleted", SceneManager.GetActiveScene().buildIndex+1);
-            adds.LoadFullSize();
             // Load the next level
         }
     }

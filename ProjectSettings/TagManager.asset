@@ -30,6 +30,9 @@ TagManager:
   - SFXToggle
   - pause
   - upperUI
+  - Skip
+  - Price
+  - PriceText
   layers:
   - Default
   - TransparentFX

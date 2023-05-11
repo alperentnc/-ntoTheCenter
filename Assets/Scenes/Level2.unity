@@ -911,10 +911,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c6986368847c941a4329016e6bb533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 132671321}
-  skip: {fileID: 1545451322}
-  price: {fileID: 1890656339}
-  winT: {fileID: 1202754697}
   oneTime: 0
   isShowing: 0
   test: 0
@@ -5107,7 +5103,6 @@ MonoBehaviour:
   Duck: {fileID: 5374809718222455454, guid: 3cb4f57e567d5824d9574c8f55634349, type: 3}
   Pumpkin: {fileID: 5374809718222455454, guid: 9d7768c9a0b008f49ae15782f96934d5, type: 3}
   Default: {fileID: 5374809718222455454, guid: c6ea775fc864f51409ad8ce522657ee9, type: 3}
-  adds: {fileID: 0}
 --- !u!1 &765334819
 GameObject:
   m_ObjectHideFlags: 0
@@ -8732,7 +8727,7 @@ GameObject:
   - component: {fileID: 1202754697}
   m_Layer: 5
   m_Name: priceTXT
-  m_TagString: Untagged
+  m_TagString: PriceText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12258,7 +12253,7 @@ GameObject:
   - component: {fileID: 1545451324}
   m_Layer: 5
   m_Name: Skip
-  m_TagString: Untagged
+  m_TagString: Skip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14140,7 +14135,7 @@ GameObject:
   - component: {fileID: 1890656341}
   m_Layer: 5
   m_Name: price
-  m_TagString: Spinner
+  m_TagString: Price
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -3164,7 +3164,7 @@ GameObject:
   - component: {fileID: 455019076}
   m_Layer: 5
   m_Name: price
-  m_TagString: Spinner
+  m_TagString: Price
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3183,7 +3183,7 @@ RectTransform:
   m_Children:
   - {fileID: 2124451360}
   m_Father: {fileID: 1089849831}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8009,10 +8009,10 @@ RectTransform:
   - {fileID: 736952043}
   - {fileID: 760765495}
   - {fileID: 172839473}
-  - {fileID: 1869204783}
   - {fileID: 2072963335}
   - {fileID: 1182612290}
   - {fileID: 455019075}
+  - {fileID: 1869204783}
   m_Father: {fileID: 988553168}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8281,7 +8281,7 @@ GameObject:
   - component: {fileID: 1182612291}
   m_Layer: 5
   m_Name: Skip
-  m_TagString: Untagged
+  m_TagString: Skip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8300,7 +8300,7 @@ RectTransform:
   m_Children:
   - {fileID: 473253223}
   m_Father: {fileID: 1089849831}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11429,10 +11429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c6986368847c941a4329016e6bb533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 1869204782}
-  skip: {fileID: 1182612289}
-  price: {fileID: 455019074}
-  winT: {fileID: 2124451361}
   oneTime: 0
   isShowing: 0
   test: 0
@@ -13602,7 +13598,7 @@ RectTransform:
   m_Children:
   - {fileID: 12552420}
   m_Father: {fileID: 1089849831}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -15677,7 +15673,7 @@ RectTransform:
   m_Children:
   - {fileID: 1301743826}
   m_Father: {fileID: 1089849831}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -16072,7 +16068,7 @@ GameObject:
   - component: {fileID: 2124451361}
   m_Layer: 5
   m_Name: priceTXT
-  m_TagString: Untagged
+  m_TagString: PriceText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16117,7 +16113,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1.5x
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ee70f398d782f4684be7681741b8f3, type: 2}
   m_sharedMaterial: {fileID: -7825157874465225546, guid: 46ee70f398d782f4684be7681741b8f3, type: 2}
@@ -16144,7 +16140,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.75
+  m_fontSize: 25
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1

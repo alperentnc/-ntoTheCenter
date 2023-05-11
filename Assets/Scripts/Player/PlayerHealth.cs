@@ -77,7 +77,6 @@ public class PlayerHealth : MonoBehaviour
             if (!isLoading)
             {
                 isLoading=true;
-                adds.LoadFullSize();
             }
             
 
