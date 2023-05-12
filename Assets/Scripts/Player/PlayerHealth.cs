@@ -54,6 +54,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Time.timeScale = 0f;
         }
+        
         // Check if the player has run out of health
         if (health <= 0 && Door.levelComplete==false)
         {
@@ -73,7 +74,7 @@ public class PlayerHealth : MonoBehaviour
                 
             }
             PlayerController.meteorStarter = false;
-            isGameOver = true;
+            //isGameOver = true;
             if (!isLoading)
             {
                 isLoading=true;
@@ -81,6 +82,28 @@ public class PlayerHealth : MonoBehaviour
             
 
         }
+
+        if (health <= 0)
+        {
+            isGameOver = true;
+
+            for (int i = 0; i < enemyLength; i++)
+            {
+                if (enemy[i] != null)
+                {
+                    Destroy(enemy[i]);
+                }
+            }
+            for (int j = 0; j < meteorLength; j++)
+            {
+                if (meteor[j] != null)
+                {
+                    meteor[j].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                }
+
+            }
+        }
+
         else
         {
             isGameOver = false;
