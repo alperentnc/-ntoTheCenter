@@ -34,7 +34,8 @@ public class Door : MonoBehaviour
             }
             for (int j = 0; j < meteorLength; j++)
             {
-                meteor[j].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                //meteor[j].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                Destroy(meteor[j]);
             }
             // Save the current level as completed
             levelComplete = true;

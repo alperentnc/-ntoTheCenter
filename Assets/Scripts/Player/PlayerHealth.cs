@@ -20,8 +20,6 @@ public class PlayerHealth : MonoBehaviour
         isLoading = false;
         adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
         slider = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
-        enemy = GameObject.FindGameObjectsWithTag("Enemy");
-        meteor = GameObject.FindGameObjectsWithTag("meteor");
         PlayerPrefs.SetInt(HealthKey, health);
        
         if (PlayerPrefs.GetInt("IndexHealth") == 0)
@@ -45,6 +43,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        meteor = GameObject.FindGameObjectsWithTag("meteor");
         Debug.Log("health" + health);
         enemyLength = enemy.Length;
         meteorLength = meteor.Length;
@@ -69,7 +69,8 @@ public class PlayerHealth : MonoBehaviour
             {
                 if(meteor[j] != null)
                 {
-                    meteor[j].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                    //meteor[j].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                    Destroy(meteor[j]);
                 }
                 
             }
