@@ -25,10 +25,10 @@ public class WheelManager : MonoBehaviour {
 
         Scene scene = SceneManager.GetActiveScene();
         spinner = GameObject.FindGameObjectWithTag("Spinner");
+        price = GameObject.FindGameObjectWithTag("Price");
         watchAdder = GameObject.FindGameObjectWithTag("WatchAdder");
         skip = GameObject.FindGameObjectWithTag("Skip");
-        price = GameObject.FindGameObjectWithTag("Price");
-        price.SetActive(false);
+        price.GetComponent<Image>().enabled = false;
         winT = GameObject.FindGameObjectWithTag("PriceText").GetComponent<TMP_Text>();
         oneTime = false;
         int currentGold = PlayerPrefs.GetInt("Gold", 0);
@@ -108,7 +108,7 @@ public class WheelManager : MonoBehaviour {
                         winT.text = "4x";
                         break;
                 }
-                price.SetActive(true);
+                price.GetComponent<Image>().enabled = true;
                 skip.SetActive(false);
                 UpdateText();
             });
@@ -180,7 +180,7 @@ public class WheelManager : MonoBehaviour {
                         winT.text = "4x";
                         break;
                 }
-                price.SetActive(true);
+                price.GetComponent<Image>().enabled = true;
                 skip.SetActive(false);
                 UpdateText();
             });
@@ -188,6 +188,7 @@ public class WheelManager : MonoBehaviour {
     }
     void Update()
     {
+        
         if (adds == null)
         {
             adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
