@@ -186,8 +186,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 8887242015602702739, guid: 6d07b352ec8cb8d41ac3ea343bd9b083, type: 3}
   bulletPos: {fileID: 1075643792509623366}
-  bulletFrequency: 1.7
+  bulletFrequency: 1
   fireDistance: 2
+  startStunTimer: 0.5
 --- !u!95 &2351852241245811357
 Animator:
   serializedVersion: 5
