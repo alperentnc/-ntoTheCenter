@@ -13,8 +13,11 @@ public class SalivaShooting : MonoBehaviour
     EnemyPatrolling enemyPatrolling;
     public Animator animator;
     float yDifferance;
+    public float slowRate;
+    public static float slowRateGlobal;
     void Start()
     {
+        slowRateGlobal = slowRate;
         player = GameObject.FindGameObjectWithTag("Player");
         enemyPatrolling = gameObject.GetComponent<EnemyPatrolling>();
         animator = gameObject.GetComponent<Animator>();

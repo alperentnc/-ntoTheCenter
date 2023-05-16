@@ -54,7 +54,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
         if (slowPlatform == true)
         {
             speed = PlayerPrefs.GetFloat(SlowSpeedKey)/2;
@@ -76,7 +75,7 @@ public class PlayerController : MonoBehaviour
         }
         if (slowTimer > 0 && slowTimer < 3 && slow)
         {
-            speed = PlayerPrefs.GetFloat(SlowSpeedKey)/2;
+            speed = PlayerPrefs.GetFloat(SlowSpeedKey)/SalivaShooting.slowRateGlobal;
         }
         if (stun)
         {

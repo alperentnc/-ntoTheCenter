@@ -179,6 +179,7 @@ MonoBehaviour:
   bulletFrequency: 1
   fireDistance: 4
   animator: {fileID: 4427409311707125574}
+  slowRate: 2
 --- !u!1 &5118763379282529568
 GameObject:
   m_ObjectHideFlags: 0

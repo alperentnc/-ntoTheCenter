@@ -9,7 +9,6 @@ public class SalivaBullet : MonoBehaviour
     public float force;
     private float timer,animTimer;
     public Animator animator;
-
     private const string HealthKey = "PlayerHealth";
     public int health;
     void Start()
