@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask ground;
     public Animator animator;
     private float slowTimer = 3;
-    private float stunTimer = 1.2f;
+    private float normalstunTimer;
     public bool slow,slowPlatform,stun;
     public float speed;
     private bool isMoving;
@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        normalstunTimer = ElectricShooting.stunTimer;
+        Debug.Log(normalstunTimer);
         //PlayerPrefs.SetInt("Diamond",8);
         if (PlayerPrefs.GetInt("IndexHealth") + 1 == 0)
         {
@@ -80,19 +82,19 @@ public class PlayerController : MonoBehaviour
         }
         if (stun)
         {
-            stunTimer -= Time.deltaTime;
+            ElectricShooting.stunTimer -= Time.deltaTime;
             animator.SetBool("isShocking", true);
         }
-        if (stunTimer <= 0)
+        if (ElectricShooting.stunTimer <= 0)
         {
-            stunTimer = 1.2f;
+            ElectricShooting.stunTimer = normalstunTimer;
             stun = false;
             animator.SetBool("isShocking", false);
         } 
-        if (stunTimer > 0 && stunTimer < 1.2f && stun)
+        if (ElectricShooting.stunTimer > 0 && ElectricShooting.stunTimer < normalstunTimer && stun)
         {
             speed = 0;
-            animator.SetBool("isWalking", false);
+            //animator.SetBool("isWalking", false);
         }
         if(!slow && !stun && !slowPlatform)
         {

@@ -99,7 +99,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 if (meteor[j] != null)
                 {
-                    meteor[j].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                    Destroy(meteor[j]);
                 }
 
             }
