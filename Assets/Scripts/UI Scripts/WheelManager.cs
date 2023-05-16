@@ -28,6 +28,7 @@ public class WheelManager : MonoBehaviour {
         watchAdder = GameObject.FindGameObjectWithTag("WatchAdder");
         skip = GameObject.FindGameObjectWithTag("Skip");
         price = GameObject.FindGameObjectWithTag("Price");
+        price.SetActive(false);
         winT = GameObject.FindGameObjectWithTag("PriceText").GetComponent<TMP_Text>();
         oneTime = false;
         int currentGold = PlayerPrefs.GetInt("Gold", 0);
