@@ -52,37 +52,20 @@ public class LevelsGameOver : MonoBehaviour
         Spinner.SetActive(false);
         overlevel = false;
     }
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-        Time.timeScale = 1.0f;
-    }
-    public void GameOver()
-    {
-        random =Random.Range(0,4);
-        if (random == 1)
-        {
-            adds.ShowFullSize();
-            Debug.Log("re");
-        }
-        hp.SetActive(false);
-        index.SetActive(false);
-        pause.SetActive(false);
-        Spinner.SetActive(true);
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-    }
     void Update()
     {
+
+        
         if (adds == null)
         {
             adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
         }
-        if(adds != null && tester == false)
+        if (adds != null && tester == false)
         {
             adds.LoadFullSize();
             tester = true;
         }
-        if (playerHealth.isGameOver&&!over)
+        if (playerHealth.isGameOver && !over)
         {
             GameOver();
             over = true;
@@ -98,6 +81,27 @@ public class LevelsGameOver : MonoBehaviour
         //}
 
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1.0f;
+    }
+    public void GameOver()
+    {
+        random = Random.Range(0, 9);
+        if (random == 4)
+        {
+            adds.ShowFullSize();
+            Debug.Log("re");
+        }
+        hp.SetActive(false);
+        index.SetActive(false);
+        pause.SetActive(false);
+        Spinner.SetActive(true);
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+    
     public void NextLevel()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("levelCompleted"));
@@ -137,8 +141,8 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void LevelsCompleted()
     {
-        random = Random.Range(0, 4);
-        if (random == 1)
+        random = Random.Range(0, 9);
+        if (random == 6)
         {
             adds.ShowFullSize();
         }
