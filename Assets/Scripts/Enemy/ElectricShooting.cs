@@ -11,13 +11,10 @@ public class ElectricShooting : MonoBehaviour
     private GameObject player;
     public float fireDistance;
     ElectricPatrolling electricPatrolling;
-    public float startStunTimer;
-    public static float stunTimer;
     //public Animator animator;
     float yDifferance;
     void Start()
     {
-        stunTimer = startStunTimer;
         player = GameObject.FindGameObjectWithTag("Player");
         electricPatrolling = gameObject.GetComponent<ElectricPatrolling>();
         //animator = gameObject.GetComponent<Animator>();
