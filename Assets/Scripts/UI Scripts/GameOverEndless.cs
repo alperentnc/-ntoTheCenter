@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameOverEndless : MonoBehaviour
 {
-    public GameObject GameOverPanel,Spinner, hp, best, score, pause, settingspanel;
+    public GameObject GameOverPanel,Spinner, hp, best, score, pause, settingspanel, pausepanel;
     PlayerHealth playerHealth;
     public CoinManager coinManager;
     GameObject player, enemy, gun, explode, electric, fastmeteor;
@@ -48,6 +48,34 @@ public class GameOverEndless : MonoBehaviour
         rb = player.GetComponent<Rigidbody2D>();
 
     }
+    private void Update()
+    {
+
+        
+
+        if (adds == null)
+        {
+            adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
+        }
+        if (adds != null && tester == false)
+        {
+            adds.LoadFullSize();
+            tester = true;
+        }
+        if (playerHealth.isGameOver)
+        {
+            GameOver();
+        }
+        //else
+        //{
+        //    Time.timeScale = 1.0f;
+        //}
+        if (scale)
+        {
+            Time.timeScale = 0f;
+        }
+
+    }
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -61,12 +89,12 @@ public class GameOverEndless : MonoBehaviour
     public void CloseSettings()
     {
         settingspanel.SetActive(false);
-        GameOverPanel.SetActive(true);
+        pausepanel.SetActive(true);
     }
     public void GameOver()
     {
-        random = Random.Range(0, 4);
-        if (random == 1)
+        random = Random.Range(0, 9);
+        if (random == 5)
         {
             adds.ShowFullSize();
         }
@@ -125,29 +153,5 @@ public class GameOverEndless : MonoBehaviour
         best.SetActive(true);
         Time.timeScale = 1.0f;
     }
-    private void Update()
-    {
-        if (adds == null)
-        {
-            adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
-        }
-        if (adds != null && tester == false)
-        {
-            adds.LoadFullSize();
-            tester = true;
-        }
-        if (playerHealth.isGameOver)
-        {
-            GameOver();
-        }
-        //else
-        //{
-        //    Time.timeScale = 1.0f;
-        //}
-        if (scale)
-        {
-            Time.timeScale = 0f;
-        }
-
-    }
+   
 }

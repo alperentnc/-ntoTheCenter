@@ -4023,6 +4023,7 @@ MonoBehaviour:
   score: {fileID: 232476204}
   pause: {fileID: 101266972}
   settingspanel: {fileID: 901191305}
+  pausepanel: {fileID: 287088852}
   coinManager: {fileID: 1219649401}
   coin: {fileID: 1219649400}
   Duck: {fileID: 5374809718222455454, guid: d22b9be245bec0749b0dbe57dd6c4d3e, type: 3}

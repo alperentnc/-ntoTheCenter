@@ -5,11 +5,10 @@ using CloudOnce;
 
 public class LeaderBoard : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         Cloud.OnInitializeComplete += CloudOnceInitializeComplete;
-        Cloud.Initialize(false, true);
+        //Cloud.Initialize(false, true);
     }
 
     public void CloudOnceInitializeComplete()
