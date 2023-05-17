@@ -2640,6 +2640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307567877}
   - component: {fileID: 307567876}
+  - component: {fileID: 307567878}
   m_Layer: 0
   m_Name: LeaderBoard
   m_TagString: Untagged
@@ -2654,7 +2655,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307567875}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d491856b9e26707408264fb9f0acc24a, type: 3}
   m_Name: 
@@ -2674,6 +2675,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &307567878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307567875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9cbee2052be1944a62dbcb0ced7aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudSaveEnabled: 0
+  autoSignIn: 1
+  autoCloudLoad: 0
 --- !u!1 &318995043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,7 +4156,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.5
+  m_fontSize: 38.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8761,7 +8777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1900d439144a1c149ac8eb7fe7d9c445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 0
 --- !u!1 &1056280407
 GameObject:
   m_ObjectHideFlags: 0
@@ -10693,7 +10708,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.35
+  m_fontSize: 38.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
