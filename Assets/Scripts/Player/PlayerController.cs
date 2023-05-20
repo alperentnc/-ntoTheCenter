@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private CapsuleCollider2D coll;
+    public GameObject hitSaliva;
+    GameObject hitSalivaObj;
     [SerializeField] private LayerMask ground;
     public Animator animator;
     private float slowTimer = 3;
@@ -22,7 +24,7 @@ public class PlayerController : MonoBehaviour
     public float minSwipeDistance;
     public float jumpForce = 2f;
     public float jumpTime = 0.5f;
-    public bool isJumping;
+    public bool isJumping,isGreenHit;
     private float jumpTimer;
     public static bool meteorStarter=false;
 
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        isGreenHit = false;
         //PlayerPrefs.SetInt("Diamond",8);
         if (PlayerPrefs.GetInt("IndexHealth") + 1 == 0)
         {
@@ -61,6 +64,13 @@ public class PlayerController : MonoBehaviour
             {
                 speed = PlayerPrefs.GetFloat(NormalSpeedKey);
                 slowPlatform = false;
+                if(hitSalivaObj != null)
+                {
+                    Destroy(hitSalivaObj);
+                    isGreenHit = false;
+                    
+                }
+                
             }
 
         }
@@ -72,6 +82,8 @@ public class PlayerController : MonoBehaviour
         {
             slowTimer = 3;
             slow = false;
+            Destroy(hitSalivaObj);
+            isGreenHit = false;
         }
         if (slowTimer > 0 && slowTimer < 3 && slow)
         {
@@ -150,6 +162,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(hitSalivaObj != null)
+        {
+            hitSalivaObj.transform.position = new Vector3(-0.3f, Camera.main.transform.position.y, 4);
+        }
+        
         if (!IsGrounded())
         {
             animator.SetBool("isWalking", false);
@@ -217,6 +234,12 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("salivaBullet"))
         {
             slow = true;
+            if (isGreenHit == false) 
+            {
+                hitSalivaObj = Instantiate(hitSaliva, new Vector3(-0.3f, Camera.main.transform.position.y, 4), Quaternion.identity);
+                isGreenHit = true;
+            }
+            
         }
         if (collision.gameObject.CompareTag("electricBullet"))
         {
@@ -229,6 +252,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("LeftSlow") || collision.gameObject.CompareTag("RightSlow") || collision.gameObject.CompareTag("MidSlow"))
         {
             slowPlatform = true;
+            if (isGreenHit == false)
+            {
+                hitSalivaObj = Instantiate(hitSaliva, new Vector3(-0.3f, Camera.main.transform.position.y, 4), Quaternion.identity);
+                isGreenHit = true;
+            }
         }
     }
 

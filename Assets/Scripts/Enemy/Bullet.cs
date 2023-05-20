@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject player,redHit;
+    GameObject redHitObj;
     private Rigidbody2D rb;
     public float force;
     private float timer,animTimer;
@@ -32,6 +33,10 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        if(redHit != null)
+        {
+            redHitObj.transform.position= new Vector3(-0.3f, Camera.main.transform.position.y, 4);
+        }
         timer += Time.deltaTime;
         animTimer += Time.deltaTime;
         if (timer > 5)
@@ -49,6 +54,8 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Reduce the player's health
+            redHitObj = Instantiate(redHit, new Vector3(-0.3f, Camera.main.transform.position.y, 4), Quaternion.identity);
+            Destroy(redHitObj,0.4f);
             health -= 10;
 
             // Save the player's health to PlayerPrefs

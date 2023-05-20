@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7cf398f87bf38b49a8139e681a32e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSaliva: {fileID: 2202121561889107401, guid: 836e0e0d8859ded4c9152e3b46442de7, type: 3}
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -183,10 +184,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a41716be8944fc468b6ee3d226e55a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 0}
   maxHalth: 100
   health: 100
   isGameOver: 0
+  isLoading: 0
+  enemyLength: 0
+  meteorLength: 0
 --- !u!114 &-480252060848510383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +202,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5980248af28070469f4b7a852e5468e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  scoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
   currentScore: 0

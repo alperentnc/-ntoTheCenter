@@ -122,8 +122,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  redHit: {fileID: 3388590743749758793, guid: bba7125427fe6a14f83e5dd0e68f8bf6, type: 3}
   force: 5
   animator: {fileID: 0}
+  health: 0
 --- !u!58 &-5095275955380051288
 CircleCollider2D:
   m_ObjectHideFlags: 0
