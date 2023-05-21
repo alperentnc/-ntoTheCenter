@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private CapsuleCollider2D coll;
-    public GameObject hitSaliva;
-    GameObject hitSalivaObj;
+    public GameObject hitSaliva,hitElectric;
+    GameObject hitSalivaObj,hitElectricObj;
     [SerializeField] private LayerMask ground;
     public Animator animator;
     private float slowTimer = 3;
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     public float minSwipeDistance;
     public float jumpForce = 2f;
     public float jumpTime = 0.5f;
-    public bool isJumping,isGreenHit;
+    public bool isJumping,isGreenHit,isElectricHit;
     private float jumpTimer;
     public static bool meteorStarter=false;
 
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         isGreenHit = false;
+        isElectricHit = false;
         //PlayerPrefs.SetInt("Diamond",8);
         if (PlayerPrefs.GetInt("IndexHealth") + 1 == 0)
         {
@@ -96,14 +97,16 @@ public class PlayerController : MonoBehaviour
         }
         if (stunTimer <= 0)
         {
-            stunTimer = 1;
+            stunTimer = 0.4f;
             stun = false;
+            Destroy(hitElectricObj);
+            isElectricHit = false;
             animator.SetBool("isShocking", false);
         } 
-        if (stunTimer > 0 && stunTimer < 1 && stun)
+        if (stunTimer > 0 && stunTimer < 0.4f && stun)
         {
             speed = 0;
-            //animator.SetBool("isWalking", false);
+            animator.SetBool("isWalking", false);
         }
         if(!slow && !stun && !slowPlatform)
         {
@@ -166,7 +169,11 @@ public class PlayerController : MonoBehaviour
         {
             hitSalivaObj.transform.position = new Vector3(-0.3f, Camera.main.transform.position.y, 4);
         }
-        
+        if (hitElectricObj != null)
+        {
+            hitElectricObj.transform.position = new Vector3(-0.2f, Camera.main.transform.position.y, 4);
+        }
+
         if (!IsGrounded())
         {
             animator.SetBool("isWalking", false);
@@ -243,6 +250,12 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("electricBullet"))
         {
+            if (isElectricHit == false)
+            {
+                hitElectricObj = Instantiate(hitElectric, new Vector3(-0.3f, Camera.main.transform.position.y, 4), Quaternion.identity);
+                isElectricHit = true;
+            }
+            
             stun = true;
         }
 

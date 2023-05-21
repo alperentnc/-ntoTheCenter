@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSaliva: {fileID: 2202121561889107401, guid: 836e0e0d8859ded4c9152e3b46442de7, type: 3}
+  hitElectric: {fileID: 757175152702432899, guid: 4167349e64f6dae418a7a9950fa8166b, type: 3}
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -151,6 +152,7 @@ MonoBehaviour:
   jumpForce: 5
   jumpTime: 0.5
   isJumping: 0
+  isGreenHit: 0
 --- !u!95 &5374809718222455446
 Animator:
   serializedVersion: 5
