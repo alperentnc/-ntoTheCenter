@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        if(redHit != null)
+        if(redHitObj != null)
         {
             redHitObj.transform.position= new Vector3(-0.3f, Camera.main.transform.position.y, 4);
         }
