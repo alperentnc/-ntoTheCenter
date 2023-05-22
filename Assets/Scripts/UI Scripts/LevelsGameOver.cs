@@ -85,7 +85,7 @@ public class LevelsGameOver : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-        Time.timeScale = 1.0f;
+        PlayerHealth.freezer = false;
     }
     public void GameOver()
     {
@@ -93,7 +93,6 @@ public class LevelsGameOver : MonoBehaviour
         if (random == 4)
         {
             adds.ShowFullSize();
-            Debug.Log("re");
         }
         hp.SetActive(false);
         index.SetActive(false);

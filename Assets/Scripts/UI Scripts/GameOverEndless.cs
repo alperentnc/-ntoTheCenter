@@ -79,7 +79,7 @@ public class GameOverEndless : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-        Time.timeScale = 1.0f;
+        PlayerHealth.freezer = false;
     }
     public void Settings()
     {

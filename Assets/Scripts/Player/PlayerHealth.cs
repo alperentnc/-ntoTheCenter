@@ -54,6 +54,8 @@ public class PlayerHealth : MonoBehaviour
         {
             Time.timeScale = 0f;
         }
+
+        else { Time.timeScale = 1f; }
         
         // Check if the player has run out of health
         if (health <= 0 && Door.levelComplete==false)
