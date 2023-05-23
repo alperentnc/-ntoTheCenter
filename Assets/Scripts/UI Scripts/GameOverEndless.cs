@@ -65,7 +65,6 @@ public class GameOverEndless : MonoBehaviour
         if (CoinManager.gameOverAccepted)
         {
             GameOver();
-            PlayerHealth.freezer = true;
         }
         //else
         //{
