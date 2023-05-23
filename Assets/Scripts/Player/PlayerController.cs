@@ -44,8 +44,8 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetFloat(NormalSpeedKey, (PlayerPrefs.GetInt("IndexSpeed")) * .3f + 6f);
-            PlayerPrefs.SetFloat(SlowSpeedKey, (PlayerPrefs.GetInt("IndexSpeed")) * .6f + 3f);
+            PlayerPrefs.SetFloat(NormalSpeedKey, (PlayerPrefs.GetInt("IndexSpeed")) * .15f + 6f);
+            PlayerPrefs.SetFloat(SlowSpeedKey, (PlayerPrefs.GetInt("IndexSpeed")) * .3f + 3f);
         }
 
         rb = GetComponent<Rigidbody2D>();

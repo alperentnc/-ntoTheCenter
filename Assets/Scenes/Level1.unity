@@ -4539,7 +4539,6 @@ GameObject:
   m_Component:
   - component: {fileID: 586118102}
   - component: {fileID: 586118103}
-  - component: {fileID: 586118104}
   m_Layer: 5
   m_Name: SFX
   m_TagString: SFXToggle
@@ -4578,7 +4577,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 586118101}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -4609,16 +4608,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 602271521}
-  toggleTransition: 1
-  graphic: {fileID: 385140947}
-  m_Group: {fileID: 0}
-  onValueChanged:
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5851163035687315427, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
         m_TargetAssemblyTypeName: SoundToggle, Assembly-CSharp
-        m_MethodName: ToggleSFX
+        m_MethodName: ToggleMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4628,19 +4624,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
---- !u!114 &586118104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586118101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46aa7c75629b5d146a0e0310ff19f72b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &600029123
 GameObject:
   m_ObjectHideFlags: 0
@@ -11642,7 +11625,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1463849658}
   - component: {fileID: 1463849659}
-  - component: {fileID: 1463849660}
   m_Layer: 5
   m_Name: Music
   m_TagString: MusicToggle
@@ -11681,7 +11663,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1463849657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -11712,11 +11694,8 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 250100076}
-  toggleTransition: 1
-  graphic: {fileID: 49914687}
-  m_Group: {fileID: 0}
-  onValueChanged:
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5851163035687315427, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
@@ -11731,19 +11710,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
---- !u!114 &1463849660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463849657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46aa7c75629b5d146a0e0310ff19f72b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1463933067
 GameObject:
   m_ObjectHideFlags: 0
