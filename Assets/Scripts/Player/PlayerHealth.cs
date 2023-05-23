@@ -50,7 +50,7 @@ public class PlayerHealth : MonoBehaviour
         meteorLength = meteor.Length;
         // Update the health slider
         slider.value = health;
-        if (freezer == true)
+        if (freezer == true || PauseMenu.pause)
         {
             Time.timeScale = 0f;
         }

@@ -62,16 +62,16 @@ public class AudioManager : MonoBehaviour
     public void ToggleMusic()
     {
         MusicSource.mute = !MusicSource.mute;
-        if (!MusicSource.mute)
-        {
-            Debug.Log(1);
-            testMusic = true;
-        }
-        if (MusicSource.mute)
-        {
-            Debug.Log(0);
-            testMusic = false;
-        }
+        //if (!MusicSource.mute)
+        //{
+        //    Debug.Log(1);
+        //    testMusic = true;
+        //}
+        //if (MusicSource.mute)
+        //{
+        //    Debug.Log(0);
+        //    testMusic = false;
+        //}
         
     }
 

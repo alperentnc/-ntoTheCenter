@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject SettingsPanel;
     public GameObject PausePanel;
     public Button Pause;
-    private bool pause;
+    public static bool pause;
 
     private void Update()
     {
@@ -30,6 +30,7 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1.0f;
+        pause = false;
     }
     public void PauseGame()
     {
@@ -48,6 +49,7 @@ public class PauseMenu : MonoBehaviour
         PausePanel.SetActive(false);
         SceneManager.LoadScene("SampleEndlessScene");
         Time.timeScale = 1.0f;
+        pause = false;
     }
 
     public void Settings()
