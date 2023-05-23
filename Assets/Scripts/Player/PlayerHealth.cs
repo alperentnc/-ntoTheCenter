@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        isGameOver = false;
         freezer = false;
         isLoading = false;
         adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();

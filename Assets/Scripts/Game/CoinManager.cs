@@ -8,9 +8,10 @@ public class CoinManager : MonoBehaviour
     public float goldPerScore; // How much gold the player earns per score point
 
     public static int totalGold; // Total gold earned by the player
-
+    public static bool gameOverAccepted;
     void Start()
     {
+        gameOverAccepted = false;
         player = GameObject.FindGameObjectWithTag("Player");
         scoreManager = player.GetComponent<ScoreManager>();
         playerHealth = player.GetComponent<PlayerHealth>();
@@ -21,11 +22,11 @@ public class CoinManager : MonoBehaviour
     {   
         if (playerHealth.isGameOver)
         {
-            
             totalGold = Mathf.RoundToInt(scoreManager.currentScore * goldPerScore);
+            gameOverAccepted = true;
 
 
-            
+
             int currentGold = PlayerPrefs.GetInt("Gold", 0);
             
             // Disable this script so that it doesn't keep calculating gold after the game is over

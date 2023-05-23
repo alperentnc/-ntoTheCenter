@@ -7358,7 +7358,7 @@ MonoBehaviour:
   GameOverPanel: {fileID: 175392055}
   LevelCompletedPanel: {fileID: 1226808360}
   SettingsPanel: {fileID: 1796337309}
-  FirstLevelCompletedPanel: {fileID: 0}
+  FirstLevelCompletedPanel: {fileID: 594980484}
   levelsCoin: {fileID: 399158554}
   coin: {fileID: 399158551}
   CoinTextOver: {fileID: 1528677228}

@@ -8,12 +8,16 @@ public class LevelsCoin : MonoBehaviour
     PlayerHealth playerHealth;
     GameObject player;
     public GameObject spinner;
-    public static bool LevelCompleted,count;
+    public static bool LevelCompleted,count,countOver;
+    public static bool gameOverAccepted,levelCompletedAccepted;
     // How much gold the player earns per score point
 
     public static int totalGold;
     void Start()
     {
+        gameOverAccepted = false;
+        levelCompletedAccepted = false;
+        countOver = false;
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
         LevelCompleted = false;
@@ -23,10 +27,16 @@ public class LevelsCoin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (LevelCompleted==false)
+        if (playerHealth.isGameOver)
         {
             // Multiply the player's score by the goldPerScore value to calculate the total gold earned
-            totalGold = PlayerPrefs.GetInt("levelCompleted")*(int)Random.Range(1,3);
+            if (countOver == false)
+            {
+                totalGold = (PlayerPrefs.GetInt("levelCompleted") * (int)Random.Range(1, 3));
+                countOver = true;
+                gameOverAccepted = true;
+            }
+            
 
             // Add the total gold earned to the player's inventory (you would need to replace this code with whatever logic you have for tracking the player's gold)
             Debug.Log("You earned " + totalGold + " gold!");
@@ -44,9 +54,11 @@ public class LevelsCoin : MonoBehaviour
         {
             if (count == false)
             {
+                
                 totalGold = PlayerPrefs.GetInt("levelCompleted") * 10;
                 Debug.Log(totalGold);
                 count = true;
+                levelCompletedAccepted = true;
             }
             
             

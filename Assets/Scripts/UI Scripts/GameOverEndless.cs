@@ -6,14 +6,14 @@ using TMPro;
 
 public class GameOverEndless : MonoBehaviour
 {
-    public GameObject GameOverPanel,Spinner, hp, best, score, pause, settingspanel, pausepanel;
+    public GameObject GameOverPanel,Spinner, hp, best, score, pause, settingspanel, pausepanel,firstGameOver;
     PlayerHealth playerHealth;
     public CoinManager coinManager;
     GameObject player, enemy, gun, explode, electric, fastmeteor;
     Rigidbody2D rb;
     public GameObject coin;
     public GameObject Duck, Monkey, Pumpkin, Default;
-    public TMP_Text CoinText;
+    public TMP_Text CoinText, firstcoin;
     bool test;
     bool scale;
     private int currentGold,random;
@@ -62,9 +62,10 @@ public class GameOverEndless : MonoBehaviour
             adds.LoadFullSize();
             tester = true;
         }
-        if (playerHealth.isGameOver)
+        if (CoinManager.gameOverAccepted)
         {
             GameOver();
+            PlayerHealth.freezer = true;
         }
         //else
         //{
@@ -93,15 +94,10 @@ public class GameOverEndless : MonoBehaviour
     }
     public void GameOver()
     {
-        random = Random.Range(0, 9);
-        if (random == 5)
-        {
-            adds.ShowFullSize();
-        }
+        
         if (!test)
         {
-            Spinner.SetActive(true);
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            //Spinner.SetActive(true);
             //enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             //fastmeteor.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             score.SetActive(false);
@@ -109,11 +105,58 @@ public class GameOverEndless : MonoBehaviour
             pause.SetActive(false);
             best.SetActive(false);
             test = true;
+            firstGameOver.SetActive(true);
+            firstcoin.text = "   You Earned: " + CoinManager.totalGold.ToString() + " Coins";
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            player.GetComponent<Animator>().SetBool("isWalking", false);
         }
         
     }
+    public void GameOverSpin()
+    {
+        firstGameOver.SetActive(false);
+        Spinner.SetActive(true);
+    }
     public void Skip()
     {
+        firstGameOver.SetActive(false);
+        PlayerHealth.freezer = true;
+        if (!WheelManager.isTook)
+        {
+            currentGold = PlayerPrefs.GetInt("Gold");
+            currentGold += CoinManager.totalGold;
+            PlayerPrefs.SetInt("Gold", currentGold);
+        }
+        Spinner.SetActive(false);
+        GameOverPanel.SetActive(true);
+        scale = true;
+        //if (!test)
+        //{
+        //    Spinner.SetActive(false);
+        //    rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        //    enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        //    fastmeteor.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        //    score.SetActive(false);
+        //    hp.SetActive(false);
+        //    pause.SetActive(false);
+        //    best.SetActive(false);
+        //    test = true;
+        //}
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+        }
+        Time.timeScale = 0;
+        CoinText.text = "   You Earned: " + CoinManager.totalGold.ToString() + " Coins";
+    }
+    public void SkipWithoutSpin()
+    {
+        firstGameOver.SetActive(false);
+        random = Random.Range(0, 9);
+        if (random == 5)
+        {
+            adds.ShowFullSize();
+        }
         PlayerHealth.freezer = true;
         if (!WheelManager.isTook)
         {

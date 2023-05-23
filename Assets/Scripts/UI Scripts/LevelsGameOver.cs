@@ -66,12 +66,12 @@ public class LevelsGameOver : MonoBehaviour
             adds.LoadFullSize();
             tester = true;
         }
-        if (playerHealth.isGameOver && !over)
+        if (LevelsCoin.gameOverAccepted && !over)
         {
             GameOver();
             over = true;
         }
-        if (LevelsCoin.LevelCompleted == true && !overlevel)
+        if (LevelsCoin.levelCompletedAccepted == true && !overlevel)
         {
             LevelsCompleted();
             overlevel = true;
@@ -90,6 +90,7 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void GameOver()
     {
+        PlayerHealth.freezer = true;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         FirstLevelCompletedPanel.SetActive(true);
         FirstCoinTextCompleted.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
@@ -176,7 +177,9 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void LevelsCompleted()
     {
+        PlayerHealth.freezer = true;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         FirstLevelCompletedPanel.SetActive(true);
         FirstCoinTextCompleted.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
         hp.SetActive(false);
