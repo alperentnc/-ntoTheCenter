@@ -10,12 +10,13 @@ public class LevelsGameOver : MonoBehaviour
     public GameObject GameOverPanel;
     public GameObject LevelCompletedPanel;
     public GameObject SettingsPanel;
+    public GameObject FirstLevelCompletedPanel;
     PlayerHealth playerHealth;
     public LevelsCoin levelsCoin;
     GameObject player,hp,index,pause;
     Rigidbody2D rb;
     public GameObject coin;
-    public TMP_Text CoinTextOver,CoinTextCompleted;
+    public TMP_Text CoinTextOver,CoinTextCompleted, FirstCoinTextCompleted;
     public bool over,overlevel,levelbool,tester;
     public GameObject Monkey, Duck, Pumpkin, Default;
     private int currentGold;
@@ -89,16 +90,12 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void GameOver()
     {
-        random = Random.Range(0, 9);
-        if (random == 4)
-        {
-            adds.ShowFullSize();
-        }
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        FirstLevelCompletedPanel.SetActive(true);
+        FirstCoinTextCompleted.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
         hp.SetActive(false);
         index.SetActive(false);
         pause.SetActive(false);
-        Spinner.SetActive(true);
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
     
     public void NextLevel()
@@ -108,6 +105,45 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void Skip()
     {
+        FirstLevelCompletedPanel.SetActive(false);
+        if (LevelsCoin.LevelCompleted == true)
+        {
+            PlayerHealth.freezer = true;
+            if (!WheelManager.isTook)
+            {
+                currentGold = PlayerPrefs.GetInt("Gold");
+                currentGold += LevelsCoin.totalGold;
+                PlayerPrefs.SetInt("Gold", currentGold);
+            }
+            LevelCompletedPanel.SetActive(true);
+            CoinTextCompleted.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
+            Spinner.SetActive(false);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            PlayerHealth.freezer = true;
+            if (!WheelManager.isTook)
+            {
+                currentGold = PlayerPrefs.GetInt("Gold");
+                currentGold += LevelsCoin.totalGold;
+                PlayerPrefs.SetInt("Gold", currentGold);
+            }
+            GameOverPanel.SetActive(true);
+            CoinTextOver.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
+            Spinner.SetActive(false);
+            Time.timeScale = 0;
+        }
+
+    }
+    public void SkipWithoutSpin()
+    {
+        FirstLevelCompletedPanel.SetActive(false);
+        random = Random.Range(0, 9);
+        if (random == 6)
+        {
+            adds.ShowFullSize();
+        }
         if (LevelsCoin.LevelCompleted == true)
         {
             PlayerHealth.freezer = true;
@@ -140,16 +176,19 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void LevelsCompleted()
     {
-        random = Random.Range(0, 9);
-        if (random == 6)
-        {
-            adds.ShowFullSize();
-        }
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        FirstLevelCompletedPanel.SetActive(true);
+        FirstCoinTextCompleted.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
         hp.SetActive(false);
         index.SetActive(false);
         pause.SetActive(false);
+        
+        
+    }
+    public void LevelsCompletedSpin()
+    {
+        FirstLevelCompletedPanel.SetActive(false);
         Spinner.SetActive(true);
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
     public void replay()
     {

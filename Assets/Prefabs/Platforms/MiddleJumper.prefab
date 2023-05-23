@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a103174449a03941baff8327887ae24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  redHit: {fileID: 3388590743749758793, guid: bba7125427fe6a14f83e5dd0e68f8bf6, type: 3}
   ground:
     serializedVersion: 2
     m_Bits: 64

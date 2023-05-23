@@ -10,12 +10,14 @@ public class Bullet : MonoBehaviour
     public float force;
     private float timer,animTimer;
     public Animator animator;
+    public bool redhitDestroyer;
 
     private const string HealthKey = "PlayerHealth";
     public int health;
 
     void Start()
     {
+        redhitDestroyer = false;
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
@@ -36,6 +38,9 @@ public class Bullet : MonoBehaviour
         if(redHitObj != null)
         {
             redHitObj.transform.position= new Vector3(-0.3f, Camera.main.transform.position.y, 4);
+            
+            redhitDestroyer = false;
+
         }
         timer += Time.deltaTime;
         animTimer += Time.deltaTime;
@@ -54,8 +59,14 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Reduce the player's health
-            redHitObj = Instantiate(redHit, new Vector3(-0.3f, Camera.main.transform.position.y, 4), Quaternion.identity);
-            Destroy(redHitObj,0.4f);
+            if (redhitDestroyer==false)
+            {
+                GameObject redHitObj = Instantiate(redHit, new Vector3(-0.3f, Camera.main.transform.position.y, 4), Quaternion.identity);
+                redhitDestroyer = true;
+                Destroy(redHitObj, 0.2f);
+            }
+            
+            
             health -= 10;
 
             // Save the player's health to PlayerPrefs

@@ -23,7 +23,7 @@ public class LevelsCoin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerHealth.isGameOver)
+        if (LevelCompleted==false)
         {
             // Multiply the player's score by the goldPerScore value to calculate the total gold earned
             totalGold = PlayerPrefs.GetInt("levelCompleted")*(int)Random.Range(1,3);

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class JumperShooting : MonoBehaviour
 {
+    public GameObject redHit;
     [SerializeField] private LayerMask ground;
     private CapsuleCollider2D coll;
     public float bulletFrequency;
     private float timer;
     private GameObject player;
+    public bool anims;
     public float fireDistance;
     JumperPatrolling jumperPatrolling;
     float yDifferance;
@@ -20,6 +22,7 @@ public class JumperShooting : MonoBehaviour
     public int health;
     void Start()
     {
+        anims = false;
         player = GameObject.FindGameObjectWithTag("Player");
         jumperPatrolling = gameObject.GetComponent<JumperPatrolling>();
         coll = GetComponent<CapsuleCollider2D>();
@@ -37,7 +40,6 @@ public class JumperShooting : MonoBehaviour
     void Update()
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
-
         yDifferance = player.transform.position.y - transform.position.y;
         if (distance < fireDistance && System.Math.Abs(yDifferance) <= 0.2f)
         {
@@ -73,6 +75,15 @@ public class JumperShooting : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (anims == false)
+            {
+                GameObject redHitObj = Instantiate(redHit, new Vector3(-0.3f, Camera.main.transform.position.y, 4), Quaternion.identity);
+                GameObject explodingAnim = Instantiate(explode, transform.position, Quaternion.identity);
+                Destroy(explodingAnim, .5f);
+                Destroy(redHitObj, .2f);
+                anims = true;
+            }
+            
             // Reduce the player's health
             health -= 10;
 
@@ -82,10 +93,11 @@ public class JumperShooting : MonoBehaviour
             Destroy(gameObject);
 
             collision.gameObject.GetComponent<PlayerHealth>().health -= 30;
-            GameObject explodingAnim =  Instantiate(explode, transform.position, Quaternion.identity);
+            
             AudioManager.Instance.PlaySFX("Explode");
             Destroy(gameObject);
-            Destroy(explodingAnim, .5f);
+            
+            
         }
     }
 }
