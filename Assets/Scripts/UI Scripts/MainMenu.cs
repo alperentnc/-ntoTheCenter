@@ -130,16 +130,16 @@ public class MainMenu : MonoBehaviour
     }
     public void AddforDiamond()
     {
-        PlayerPrefs.SetInt("Diamond", 20);
-        //if (internet)
-        //{
-        //    adds.ShowRewardedAd();
-        //    diamondPlus = true;
-        //}
-        //else if (!internet)
-        //{
-        //    Debug.Log("intyokrewarded");
-        //}
+
+        if (internet)
+        {
+            adds.ShowRewardedAd();
+            diamondPlus = true;
+        }
+        else if (!internet)
+        {
+            Debug.Log("intyokrewarded");
+        }
     }
     public void AddforCoin()
     {

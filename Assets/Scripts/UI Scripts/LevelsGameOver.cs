@@ -13,11 +13,11 @@ public class LevelsGameOver : MonoBehaviour
     public GameObject FirstLevelCompletedPanel;
     PlayerHealth playerHealth;
     public LevelsCoin levelsCoin;
-    GameObject player,hp,index,pause;
+    GameObject player, hp, index, pause;
     Rigidbody2D rb;
     public GameObject coin;
-    public TMP_Text CoinTextOver,CoinTextCompleted, FirstCoinTextCompleted;
-    public bool over,overlevel,levelbool,tester;
+    public TMP_Text CoinTextOver, CoinTextCompleted, FirstCoinTextCompleted;
+    public bool over, overlevel, levelbool, tester;
     public GameObject Monkey, Duck, Pumpkin, Default;
     private int currentGold;
     private int random;
@@ -28,7 +28,7 @@ public class LevelsGameOver : MonoBehaviour
         currentGold = 0;
         if (PlayerPrefs.GetInt("equipDuck") == 1)
         {
-            Instantiate(Duck, new Vector3(-2, 4.9f, 4),Quaternion.identity);
+            Instantiate(Duck, new Vector3(-2, 4.9f, 4), Quaternion.identity);
         }
         else if (PlayerPrefs.GetInt("equipMonkey") == 1)
         {
@@ -56,7 +56,7 @@ public class LevelsGameOver : MonoBehaviour
     void Update()
     {
 
-        
+
         if (adds == null)
         {
             adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
@@ -66,12 +66,12 @@ public class LevelsGameOver : MonoBehaviour
             adds.LoadFullSize();
             tester = true;
         }
-        if (LevelsCoin.gameOverAccepted && !over)
+        if (playerHealth.isGameOver && !over)
         {
             GameOver();
             over = true;
         }
-        if (LevelsCoin.levelCompletedAccepted == true && !overlevel)
+        if (LevelsCoin.LevelCompleted == true && !overlevel)
         {
             LevelsCompleted();
             overlevel = true;
@@ -87,6 +87,7 @@ public class LevelsGameOver : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         PlayerHealth.freezer = false;
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void GameOver()
     {
@@ -97,11 +98,12 @@ public class LevelsGameOver : MonoBehaviour
         index.SetActive(false);
         pause.SetActive(false);
     }
-    
+
     public void NextLevel()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("levelCompleted"));
         Time.timeScale = 1;
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void Skip()
     {
@@ -134,7 +136,7 @@ public class LevelsGameOver : MonoBehaviour
             Spinner.SetActive(false);
             Time.timeScale = 0;
         }
-
+        AudioManager.Instance.PlaySFX("Equip");
     }
     public void SkipWithoutSpin()
     {
@@ -172,48 +174,53 @@ public class LevelsGameOver : MonoBehaviour
             Spinner.SetActive(false);
             Time.timeScale = 0;
         }
-
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void LevelsCompleted()
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         FirstLevelCompletedPanel.SetActive(true);
         FirstCoinTextCompleted.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
         hp.SetActive(false);
         index.SetActive(false);
         pause.SetActive(false);
-        
-        
+
+
     }
     public void LevelsCompletedSpin()
     {
         FirstLevelCompletedPanel.SetActive(false);
         Spinner.SetActive(true);
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void replay()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void SettingsWin()
     {
         SettingsPanel.SetActive(true);
         LevelCompletedPanel.SetActive(false);
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void CloseSettingsWin()
     {
         SettingsPanel.SetActive(false);
         LevelCompletedPanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void SettingsLose()
     {
         SettingsPanel.SetActive(true);
         GameOverPanel.SetActive(false);
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void CloseSettingsLose()
     {
         SettingsPanel.SetActive(false);
         GameOverPanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("Click");
     }
 }
