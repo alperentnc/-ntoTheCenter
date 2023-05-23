@@ -31,18 +31,21 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1.0f;
         pause = false;
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void PauseGame()
     {
         PausePanel.SetActive(true);
         Time.timeScale = 0f;
         pause = true;
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void UnPauseGame()
     {
         PausePanel.SetActive(false);
         pause = false;
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void RestartGame()
     {
@@ -50,17 +53,20 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("SampleEndlessScene");
         Time.timeScale = 1.0f;
         pause = false;
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void Settings()
     {
         SettingsPanel.SetActive(true);
         PausePanel.SetActive(false);
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void CloseSettings()
     {
         SettingsPanel.SetActive(false);
         PausePanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("Click");
     }
 
 }

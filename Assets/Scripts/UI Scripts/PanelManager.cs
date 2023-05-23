@@ -6,6 +6,8 @@ public class PanelManager : MonoBehaviour
     private int currentPanelIndex = 0;
     private string panelShownKeyPrefix = "PanelShown_";
     public GameObject button;
+    private int prefs;
+    private string panelShownKey;
     private void Start()
     {
         // Initially activate the first panel if it hasn't been shown before
@@ -17,6 +19,7 @@ public class PanelManager : MonoBehaviour
         {
             button.SetActive(false);
         }
+        prefs = PlayerPrefs.GetInt(panelShownKey);
     }
 
     private void Update()
@@ -26,7 +29,7 @@ public class PanelManager : MonoBehaviour
         {
             // Deactivate the current panel
             DeactivatePanel(currentPanelIndex);
-
+            
             // Move to the next panel
             currentPanelIndex++;
 
@@ -42,21 +45,22 @@ public class PanelManager : MonoBehaviour
             else
             {
                 // No more panels, do something else
-                Debug.Log("No more panels"); 
+                Debug.Log("No more panels");
                 button.SetActive(false);
             }
+
         }
     }
 
     private bool IsPanelShown(int index)
     {
-        string panelShownKey = panelShownKeyPrefix + index.ToString();
+         panelShownKey = panelShownKeyPrefix + index.ToString();
         return PlayerPrefs.GetInt(panelShownKey, 0) == 1;
     }
 
     private void MarkPanelAsShown(int index)
     {
-        string panelShownKey = panelShownKeyPrefix + index.ToString();
+         panelShownKey = panelShownKeyPrefix + index.ToString();
         PlayerPrefs.SetInt(panelShownKey, 1);
     }
 
@@ -74,6 +78,11 @@ public class PanelManager : MonoBehaviour
         {
             panels[index].SetActive(false);
             MarkPanelAsShown(index);
+            if (prefs == 0)
+            {
+                AudioManager.Instance.PlaySFX("Equip");
+            }
+            
         }
     }
 }

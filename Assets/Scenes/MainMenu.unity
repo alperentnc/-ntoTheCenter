@@ -19341,6 +19341,54 @@ PrefabInstance:
       propertyPath: musicToggle
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[4].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f8e14642d3e1034e8e76bb0a3b59b93, type: 3}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[6].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3bab434524cdd9542a6e36f81898b800, type: 3}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[6].Name
+      value: Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[7].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0afcb6f966f0c1f4a8cb2671dd828592, type: 3}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[7].Name
+      value: Upgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[8].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3149dde44ccf7af498172dcac02e74bc, type: 3}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[8].Name
+      value: Equip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[9].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3149dde44ccf7af498172dcac02e74bc, type: 3}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[9].Name
+      value: Equip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[10].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3149dde44ccf7af498172dcac02e74bc, type: 3}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[10].Name
+      value: Win
+      objectReference: {fileID: 0}
     - target: {fileID: 5227546180124094515, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
       propertyPath: m_Name
       value: AudioManager

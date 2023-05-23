@@ -231,7 +231,7 @@ public class WheelManager : MonoBehaviour {
             UpdateText();
             watchAdder.SetActive(false);
             spinner.SetActive(false);
-            
+        AudioManager.Instance.PlaySFX("Wheel");
     }
     
     public void WatchAd()

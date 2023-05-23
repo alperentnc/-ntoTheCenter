@@ -92,7 +92,7 @@ public class SkinBuy : MonoBehaviour
             haveDuck = 1;
             PlayerPrefs.SetInt("haveDuck", haveDuck);
             DuckEquiper.gameObject.SetActive(true);
-
+            AudioManager.Instance.PlaySFX("Upgrade");
         }
     }
     public void PumpkinBuy()
@@ -105,7 +105,7 @@ public class SkinBuy : MonoBehaviour
             havePumpkin = 1;
             PlayerPrefs.SetInt("havePumpkin", havePumpkin);
             PumpkinEquiper.gameObject.SetActive(true);
-
+            AudioManager.Instance.PlaySFX("Upgrade");
         }
     }
     public void MonkeyBuy()
@@ -118,7 +118,7 @@ public class SkinBuy : MonoBehaviour
             haveMonkey = 1;
             PlayerPrefs.SetInt("haveMonkey", haveMonkey);
             MonkeyEquiper.gameObject.SetActive(true);
-
+            AudioManager.Instance.PlaySFX("Upgrade");
         }
     }
     public void MonkeyEquip()
@@ -132,6 +132,7 @@ public class SkinBuy : MonoBehaviour
         PlayerPrefs.SetInt("equipDuck", 0);
         PlayerPrefs.SetInt("equipPumpkin", 0);
         PlayerPrefs.SetInt("equipDefault", 0);
+        AudioManager.Instance.PlaySFX("Equip");
     }
     public void DuckEquip()
     {
@@ -144,7 +145,7 @@ public class SkinBuy : MonoBehaviour
         PlayerPrefs.SetInt("equipPumpkin", 0);
         PlayerPrefs.SetInt("equipDefault", 0);
         DuckEquiper.gameObject.SetActive(false);
-
+        AudioManager.Instance.PlaySFX("Equip");
     }
     public void PumpkinEquip()
     {
@@ -157,6 +158,7 @@ public class SkinBuy : MonoBehaviour
         PlayerPrefs.SetInt("equipDuck", 0);
         PlayerPrefs.SetInt("equipDefault", 0);
         PlayerPrefs.SetInt("equipPumpkin", 1);
+        AudioManager.Instance.PlaySFX("Equip");
     }
     public void DefaultEquip()
     {
@@ -168,5 +170,6 @@ public class SkinBuy : MonoBehaviour
         PlayerPrefs.SetInt("equipDuck", 0);
         PlayerPrefs.SetInt("equipPumpkin", 0);
         PlayerPrefs.SetInt("equipDefault", 1);
+        AudioManager.Instance.PlaySFX("Equip");
     }
 }

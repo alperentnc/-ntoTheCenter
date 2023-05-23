@@ -33,17 +33,21 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("levelCompleted"));
         Time.timeScale = 1.0f;
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void PlayEndless()
     {
         SceneManager.LoadScene("SampleEndlessScene");
+        AudioManager.Instance.PlaySFX("Click");
+        AudioManager.Instance.PlaySFX("Click");
 
     }
     public void PlayPopUp()
     {
         PlayPanel.SetActive(true);
         PlayBtn.SetActive(false);
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void Settings()
@@ -51,6 +55,7 @@ public class MainMenu : MonoBehaviour
         SettingsPanel.SetActive(true);
         PlayBtn.SetActive(false);
         FreeFall.SetActive(false);
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void Power()
@@ -58,18 +63,21 @@ public class MainMenu : MonoBehaviour
         PowerPanel.SetActive(true);
         PlayBtn.SetActive(false);
         FreeFall.SetActive(false);
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void Levels()
     {
         LevelsPanel.SetActive(true);
         PlayBtn.SetActive(false);
         FreeFall.SetActive(false);
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void CloseShop()
     {
         PlayPanel.SetActive(false);
         PlayBtn.SetActive(true);
         FreeFall.SetActive(true);
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void CloseSettings()
@@ -77,6 +85,7 @@ public class MainMenu : MonoBehaviour
         SettingsPanel.SetActive(false);
         PlayBtn.SetActive(true);
         FreeFall.SetActive(true);
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void ClosePower()
@@ -84,22 +93,26 @@ public class MainMenu : MonoBehaviour
         PowerPanel.SetActive(false);
         PlayBtn.SetActive(true);
         FreeFall.SetActive(true);
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void CloseLevels()
     {
         LevelsPanel.SetActive(false);
         PlayBtn.SetActive(true);
         FreeFall.SetActive(true);
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void ToggleMusic()
     {
         AudioManager.Instance.ToggleMusic();
+        AudioManager.Instance.PlaySFX("Click");
     }
 
     public void ToggleSFX()
     {
         AudioManager.Instance.ToggleSFX();
+        AudioManager.Instance.PlaySFX("Click");
     }
     
     IEnumerator CheckInternetConnection()
@@ -117,15 +130,16 @@ public class MainMenu : MonoBehaviour
     }
     public void AddforDiamond()
     {
-        if (internet)
-        {
-            adds.ShowRewardedAd();
-            diamondPlus = true;
-        }
-        else if (!internet)
-        {
-            Debug.Log("intyokrewarded");
-        }
+        PlayerPrefs.SetInt("Diamond", 20);
+        //if (internet)
+        //{
+        //    adds.ShowRewardedAd();
+        //    diamondPlus = true;
+        //}
+        //else if (!internet)
+        //{
+        //    Debug.Log("intyokrewarded");
+        //}
     }
     public void AddforCoin()
     {

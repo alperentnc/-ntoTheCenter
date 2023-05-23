@@ -93,7 +93,7 @@ public class Upgrades : MonoBehaviour
             //playerControllerLevel.normalSpeed += 0.3f;
             //playerControllerEndless.slowSpeed += 0.3f;
             //playerControllerLevel.slowSpeed += 0.3f;
-
+            AudioManager.Instance.PlaySFX("Upgrade");
         }
     }
 
@@ -114,8 +114,8 @@ public class Upgrades : MonoBehaviour
             PlayerPrefs.SetInt("HealthBuyValue", int.Parse(healthBuyText.text));
             playerHealthEndless.maxHalth += 10;
             PlayerPrefs.SetInt(HealthKey, playerHealthEndless.maxHalth);
-           
-            
+            AudioManager.Instance.PlaySFX("Upgrade");
+
         }
     }
     private void Update()

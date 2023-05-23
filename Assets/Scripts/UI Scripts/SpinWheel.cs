@@ -6,7 +6,7 @@ public class SpinWheel {
 
     float degrees = 360f;
     int numberOfRewards = 1;
-    float maxTime = 4, minTime = 2f;
+    float maxTime = 3, minTime = 1.2f;
     float timeToSlow = 1f;
     float offSet = 0f;
     float speed = 20f;
