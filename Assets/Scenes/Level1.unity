@@ -4612,9 +4612,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5851163035687315427, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
-        m_TargetAssemblyTypeName: SoundToggle, Assembly-CSharp
-        m_MethodName: ToggleMusic
+      - m_Target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ToggleSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

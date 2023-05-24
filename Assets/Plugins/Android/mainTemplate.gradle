@@ -37,12 +37,12 @@ dependencies {
     implementation 'com.facebook.android:facebook-gamingservices:[16.0,17)' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:9
     implementation 'com.facebook.android:facebook-login:[16.0,17)' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:7
     implementation 'com.facebook.android:facebook-share:[16.0,17)' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:8
-    implementation 'com.google.android.gms:play-services-ads:21.5.0' // Assets/IronSource/Editor/ISAdMobAdapterDependencies.xml:8
+    implementation 'com.google.android.gms:play-services-ads:22.1.0' // Assets/IronSource/Editor/ISAdMobAdapterDependencies.xml:8
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1' // Assets/IronSource/Editor/IronSourceSDKDependencies.xml:17
     implementation 'com.google.android.gms:play-services-basement:18.1.0' // Assets/IronSource/Editor/IronSourceSDKDependencies.xml:25
     implementation 'com.google.games:gpgs-plugin-support:0.10.14' // Assets/Extensions/GooglePlayGames/Editor/GooglePlayGamesPluginDependencies.xml:11
     implementation 'com.ironsource.adapters:adcolonyadapter:4.3.14' // Assets/IronSource/Editor/ISAdColonyAdapterDependencies.xml:16
-    implementation 'com.ironsource.adapters:admobadapter:4.3.36' // Assets/IronSource/Editor/ISAdMobAdapterDependencies.xml:16
+    implementation 'com.ironsource.adapters:admobadapter:4.3.37' // Assets/IronSource/Editor/ISAdMobAdapterDependencies.xml:16
     implementation 'com.ironsource.adapters:applovinadapter:4.3.38' // Assets/IronSource/Editor/ISAppLovinAdapterDependencies.xml:8
     implementation 'com.ironsource.sdk:mediationsdk:7.3.0.1' // Assets/IronSource/Editor/IronSourceSDKDependencies.xml:9
     implementation 'com.parse.bolts:bolts-android:1.4.0' // Assets/FacebookSDK/Plugins/Editor/Dependencies.xml:4
