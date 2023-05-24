@@ -6,16 +6,20 @@ public class PlayerHealth : MonoBehaviour
     Slider slider;
     public int maxHalth = 100;
     public int health = 100;
-    public bool isGameOver = false,isLoading;
+    public bool isGameOver = false,isLoading,notYet;
     Adds adds;
     public static bool freezer;
     GameObject[] enemy,meteor;
     public int enemyLength, meteorLength;
+    public GameObject bom;
+    GameObject player,bomber;
+    public float timer;
 
     private const string HealthKey = "PlayerHealth";
 
     void Start()
     {
+        notYet = false;
         isGameOver = false;
         freezer = false;
         isLoading = false;
@@ -44,6 +48,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         enemy = GameObject.FindGameObjectsWithTag("Enemy");
         meteor = GameObject.FindGameObjectsWithTag("meteor");
         Debug.Log("health" + health);
@@ -89,7 +97,20 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            isGameOver = true;
+            if (notYet == false)
+            {
+                bomber = Instantiate(bom, new Vector3(player.transform.position.x, player.transform.position.y, 0), Quaternion.identity);
+                Destroy(bomber, 0.3f);
+                player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 100);
+                notYet = true;
+            }
+            
+            timer += Time.deltaTime;
+            if (timer >= 0.3f)
+            {
+                isGameOver = true;
+            }
+            
 
             for (int i = 0; i < enemyLength; i++)
             {

@@ -153,6 +153,7 @@ MonoBehaviour:
   jumpTime: 0.5
   isJumping: 0
   isGreenHit: 0
+  isElectricHit: 0
 --- !u!95 &5374809718222455446
 Animator:
   serializedVersion: 5
@@ -191,3 +192,5 @@ MonoBehaviour:
   isLoading: 0
   enemyLength: 0
   meteorLength: 0
+  bom: {fileID: 3549143364841374174, guid: 8e883db8da56d8743a070c1a530e13c0, type: 3}
+  timer: 0

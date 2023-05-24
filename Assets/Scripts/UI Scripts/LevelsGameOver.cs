@@ -17,13 +17,14 @@ public class LevelsGameOver : MonoBehaviour
     Rigidbody2D rb;
     public GameObject coin;
     public TMP_Text CoinTextOver, CoinTextCompleted, FirstCoinTextCompleted;
-    public bool over, overlevel, levelbool, tester;
+    public bool over, overlevel, levelbool, tester,closeWalk;
     public GameObject Monkey, Duck, Pumpkin, Default;
     private int currentGold;
     private int random;
     Adds adds;
     private void Start()
     {
+        closeWalk = false;
         tester = false;
         currentGold = 0;
         if (PlayerPrefs.GetInt("equipDuck") == 1)
@@ -66,12 +67,17 @@ public class LevelsGameOver : MonoBehaviour
             adds.LoadFullSize();
             tester = true;
         }
-        if (playerHealth.isGameOver && !over)
+        if (LevelsCoin.gameOverAccepted && !over)
         {
             GameOver();
+            closeWalk = true;
             over = true;
         }
-        if (LevelsCoin.LevelCompleted == true && !overlevel)
+        if (closeWalk == true)
+        {
+            player.GetComponent<Animator>().SetBool("isWalking", false);
+        }
+        if (LevelsCoin.levelCompletedAccepted == true && !overlevel)
         {
             LevelsCompleted();
             overlevel = true;

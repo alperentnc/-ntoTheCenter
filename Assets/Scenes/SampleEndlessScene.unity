@@ -4305,7 +4305,7 @@ MonoBehaviour:
   pause: {fileID: 101266972}
   settingspanel: {fileID: 901191305}
   pausepanel: {fileID: 287088852}
-  firstGameOver: {fileID: 618420122}
+  firstGameOverPanel: {fileID: 618420122}
   coinManager: {fileID: 1219649401}
   coin: {fileID: 1219649400}
   Duck: {fileID: 5374809718222455454, guid: d22b9be245bec0749b0dbe57dd6c4d3e, type: 3}
@@ -4313,8 +4313,9 @@ MonoBehaviour:
   Pumpkin: {fileID: 5374809718222455454, guid: fd672cfd204d78c4dbb29428ada90497, type: 3}
   Default: {fileID: 5374809718222455454, guid: 2c0cb8141565313468f9d89bb2a3cddb, type: 3}
   CoinText: {fileID: 1754284887}
-  firstcoin: {fileID: 1393860694}
+  FirstText: {fileID: 1393860694}
   tester: 0
+  closeWalk: 0
 --- !u!1 &761126302
 GameObject:
   m_ObjectHideFlags: 0
@@ -7479,7 +7480,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 732660600}
         m_TargetAssemblyTypeName: GameOverEndless, Assembly-CSharp
-        m_MethodName: GameOverSpin
+        m_MethodName: firstSpin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

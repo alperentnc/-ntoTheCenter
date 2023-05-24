@@ -3916,7 +3916,7 @@ GameObject:
   - component: {fileID: 536699284}
   m_Layer: 10
   m_Name: meteor (2)
-  m_TagString: Untagged
+  m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6539,6 +6539,7 @@ MonoBehaviour:
   overlevel: 0
   levelbool: 0
   tester: 0
+  closeWalk: 0
   Monkey: {fileID: 5374809718222455454, guid: c8b594a3daa8821418fa0156ef825561, type: 3}
   Duck: {fileID: 5374809718222455454, guid: 3cb4f57e567d5824d9574c8f55634349, type: 3}
   Pumpkin: {fileID: 5374809718222455454, guid: 9d7768c9a0b008f49ae15782f96934d5, type: 3}
