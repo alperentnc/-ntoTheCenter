@@ -92,10 +92,11 @@ public class JumperShooting : MonoBehaviour
 
             Destroy(gameObject);
 
-            collision.gameObject.GetComponent<PlayerHealth>().health -= 30;
-            
-            AudioManager.Instance.PlaySFX("Explode");
+            collision.gameObject.GetComponent<PlayerHealth>().health -= 20;
+
             Destroy(gameObject);
+            AudioManager.Instance.PlaySFX("Explode");
+            
             
             
         }

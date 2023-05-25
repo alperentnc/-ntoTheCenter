@@ -11,6 +11,7 @@ public class LevelsGameOver : MonoBehaviour
     public GameObject LevelCompletedPanel;
     public GameObject SettingsPanel;
     public GameObject FirstLevelCompletedPanel;
+    public GameObject youwin, youlose;
     PlayerHealth playerHealth;
     public LevelsCoin levelsCoin;
     GameObject player, hp, index, pause;
@@ -57,7 +58,6 @@ public class LevelsGameOver : MonoBehaviour
     void Update()
     {
 
-
         if (adds == null)
         {
             adds = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Adds>();
@@ -99,6 +99,7 @@ public class LevelsGameOver : MonoBehaviour
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         FirstLevelCompletedPanel.SetActive(true);
+        youwin.SetActive(false);
         FirstCoinTextCompleted.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
         hp.SetActive(false);
         index.SetActive(false);
@@ -186,6 +187,7 @@ public class LevelsGameOver : MonoBehaviour
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         FirstLevelCompletedPanel.SetActive(true);
+        youlose.SetActive(false);
         FirstCoinTextCompleted.text = "   You Earned: " + LevelsCoin.totalGold.ToString() + " Coins";
         hp.SetActive(false);
         index.SetActive(false);

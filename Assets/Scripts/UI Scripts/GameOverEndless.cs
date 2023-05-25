@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameOverEndless : MonoBehaviour
 {
-    public GameObject GameOverPanel, Spinner, hp, best, score, pause, settingspanel, pausepanel,firstGameOverPanel;
+    public GameObject GameOverPanel, Spinner, hp, best, score, pause, settingspanel, pausepanel,firstGameOverPanel,YouLose;
     PlayerHealth playerHealth;
     public CoinManager coinManager;
     GameObject player, enemy, gun, explode, electric, fastmeteor;
