@@ -97,11 +97,14 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            
             if (notYet == false)
             {
                 bomber = Instantiate(bom, new Vector3(player.transform.position.x, player.transform.position.y, 0), Quaternion.identity);
                 Destroy(bomber, 0.3f);
                 player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 100);
+                AudioManager.Instance.PlaySFX("Lose");
+                //AudioManager.Instance.PlayMusic("Menu");
                 notYet = true;
             }
             
@@ -109,6 +112,7 @@ public class PlayerHealth : MonoBehaviour
             if (timer >= 0.3f)
             {
                 isGameOver = true;
+                
             }
             
 
@@ -135,4 +139,5 @@ public class PlayerHealth : MonoBehaviour
             //Time.timeScale = 1f;
         }
     }
+    
 }

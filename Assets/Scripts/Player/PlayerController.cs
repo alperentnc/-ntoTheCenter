@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
         stun = false;
         slowPlatform = false;
         meteorStarter = false;
+        AudioManager.Instance.PlayMusic("Game");
     }
 
     void Update()

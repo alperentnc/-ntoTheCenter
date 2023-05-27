@@ -28,6 +28,7 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("levelCompleted", 1);
         }
         adds = cam.GetComponent<Adds>();
+        AudioManager.Instance.PlayMusic("Menu");
     }
     public void PlayLevel()
     {

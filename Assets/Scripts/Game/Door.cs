@@ -39,6 +39,10 @@ public class Door : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            //AudioManager.Instance.MusicSource.Pause();
+
+            AudioManager.Instance.PlaySFX("Win");
+            //AudioManager.Instance.PlayMusic("Menu");
             for (int i = 0; i < enemyLength; i++)
             {
                 if (enemy[i] != null)
@@ -60,5 +64,6 @@ public class Door : MonoBehaviour
             
             // Load the next level
         }
+        
     }
 }

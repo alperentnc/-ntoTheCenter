@@ -143,7 +143,7 @@ public class LevelsGameOver : MonoBehaviour
             Spinner.SetActive(false);
             Time.timeScale = 0;
         }
-        AudioManager.Instance.PlaySFX("Equip");
+        AudioManager.Instance.PlaySFX("Collect");
     }
     public void SkipWithoutSpin()
     {

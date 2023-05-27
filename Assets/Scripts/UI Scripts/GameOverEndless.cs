@@ -156,7 +156,7 @@ public class GameOverEndless : MonoBehaviour
         }
         Time.timeScale = 0;
         CoinText.text = "   You Earned: " + CoinManager.totalGold.ToString() + " Coins";
-        AudioManager.Instance.PlaySFX("Equip");
+        AudioManager.Instance.PlaySFX("Collect");
     }
     public void SkipWithoutSpin()
     {
