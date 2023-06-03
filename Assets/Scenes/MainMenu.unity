@@ -19419,6 +19419,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 6f8e14642d3e1034e8e76bb0a3b59b93, type: 3}
     - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
+      propertyPath: SFXSounds.Array.data[5].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c2e083658e432648883a7793194fa0a, type: 3}
+    - target: {fileID: 5227546180124094514, guid: c6f71de79d02f18479ec3186363f798a, type: 3}
       propertyPath: SFXSounds.Array.data[6].Clip
       value: 
       objectReference: {fileID: 8300000, guid: 3bab434524cdd9542a6e36f81898b800, type: 3}
