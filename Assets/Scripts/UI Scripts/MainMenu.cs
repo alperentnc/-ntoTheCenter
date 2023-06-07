@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     public GameObject PlayPanel;
     public GameObject SettingsPanel;
     public GameObject PowerPanel;
-    public GameObject LevelsPanel;
+    public GameObject AchievementsPanel;
     public GameObject PlayBtn;
     public GameObject FreeFall;
     public GameObject FreeFallPanel;
@@ -66,9 +66,9 @@ public class MainMenu : MonoBehaviour
         FreeFall.SetActive(false);
         AudioManager.Instance.PlaySFX("Click");
     }
-    public void Levels()
+    public void Achievements()
     {
-        LevelsPanel.SetActive(true);
+        AchievementsPanel.SetActive(true);
         PlayBtn.SetActive(false);
         FreeFall.SetActive(false);
         AudioManager.Instance.PlaySFX("Click");
@@ -96,9 +96,9 @@ public class MainMenu : MonoBehaviour
         FreeFall.SetActive(true);
         AudioManager.Instance.PlaySFX("Click");
     }
-    public void CloseLevels()
+    public void CloseAchievements()
     {
-        LevelsPanel.SetActive(false);
+        AchievementsPanel.SetActive(false);
         PlayBtn.SetActive(true);
         FreeFall.SetActive(true);
         AudioManager.Instance.PlaySFX("Click");
