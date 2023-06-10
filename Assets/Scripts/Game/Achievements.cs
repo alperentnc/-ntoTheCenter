@@ -7,6 +7,7 @@ public class Achievements : MonoBehaviour
     private int diamondValue;
     private int coinValue;
     public Button[] buttons;
+    public Image[] locks;
 
     private void Start()
     {
@@ -40,7 +41,10 @@ public class Achievements : MonoBehaviour
         {
             buttons[0].interactable = false;
         }
-
+        if (PlayerPrefs.GetInt("Coin100") != 0)
+        {
+            locks[0].enabled = false;
+        }
         if (PlayerPrefs.GetFloat("HighScore") >= 500 && PlayerPrefs.GetInt("Diammond2a") == 0)
         {
             buttons[1].interactable = true;
@@ -48,6 +52,10 @@ public class Achievements : MonoBehaviour
         else
         {
             buttons[1].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("Diammond2a") != 0)
+        {
+            locks[1].enabled = false;
         }
         if (PlayerPrefs.GetFloat("HighScore") >= 1000 && PlayerPrefs.GetInt("Diammond3a") == 0)
         {
@@ -57,6 +65,10 @@ public class Achievements : MonoBehaviour
         {
             buttons[2].interactable = false;
         }
+        if (PlayerPrefs.GetInt("Diammond3a") != 0)
+        {
+            locks[2].enabled = false;
+        }
         if (PlayerPrefs.GetFloat("HighScore") >= 1500 && PlayerPrefs.GetInt("Diammond5a") == 0)
         {
             buttons[3].interactable = true;
@@ -64,6 +76,10 @@ public class Achievements : MonoBehaviour
         else
         {
             buttons[3].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("Diammond5a") != 0)
+        {
+            locks[3].enabled = false;
         }
         if (PlayerPrefs.GetFloat("HighScore") >= 2000 && PlayerPrefs.GetInt("Diammond7") == 0)
         {
@@ -73,6 +89,10 @@ public class Achievements : MonoBehaviour
         {
             buttons[4].interactable = false;
         }
+        if (PlayerPrefs.GetInt("Diammond7") != 0)
+        {
+            locks[4].enabled = false;
+        }
         if (PlayerPrefs.GetFloat("HighScore") >= 2500 && PlayerPrefs.GetInt("Diammond10") == 0)
         {
             buttons[5].interactable = true;
@@ -80,6 +100,10 @@ public class Achievements : MonoBehaviour
         else
         {
             buttons[5].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("Diammond10") != 0)
+        {
+            locks[5].enabled = false;
         }
         if (PlayerPrefs.GetInt("levelCompleted") - 1 >= 5 && PlayerPrefs.GetInt("Coin300") == 0)
         {
@@ -89,6 +113,10 @@ public class Achievements : MonoBehaviour
         {
             buttons[6].interactable = false;
         }
+        if (PlayerPrefs.GetInt("Coin300") != 0)
+        {
+            locks[6].enabled = false;
+        }
         if (PlayerPrefs.GetInt("levelCompleted") - 1 >= 10 && PlayerPrefs.GetInt("Diammond2b") == 0)
         {
             buttons[7].interactable = true;
@@ -96,6 +124,10 @@ public class Achievements : MonoBehaviour
         else
         {
             buttons[7].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("Diammond2b") != 0)
+        {
+            locks[7].enabled = false;
         }
         if (PlayerPrefs.GetInt("levelCompleted") - 1 >= 15 && PlayerPrefs.GetInt("Diammond3b") == 0)
         {
@@ -105,6 +137,10 @@ public class Achievements : MonoBehaviour
         {
             buttons[8].interactable = false;
         }
+        if (PlayerPrefs.GetInt("Diammond3b") != 0)
+        {
+            locks[8].enabled = false;
+        }
         if (PlayerPrefs.GetInt("levelCompleted") - 1 >= 20 && PlayerPrefs.GetInt("Diammond5b") == 0)
         {
             buttons[9].interactable = true;
@@ -113,7 +149,10 @@ public class Achievements : MonoBehaviour
         {
             buttons[9].interactable = false;
         }
-
+        if (PlayerPrefs.GetInt("Diammond5b") != 0)
+        {
+            locks[9].enabled = false;
+        }
         if (PlayerPrefs.GetInt("IndexSpeed") >= 3 && PlayerPrefs.GetInt("Diammond1a") == 0)
         {
             buttons[10].interactable = true;
@@ -121,6 +160,10 @@ public class Achievements : MonoBehaviour
         else
         {
             buttons[10].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("Diammond1a") != 0)
+        {
+            locks[10].enabled = false;
         }
         if (PlayerPrefs.GetInt("IndexSpeed") >= 6 && PlayerPrefs.GetInt("Diammond3c") == 0)
         {
@@ -130,6 +173,10 @@ public class Achievements : MonoBehaviour
         {
             buttons[11].interactable = false;
         }
+        if (PlayerPrefs.GetInt("Diammond3c") != 0)
+        {
+            locks[11].enabled = false;
+        }
         if (PlayerPrefs.GetInt("IndexSpeed") >= 10 && PlayerPrefs.GetInt("Diammond5c") == 0)
         {
             buttons[12].interactable = true;
@@ -137,6 +184,10 @@ public class Achievements : MonoBehaviour
         else
         {
             buttons[12].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("Diammond5c") != 0)
+        {
+            locks[12].enabled = false;
         }
         if (PlayerPrefs.GetInt("IndexHealth") >= 3 && PlayerPrefs.GetInt("Diammond1b") == 0)
         {
@@ -146,6 +197,10 @@ public class Achievements : MonoBehaviour
         {
             buttons[13].interactable = false;
         }
+        if (PlayerPrefs.GetInt("Diammond1b") != 0)
+        {
+            locks[13].enabled = false;
+        }
         if (PlayerPrefs.GetInt("IndexHealth") >= 6 && PlayerPrefs.GetInt("Diammond3d") == 0)
         {
             buttons[14].interactable = true;
@@ -154,6 +209,10 @@ public class Achievements : MonoBehaviour
         {
             buttons[14].interactable = false;
         }
+        if (PlayerPrefs.GetInt("Diammond3d") != 0)
+        {
+            locks[14].enabled = false;
+        }
         if (PlayerPrefs.GetInt("IndexHealth") >= 10 && PlayerPrefs.GetInt("Diammond5d") == 0)
         {
             buttons[15].interactable = true;
@@ -161,6 +220,10 @@ public class Achievements : MonoBehaviour
         else
         {
             buttons[15].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("Diammond5d") != 0)
+        {
+            locks[15].enabled = false;
         }
     }
 

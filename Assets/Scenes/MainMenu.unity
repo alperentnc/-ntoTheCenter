@@ -4430,6 +4430,23 @@ MonoBehaviour:
   - {fileID: 1421279507}
   - {fileID: 467788409}
   - {fileID: 1891010080}
+  locks:
+  - {fileID: 983805963}
+  - {fileID: 1737060367}
+  - {fileID: 24537882}
+  - {fileID: 827898341}
+  - {fileID: 1342639193}
+  - {fileID: 2097387217}
+  - {fileID: 1645887270}
+  - {fileID: 1405686158}
+  - {fileID: 687760824}
+  - {fileID: 2115526171}
+  - {fileID: 1085390883}
+  - {fileID: 1842970499}
+  - {fileID: 1990563928}
+  - {fileID: 283914255}
+  - {fileID: 1000517268}
+  - {fileID: 133966170}
 --- !u!1 &305066180
 GameObject:
   m_ObjectHideFlags: 0
