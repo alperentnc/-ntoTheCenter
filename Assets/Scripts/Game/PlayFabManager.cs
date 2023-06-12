@@ -8,19 +8,31 @@ using TMPro;
 
 public class PlayFabManager : MonoBehaviour
 {
+    public GameObject first, second, third;
     public GameObject nameWindow;
     public TMP_InputField nameInput;
     public GameObject LeaderBoardPanel;
     public GameObject rowPrefab;
     public Transform rowsParent;
     string loggedInPlayedId;
+    public static bool nameAccepter,panelclosed;
     // Start is called before the first frame update
     void Start()
     {
+        nameAccepter = false;
+        panelclosed = false;
         Login();
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        if (nameAccepter == true && panelclosed==true)
+        {
+            nameWindow.SetActive(true);
+            nameAccepter = false;
+        }
+    }
     void Login()
     {
         var request = new LoginWithCustomIDRequest
@@ -46,7 +58,7 @@ public class PlayFabManager : MonoBehaviour
         }
         if (name == null)
         {
-            nameWindow.SetActive(true);
+            nameAccepter = true;
         }
         
     }
@@ -57,6 +69,7 @@ public class PlayFabManager : MonoBehaviour
             DisplayName = nameInput.text,
 
         };
+        nameWindow.SetActive(false);
         PlayFabClientAPI.UpdateUserTitleDisplayName(request, OnDisplayNameUpdate, OnError);
     }
     void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)
@@ -100,27 +113,43 @@ public class PlayFabManager : MonoBehaviour
     }
     void OnLeaderboardGet(GetLeaderboardResult result)
     {
-        GetLeaderboardAroundPlayer();
         foreach (Transform item in rowsParent)
         {
             Destroy(item.gameObject);
         }
         foreach(var item in result.Leaderboard)
         {
-            GameObject newGo = Instantiate(rowPrefab, rowsParent);
-            TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
-            texts[0].text = (item.Position+1).ToString();
-            texts[1].text = item.DisplayName;
-            texts[2].text = item.StatValue.ToString();
-            Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
+            if(item.PlayFabId != loggedInPlayedId)
+            {
+                if (item.Position == 0)
+                {
+                    first.SetActive(true);
+                }
+                if (item.Position == 1)
+                {
+                    second.SetActive(true);
+                }
+                if (item.Position == 2)
+                {
+                    third.SetActive(true);
+                }
+                GameObject newGo = Instantiate(rowPrefab, rowsParent);
+                TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
+                texts[0].text = (item.Position + 1).ToString();
+                texts[1].text = item.DisplayName;
+                texts[2].text = item.StatValue.ToString();
+                Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
+            }
+            
         }
-        
+        GetLeaderboardAroundPlayer();
+
     }
     void OnLeaderboardAroundPlayerGet(GetLeaderboardAroundPlayerResult result)
     {
         foreach (Transform item in rowsParent)
         {
-            Destroy(item.gameObject);
+            //Destroy(item.gameObject);
         }
         foreach (var item in result.Leaderboard)
         {
@@ -129,6 +158,18 @@ public class PlayFabManager : MonoBehaviour
             texts[0].text = (item.Position + 1).ToString();
             texts[1].text = item.DisplayName;
             texts[2].text = item.StatValue.ToString();
+            if (item.Position == 0)
+            {
+                first.SetActive(true);
+            }
+            if (item.Position == 1)
+            {
+                second.SetActive(true);
+            }
+            if (item.Position == 2)
+            {
+                third.SetActive(true);
+            }
             if (item.PlayFabId == loggedInPlayedId)
             {
                 texts[0].color = new Color(97/255f, 56/255f, 253/255f);
