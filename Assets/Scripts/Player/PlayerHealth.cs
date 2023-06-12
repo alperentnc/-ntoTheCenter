@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
         }
         enemy = GameObject.FindGameObjectsWithTag("Enemy");
         meteor = GameObject.FindGameObjectsWithTag("meteor");
-        Debug.Log("health" + health);
+        //Debug.Log("health" + health);
         enemyLength = enemy.Length;
         meteorLength = meteor.Length;
         // Update the health slider

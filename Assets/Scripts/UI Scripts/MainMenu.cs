@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     public GameObject PlayBtn;
     public GameObject FreeFall;
     public GameObject FreeFallPanel;
+    public GameObject LeaderBoardPanel;
     public static int levelCompleted = 1;
     Adds adds;
     public GameObject cam;
@@ -95,6 +96,10 @@ public class MainMenu : MonoBehaviour
         PlayBtn.SetActive(true);
         FreeFall.SetActive(true);
         AudioManager.Instance.PlaySFX("Click");
+    }
+    public void CloseLeaderBoard()
+    {
+        LeaderBoardPanel.SetActive(false);
     }
     public void CloseAchievements()
     {

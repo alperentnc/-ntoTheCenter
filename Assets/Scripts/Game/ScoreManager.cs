@@ -7,14 +7,14 @@ public class ScoreManager : MonoBehaviour
     GameObject character; // The Transform component of the character object
     TMP_Text scoreText; // The UI Text component for displaying the current score
     TMP_Text highScoreText; // The UI Text component for displaying the high score
-
+    PlayFabManager playFabManager;
     private float highScore; // The saved high score
     public float currentScore; // The current score
 
     void Start()
     {
-      
-       scoreText = GameObject.FindGameObjectWithTag("CurrentScore").GetComponent<TMP_Text>();
+        playFabManager = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayFabManager>();
+        scoreText = GameObject.FindGameObjectWithTag("CurrentScore").GetComponent<TMP_Text>();
         highScoreText= GameObject.FindGameObjectWithTag("HighScore").GetComponent<TMP_Text>();
         character = GameObject.FindGameObjectWithTag("Player");
    
@@ -48,6 +48,7 @@ public class ScoreManager : MonoBehaviour
         {
             highScore = currentScore;
             PlayerPrefs.SetFloat("HighScore", highScore);
+            playFabManager.SendLeaderboard((int)highScore);
             Leaderboards.HighScore.SubmitScore(Mathf.RoundToInt(highScore));
           
         }
