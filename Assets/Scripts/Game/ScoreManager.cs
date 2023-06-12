@@ -20,7 +20,6 @@ public class ScoreManager : MonoBehaviour
    
         // Load the saved high score from PlayerPrefs
         highScore = PlayerPrefs.GetFloat("HighScore", 0);
-        Cloud.Initialize(true, true);
         if (highScore != 0)
         {
             Leaderboards.HighScore.SubmitScore(Mathf.RoundToInt(highScore));

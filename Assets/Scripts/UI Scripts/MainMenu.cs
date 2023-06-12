@@ -100,6 +100,7 @@ public class MainMenu : MonoBehaviour
     public void CloseLeaderBoard()
     {
         LeaderBoardPanel.SetActive(false);
+        AudioManager.Instance.PlaySFX("Click");
     }
     public void CloseAchievements()
     {
