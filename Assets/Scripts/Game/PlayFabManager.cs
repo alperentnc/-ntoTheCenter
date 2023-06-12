@@ -15,19 +15,18 @@ public class PlayFabManager : MonoBehaviour
     public GameObject rowPrefab;
     public Transform rowsParent;
     string loggedInPlayedId;
-    public static bool nameAccepter,panelclosed;
+    public static bool nameAccepter;
     // Start is called before the first frame update
     void Start()
     {
         nameAccepter = false;
-        panelclosed = false;
         Login();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (nameAccepter == true && panelclosed==true)
+        if (nameAccepter == true && PlayerPrefs.GetInt("panelFinisher")==1)
         {
             nameWindow.SetActive(true);
             nameAccepter = false;

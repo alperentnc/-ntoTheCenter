@@ -8,10 +8,9 @@ public class PanelManager : MonoBehaviour
     public GameObject button;
     private int prefs;
     private string panelShownKey;
-    public bool panelFinisher;
     private void Start()
     {
-        panelFinisher = false;
+        PlayerPrefs.GetInt("panelFinisher", 0);
         // Initially activate the first panel if it hasn't been shown before
         if (!IsPanelShown(currentPanelIndex))
         {
@@ -47,12 +46,11 @@ public class PanelManager : MonoBehaviour
             else
             {
                 // No more panels, do something else
-                if (panelFinisher == false)
+                if (PlayerPrefs.GetInt("panelFinisher")==0)
                 {
                     Debug.Log("No more panels");
-                    PlayFabManager.panelclosed = true;
                     button.SetActive(false);
-                    panelFinisher = true;
+                    PlayerPrefs.SetInt("panelFinisher", 1);
                 }
                 
             }
