@@ -20,8 +20,11 @@ public class MainMenu : MonoBehaviour
     public GameObject cam;
     private bool internet = false;
     public static bool diamondPlus, coinPlus;
+    PlayFabManager playFabManager;
+
     void Start()
     {
+        playFabManager = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<PlayFabManager>();
         StartCoroutine(CheckInternetConnection());
         levelCompleted = PlayerPrefs.GetInt("levelCompleted", 1);
         if (PlayerPrefs.GetInt("levelCompleted") == 0)
@@ -30,6 +33,9 @@ public class MainMenu : MonoBehaviour
         }
         adds = cam.GetComponent<Adds>();
         AudioManager.Instance.PlayMusic("Menu");
+
+
+        playFabManager.SendLeaderboard((int)PlayerPrefs.GetFloat("HighScore"));
     }
     public void PlayLevel()
     {
@@ -42,7 +48,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("SampleEndlessScene");
         AudioManager.Instance.PlaySFX("Click");
-        AudioManager.Instance.PlaySFX("Click");
+        
 
     }
     public void PlayPopUp()

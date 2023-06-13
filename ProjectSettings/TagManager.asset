@@ -33,6 +33,7 @@ TagManager:
   - Skip
   - Price
   - PriceText
+  - EventSystem
   layers:
   - Default
   - TransparentFX

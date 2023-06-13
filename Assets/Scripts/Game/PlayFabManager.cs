@@ -63,6 +63,7 @@ public class PlayFabManager : MonoBehaviour
     }
     public void SubmitNameButton()
     {
+        AudioManager.Instance.PlaySFX("Click");
         var request = new UpdateUserTitleDisplayNameRequest
         {
             DisplayName = nameInput.text,
@@ -101,6 +102,7 @@ public class PlayFabManager : MonoBehaviour
     }
     public void GetLeaderboard()
     {
+        AudioManager.Instance.PlaySFX("Click");
         LeaderBoardPanel.SetActive(true);
         var request = new GetLeaderboardRequest
         {
