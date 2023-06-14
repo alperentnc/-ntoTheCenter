@@ -120,7 +120,7 @@ public class PlayFabManager : MonoBehaviour
         }
         foreach(var item in result.Leaderboard)
         {
-            if(item.PlayFabId != loggedInPlayedId)
+            if(item.Position<9)
             {
                 if (item.Position == 0)
                 {
@@ -140,10 +140,38 @@ public class PlayFabManager : MonoBehaviour
                 texts[1].text = item.DisplayName;
                 texts[2].text = item.StatValue.ToString();
                 Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
+                if (item.PlayFabId == loggedInPlayedId)
+                {
+                    texts[0].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
+                    texts[1].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
+                    texts[2].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
+                }
+            }
+            else
+            {
+                if (item.Position == 0)
+                {
+                    first.SetActive(true);
+                }
+                if (item.Position == 1)
+                {
+                    second.SetActive(true);
+                }
+                if (item.Position == 2)
+                {
+                    third.SetActive(true);
+                }
+                GameObject newGo = Instantiate(rowPrefab, rowsParent);
+                TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
+                texts[0].text = (item.Position + 1).ToString();
+                texts[1].text = item.DisplayName;
+                texts[2].text = item.StatValue.ToString();
+                Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
+                GetLeaderboardAroundPlayer();
             }
             
         }
-        GetLeaderboardAroundPlayer();
+        
 
     }
     void OnLeaderboardAroundPlayerGet(GetLeaderboardAroundPlayerResult result)
