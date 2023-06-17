@@ -112,10 +112,8 @@ public class GameOverEndless : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             //enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             //fastmeteor.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            score.SetActive(false);
             hp.SetActive(false);
             pause.SetActive(false);
-            best.SetActive(false);
             test = true;
         }
 
@@ -160,9 +158,11 @@ public class GameOverEndless : MonoBehaviour
     }
     public void SkipWithoutSpin()
     {
+        score.SetActive(false);
+        best.SetActive(false);
         firstGameOverPanel.SetActive(false);
-        random = Random.Range(0, 9);
-        if (random == 5)
+        random = Random.Range(0, 2);
+        if (random == 0)
         {
             adds.ShowFullSize();
         }

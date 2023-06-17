@@ -14,10 +14,11 @@ public class PlayFabManager : MonoBehaviour
     public GameObject rowPrefab;
     public Transform rowsParent;
     string loggedInPlayedId;
-    public static bool nameAccepter;
+    public static bool nameAccepter,playerFound;
     // Start is called before the first frame update
     void Start()
     {
+        playerFound = false;
         nameAccepter = false;
         Login();
     }
@@ -129,6 +130,7 @@ public class PlayFabManager : MonoBehaviour
                 Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
                 if (item.PlayFabId == loggedInPlayedId)
                 {
+                    playerFound = true;
                     texts[0].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
                     texts[1].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
                     texts[2].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
@@ -136,12 +138,6 @@ public class PlayFabManager : MonoBehaviour
             }
             else
             {
-                GameObject newGo = Instantiate(rowPrefab, rowsParent);
-                TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
-                texts[0].text = (item.Position + 1).ToString();
-                texts[1].text = item.DisplayName;
-                texts[2].text = item.StatValue.ToString();
-                Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
                 GetLeaderboardAroundPlayer();
             }
             
@@ -157,18 +153,21 @@ public class PlayFabManager : MonoBehaviour
         }
         foreach (var item in result.Leaderboard)
         {
-            GameObject newGo = Instantiate(rowPrefab, rowsParent);
-            TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
-            texts[0].text = (item.Position + 1).ToString();
-            texts[1].text = item.DisplayName;
-            texts[2].text = item.StatValue.ToString();
-            if (item.PlayFabId == loggedInPlayedId)
+            if(playerFound == false)
             {
-                texts[0].color = new Color(97/255f, 56/255f, 253/255f);
-                texts[1].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
-                texts[2].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
-            }
-            Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
+                GameObject newGo = Instantiate(rowPrefab, rowsParent);
+                TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
+                texts[0].text = (item.Position + 1).ToString();
+                texts[1].text = item.DisplayName;
+                texts[2].text = item.StatValue.ToString();
+                if (item.PlayFabId == loggedInPlayedId)
+                {
+                    texts[0].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
+                    texts[1].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
+                    texts[2].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
+                }
+                Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
+            }   
         }
     }
     public void GetLeaderboardAroundPlayer()

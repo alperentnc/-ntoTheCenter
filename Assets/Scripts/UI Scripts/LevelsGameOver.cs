@@ -54,6 +54,8 @@ public class LevelsGameOver : MonoBehaviour
         rb = player.GetComponent<Rigidbody2D>();
         Spinner.SetActive(false);
         overlevel = false;
+        PlayerHealth.freezer = false;
+        PauseMenu.pause = false;
     }
     void Update()
     {
@@ -148,8 +150,8 @@ public class LevelsGameOver : MonoBehaviour
     public void SkipWithoutSpin()
     {
         FirstLevelCompletedPanel.SetActive(false);
-        random = Random.Range(0, 9);
-        if (random == 6)
+        random = Random.Range(0, 2);
+        if (random == 1)
         {
             adds.ShowFullSize();
         }
@@ -203,8 +205,9 @@ public class LevelsGameOver : MonoBehaviour
     }
     public void replay()
     {
+        PlayerHealth.freezer = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        AudioManager.Instance.PlaySFX("Click");
+        AudioManager.Instance.PlaySFX("Click");  
     }
     public void SettingsWin()
     {

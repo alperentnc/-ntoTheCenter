@@ -2532,6 +2532,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8343277382ab494fbf881d142f075b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameWindow: {fileID: 0}
+  nameInput: {fileID: 0}
+  LeaderBoardPanel: {fileID: 0}
+  rowPrefab: {fileID: 0}
+  rowsParent: {fileID: 0}
 --- !u!1 &531653773
 GameObject:
   m_ObjectHideFlags: 0
