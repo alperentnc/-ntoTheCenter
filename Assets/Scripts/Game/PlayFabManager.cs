@@ -120,7 +120,7 @@ public class PlayFabManager : MonoBehaviour
         }
         foreach(var item in result.Leaderboard)
         {
-            if(item.Position<9)
+            if(item.Position<10)
             {      
                 GameObject newGo = Instantiate(rowPrefab, rowsParent);
                 TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
