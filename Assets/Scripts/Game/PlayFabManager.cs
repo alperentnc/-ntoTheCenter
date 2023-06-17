@@ -108,7 +108,7 @@ public class PlayFabManager : MonoBehaviour
         {
             StatisticName = "Core Quest Leaderboard",
             StartPosition = 0,
-            MaxResultsCount = 10
+            MaxResultsCount = 11
         };
         PlayFabClientAPI.GetLeaderboard(request, OnLeaderboardGet, OnError);
     }
@@ -138,7 +138,9 @@ public class PlayFabManager : MonoBehaviour
             }
             else
             {
+                Debug.Log("getaroundcart");
                 GetLeaderboardAroundPlayer();
+                
             }
             
         }
@@ -153,8 +155,6 @@ public class PlayFabManager : MonoBehaviour
         }
         foreach (var item in result.Leaderboard)
         {
-            if(playerFound == false)
-            {
                 GameObject newGo = Instantiate(rowPrefab, rowsParent);
                 TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
                 texts[0].text = (item.Position + 1).ToString();
@@ -167,7 +167,6 @@ public class PlayFabManager : MonoBehaviour
                     texts[2].color = new Color(97 / 255f, 56 / 255f, 253 / 255f);
                 }
                 Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
-            }   
         }
     }
     public void GetLeaderboardAroundPlayer()
