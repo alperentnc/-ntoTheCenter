@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>401783161849-j91hgblh7k73o7vfmgf95i6apsocipf6.apps.googleusercontent.com</string>
+	<string>401783161849-346nbqpd5513tf1b69p2ui48kh1itnns.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.401783161849-j91hgblh7k73o7vfmgf95i6apsocipf6</string>
+	<string>com.googleusercontent.apps.401783161849-346nbqpd5513tf1b69p2ui48kh1itnns</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCKun2cveAcejwIFPGUwWlwclcNKYy8sZQ</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.cerebrum.CoreQuest</string>
+	<string>com.cerebrum.Core-Quest</string>
 	<key>PROJECT_ID</key>
 	<string>core-quest</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:401783161849:ios:4681040b8abfe8e010b328</string>
+	<string>1:401783161849:ios:d448ba30bc88dd9b10b328</string>
 </dict>
 </plist>
