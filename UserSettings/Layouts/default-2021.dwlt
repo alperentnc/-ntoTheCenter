@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 111
+  controlID: 82
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 83
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 73
+  controlID: 84
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,8 +298,8 @@ MonoBehaviour:
     y: 0
     width: 477
     height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -1144,9 +1144,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b07d0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 02fbffff
+      m_ExpandedIDs: b2dafeff12dbfeff16e1feff7ae1feff80e1feff90e9feff90f1feff12f8feff5efefeff6a04ffff6e09ffffb80effff6813ffffaa16ffffe01affff761effff0022ffff3e25ffff0028ffffb62affffb82cfffff42dffffd22effff6a2ffffff62fffff1830ffff0047ffff224fffff824fffffd652ffff3253ffff3653ffff465bffff4663ffffc869ffff1470ffff2076ffff247bffff6e80ffff1c85ffff5e88ffff948cffff2a90ffffb093ffffea96ffffac99ffff629cffff609effff9c9fffff78a0ffff0ca1ffff7aa1ffff9ca1ffff04a3ffff6aa3ffff6ea9ffffd2a9ffffd8a9ffffe8b1ffffe8b9ffff6ac0ffffb6c6ffffc2ccffffc6d1ffff10d7ffffc0dbffff02dfffff38e3ffffcee6ffff58eaffff96edffff58f0ffff0ef3ffff10f5ffff4cf6ffff2af7ffffc2f7ffff4ef8ffff72f8ffff02fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1239,21 +1239,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Game
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Game
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\Users\Public\Documents\CoreQuest
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: c47c0000
-    m_LastClickedID: 31940
+    scrollPos: {x: 0, y: 363}
+    m_SelectedIDs: 5a840000
+    m_LastClickedID: 33882
     m_ExpandedIDs: 00000000c47c0000c67c0000c87c0000ca7c0000cc7c0000ce7c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000466b0000926d0000dc9e00005668000086740000fe6c0000c6a00100a66c00004e76000022b802005c740000905201001a35050066970000bcb90000267400006cb20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1334,7 +1334,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 98}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 234
