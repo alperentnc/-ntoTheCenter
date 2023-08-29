@@ -2637,7 +2637,7 @@ MonoBehaviour:
   - {fileID: 8554870447228916183, guid: a0376a69c5b937f4690fa1188fdbe186, type: 3}
   - {fileID: 4243158547661398261, guid: 03b1fd9b771e55e418880ad9813c33e1, type: 3}
   platformSpawnDistance: 18
-  maxPlatformCount: 50
+  maxPlatformCount: 100
   leftPlatformTag: LeftPlatform
   rightPlatformTag: RightPlatform
   middlePlatformTag: MiddlePlatform

@@ -27,6 +27,90 @@ public class Achievements : MonoBehaviour
         PlayerPrefs.GetInt("Diammond1b", 0);
         PlayerPrefs.GetInt("Diammond3d", 0);
         PlayerPrefs.GetInt("Diammond5d", 0);
+
+        //kazanýnca buton büyüyüp küçülsün:
+        if (PlayerPrefs.GetFloat("HighScore") >= 250 && PlayerPrefs.GetInt("Coin100") == 0)
+        {
+            
+            buttons[0].animator.SetBool("Highlighted", true);
+        }
+
+        if (PlayerPrefs.GetFloat("HighScore") >= 500 && PlayerPrefs.GetInt("Diammond2a") == 0)
+        {
+            buttons[1].animator.SetBool("Highlighted", true);
+        }
+        
+
+        if (PlayerPrefs.GetFloat("HighScore") >= 1000 && PlayerPrefs.GetInt("Diammond3a") == 0)
+        {
+            buttons[2].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetFloat("HighScore") >= 1500 && PlayerPrefs.GetInt("Diammond5a") == 0)
+        {
+            buttons[3].animator.SetBool("Highlighted", true);
+        }
+       
+        if (PlayerPrefs.GetFloat("HighScore") >= 2000 && PlayerPrefs.GetInt("Diammond7") == 0)
+        {
+            buttons[4].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetFloat("HighScore") >= 2500 && PlayerPrefs.GetInt("Diammond10") == 0)
+        {
+            buttons[5].animator.SetBool("Highlighted", true);
+        }
+
+        if (PlayerPrefs.GetInt("levelCompleted") - 1 >= 5 && PlayerPrefs.GetInt("Coin300") == 0)
+        {
+            buttons[6].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetInt("levelCompleted") - 1 >= 10 && PlayerPrefs.GetInt("Diammond2b") == 0)
+        {
+            buttons[7].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetInt("levelCompleted") - 1 >= 15 && PlayerPrefs.GetInt("Diammond3b") == 0)
+        {
+            buttons[8].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetInt("levelCompleted") - 1 >= 20 && PlayerPrefs.GetInt("Diammond5b") == 0)
+        {
+            buttons[9].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetInt("IndexSpeed") >= 3 && PlayerPrefs.GetInt("Diammond1a") == 0)
+        {
+            buttons[10].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetInt("IndexSpeed") >= 6 && PlayerPrefs.GetInt("Diammond3c") == 0)
+        {
+            buttons[11].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetInt("IndexSpeed") >= 10 && PlayerPrefs.GetInt("Diammond5c") == 0)
+        {
+            buttons[12].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetInt("IndexHealth") >= 3 && PlayerPrefs.GetInt("Diammond1b") == 0)
+        {
+            buttons[13].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetInt("IndexHealth") >= 6 && PlayerPrefs.GetInt("Diammond3d") == 0)
+        {
+            buttons[14].animator.SetBool("Highlighted", true);
+        }
+        
+        if (PlayerPrefs.GetInt("IndexHealth") >= 10 && PlayerPrefs.GetInt("Diammond5d") == 0)
+        {
+            buttons[15].animator.SetBool("Highlighted", true);
+        }
+
     }
 
 
@@ -39,31 +123,33 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[0].interactable = false;
+            buttons[0].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Coin100") != 0)
         {
             locks[0].enabled = false;
         }
+
         if (PlayerPrefs.GetFloat("HighScore") >= 500 && PlayerPrefs.GetInt("Diammond2a") == 0)
         {
             buttons[1].interactable = true;
         }
         else
         {
-            buttons[1].interactable = false;
+            buttons[1].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond2a") != 0)
         {
             locks[1].enabled = false;
         }
+
         if (PlayerPrefs.GetFloat("HighScore") >= 1000 && PlayerPrefs.GetInt("Diammond3a") == 0)
         {
             buttons[2].interactable = true;
         }
         else
         {
-            buttons[2].interactable = false;
+            buttons[2].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond3a") != 0)
         {
@@ -75,7 +161,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[3].interactable = false;
+            buttons[3].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond5a") != 0)
         {
@@ -87,7 +173,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[4].interactable = false;
+            buttons[4].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond7") != 0)
         {
@@ -99,7 +185,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[5].interactable = false;
+            buttons[5].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond10") != 0)
         {
@@ -111,7 +197,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[6].interactable = false;
+            buttons[6].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Coin300") != 0)
         {
@@ -123,7 +209,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[7].interactable = false;
+            buttons[7].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond2b") != 0)
         {
@@ -135,7 +221,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[8].interactable = false;
+            buttons[8].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond3b") != 0)
         {
@@ -147,7 +233,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[9].interactable = false;
+            buttons[9].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond5b") != 0)
         {
@@ -159,7 +245,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[10].interactable = false;
+            buttons[10].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond1a") != 0)
         {
@@ -171,7 +257,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[11].interactable = false;
+            buttons[11].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond3c") != 0)
         {
@@ -183,7 +269,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[12].interactable = false;
+            buttons[12].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond5c") != 0)
         {
@@ -195,7 +281,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[13].interactable = false;
+            buttons[13].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond1b") != 0)
         {
@@ -207,7 +293,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[14].interactable = false;
+            buttons[14].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond3d") != 0)
         {
@@ -219,7 +305,7 @@ public class Achievements : MonoBehaviour
         }
         else
         {
-            buttons[15].interactable = false;
+            buttons[15].gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("Diammond5d") != 0)
         {
@@ -235,6 +321,7 @@ public class Achievements : MonoBehaviour
         PlayerPrefs.SetInt("Diammond1a", 1);
         PlayerPrefs.Save();
         AudioManager.Instance.PlaySFX("Collect");
+        
     }
     public void Diamond1b()
     {
@@ -372,4 +459,6 @@ public class Achievements : MonoBehaviour
         PlayerPrefs.Save();
         AudioManager.Instance.PlaySFX("Collect");
     }
+
+
 }
